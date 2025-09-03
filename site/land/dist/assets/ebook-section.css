@@ -1,0 +1,190 @@
+/* Seção Download E-book */
+
+.ebook-section {
+    background: linear-gradient(135deg, #F19F42 0%, #FFB347 100%);
+    padding: 3rem 0;
+    position: relative;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+}
+
+.ebook-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+
+.ebook-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+/* Lado esquerdo - Imagens dos livros */
+.ebook-images {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ebook-book-left {
+    width: 320px;
+    height: auto;
+    transform: rotate(-15deg) translateX(-120px) translateY(-70px);
+    transform: rotate(5deg) translateX(-120px) translateY(-20px);
+    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.3));
+    transition: transform 0.3s ease;
+    z-index: 1;
+}
+
+.ebook-book-right {
+    width: 360px;
+    height: auto;
+    position: absolute;
+    transform: rotate(20deg) translateX(80px) translateY(10px);
+    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.3));
+    transition: transform 0.3s ease;
+    z-index: 2;
+}
+
+.ebook-book-left:hover {
+    transform: rotate(-25deg) translateX(-120px) translateY(-70px) scale(1.05);
+    transform: rotate(-5deg) translateX(-120px) translateY(-20px) scale(1.05);
+}
+
+.ebook-book-right:hover {
+    transform: rotate(10deg) translateX(80px) translateY(0px) scale(1.05);
+}
+
+/* Lado direito - Texto e botão */
+.ebook-text {
+    color: white;
+    max-width: 500px;
+}
+
+.ebook-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.ebook-description {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    font-family: 'Inter', sans-serif;
+    opacity: 0.95;
+}
+
+.ebook-button {
+    background: #7c3aed;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 0.75rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 25px rgba(124, 58, 237, 0.3);
+}
+
+.ebook-button:hover {
+    background: #6d28d9;
+    transform: translateY(-2px);
+    box-shadow: 0 15px 35px rgba(124, 58, 237, 0.4);
+}
+
+.ebook-button:active {
+    transform: translateY(0);
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .ebook-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+    
+    .ebook-title {
+        font-size: 2rem;
+    }
+    
+    .ebook-book-left {
+        width: 250px;
+    }
+    
+    .ebook-book-right {
+        width: 250px;
+        transform: rotate(-5deg) translateX(-40px) translateY(-15px);
+    }
+}
+
+@media (max-width: 768px) {
+    .ebook-section {
+        padding: 2rem 0;
+        min-height: auto;
+    }
+    
+    .ebook-title {
+        font-size: 1.75rem;
+    }
+    
+    .ebook-description {
+        font-size: 1rem;
+    }
+    
+    .ebook-book-left {
+        width: 200px;
+    }
+    
+    .ebook-book-right {
+        width: 200px;
+        transform: rotate(-5deg) translateX(-25px) translateY(-10px);
+    }
+    
+    .ebook-button {
+        padding: 0.875rem 1.5rem;
+        font-size: 0.875rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .ebook-section {
+        padding: 1.5rem 0;
+    }
+    
+    .ebook-title {
+        font-size: 1.5rem;
+    }
+    
+    .ebook-description {
+        font-size: 0.9rem;
+    }
+    
+    .ebook-book-left {
+        width: 150px;
+    }
+    
+    .ebook-book-right {
+        width: 150px;
+        transform: rotate(-5deg) translateX(-15px) translateY(-5px);
+    }
+    
+    .ebook-button {
+        padding: 0.75rem 1.25rem;
+        font-size: 0.8rem;
+    }
+}

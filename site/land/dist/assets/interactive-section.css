@@ -1,0 +1,462 @@
+/* Seção Interativa */
+.interactive-section {
+    position: relative;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: url('../images/section-bg.png') center center/cover no-repeat;
+    padding: 4rem 0;
+    margin-top: 60px; /* Espaçamento para a navbar fixa */
+    z-index: 1;
+}
+
+header.fixed {
+    z-index: 9999 !important;
+}
+
+.interactive-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../images/section-bg.png') center center/cover no-repeat;
+    opacity: 0.9;
+}
+
+.interactive-container {
+    position: relative;
+    z-index: 10;
+    max-width: 90rem;
+    margin: 0 auto;
+    padding: 0 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.image-area {
+    position: absolute;
+    bottom: -5%;
+    left: 12%;
+    width: 45%;
+    height: 120%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background: transparent;
+    z-index: 1;
+}
+
+.image-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    background: transparent;
+}
+
+.main-image {
+    width: 100%;
+    height: 80%;
+    max-height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 1rem;
+    box-shadow: none;
+    background: transparent;
+}
+
+.image-fade-in {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.image-fade-out {
+    opacity: 0;
+    transform: scale(0.95);
+}
+
+.glass-container {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 1rem;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+    min-width: 500px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 8rem;
+    right: 15%;
+    z-index: 20;
+}
+
+.glass-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: black;
+    text-align: center;
+    line-height: 1.4;
+    font-family: 'Inter', sans-serif;
+}
+
+.features-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+    width: 100%;
+}
+
+/* Primeira linha - 3 cards */
+.features-row-1 {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.8rem;
+    width: 100%;
+}
+
+.features-row-1 .feature-card {
+    flex: 1;
+}
+
+/* Segunda linha - 2 cards centralizados */
+.features-row-2 {
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    width: 100%;
+}
+
+.features-row-2 .feature-card {
+    flex: 0 0 calc(33.333% - 0.6rem);
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 3px 8px 1.5px rgba(0, 0, 0, 0.3);
+    border-radius: 1rem;
+    padding: 1.5rem 2.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+    min-height: 140px;
+    justify-content: center;
+}
+
+.feature-card:hover {
+    background: rgba(255, 255, 255, 0.8);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    border-color: rgba(59, 130, 246, 0.3);
+}
+
+.feature-image {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+}
+
+.feature-png {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover .feature-png {
+    filter: brightness(0) saturate(100%) invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%) scale(1.1);
+}
+
+.feature-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+    flex: 1;
+}
+
+.feature-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.2;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .interactive-section {
+        padding: 4rem 2rem;
+        min-height: 80vh;
+        margin-top: 60px;
+    }
+    
+    .image-area {
+        left: 8%;
+        width: 40%;
+    }
+    
+    .glass-container {
+        min-width: 400px;
+        max-width: 500px;
+        top: 12rem;
+        right: 8%;
+        padding: 1rem 1.5rem 3rem 1.5rem;
+    }
+    
+    .glass-title {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .interactive-section {
+        padding: 3rem 1rem;
+        min-height: 70vh;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 60px;
+    }
+    
+    .interactive-container {
+        padding: 0 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+    
+    .image-area {
+        position: relative;
+        left: auto;
+        width: 100%;
+        height: 350px;
+        margin-bottom: 2rem;
+        order: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .image-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .main-image {
+        width: auto;
+        height: 100%;
+        max-width: 80%;
+        object-fit: contain;
+        object-position: top center;
+        border-radius: 1rem;
+    }
+    
+    .glass-container {
+        position: relative;
+        top: auto;
+        right: auto;
+        min-width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+        order: 2;
+        padding: 1.5rem 1rem 3rem 1rem;
+    }
+    
+    .glass-title {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+    
+    .features-grid {
+        gap: 1rem;
+        margin-top: 1.2rem;
+    }
+    
+    .features-row-1,
+    .features-row-2 {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .features-row-1 .feature-card,
+    .features-row-2 .feature-card {
+        flex: none;
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .feature-card {
+        padding: 1.2rem 0.8rem;
+        min-height: 120px;
+    }
+    
+    .feature-image {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .feature-title {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .interactive-section {
+        padding: 2rem 0.5rem;
+        min-height: 60vh;
+        margin-top: 60px;
+    }
+    
+    .interactive-container {
+        padding: 0 0.5rem;
+        gap: 1.5rem;
+    }
+    
+    .image-area {
+        height: 300px;
+        margin-bottom: 1.5rem;
+    }
+    
+    .image-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .main-image {
+        max-width: 90%;
+        height: 95%;
+        object-fit: contain;
+        object-position: top center;
+        border-radius: 1rem;
+    }
+    
+    .glass-container {
+        padding: 1rem 0.75rem 2.5rem 0.75rem;
+    }
+    
+    .glass-title {
+        font-size: 1.2rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .features-grid {
+        gap: 0.6rem;
+        margin-top: 1rem;
+    }
+    
+    .feature-card {
+        padding: 0.8rem;
+    }
+    
+    .feature-image {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .feature-title {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .interactive-section {
+        padding: 1.5rem 0.25rem;
+        min-height: 50vh;
+        margin-top: 60px;
+    }
+    
+    .interactive-container {
+        gap: 1rem;
+    }
+    
+    .image-area {
+        height: 250px;
+        margin-bottom: 1rem;
+    }
+    
+    .image-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .main-image {
+        max-width: 95%;
+        height: 90%;
+        object-fit: contain;
+        object-position: top center;
+        border-radius: 1rem;
+    }
+    
+    .glass-container {
+        padding: 0.75rem 0.5rem 2rem 0.5rem;
+    }
+    
+    .glass-title {
+        font-size: 1.1rem;
+        margin-bottom: 0.6rem;
+    }
+    
+    .features-grid {
+        gap: 0.5rem;
+        margin-top: 0.8rem;
+    }
+    
+    .feature-card {
+        padding: 0.7rem;
+    }
+    
+    .feature-image {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .feature-title {
+        font-size: 0.75rem;
+    }
+}

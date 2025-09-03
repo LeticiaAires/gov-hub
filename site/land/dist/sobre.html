@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre - GovHub</title>
+    <link rel="stylesheet" crossorigin href="./assets/navbar.css">
+    <link rel="stylesheet" crossorigin href="./assets/banner.css">
+    <link rel="stylesheet" crossorigin href="./assets/sobre.css">
+    <link rel="stylesheet" crossorigin href="./assets/footer.css">
+    <script src="./assets/main.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <div id="topo"></div>
+    <header>
+        <nav class="custom-navbar">
+            <div class="navbar-container">
+                <!-- Logo Section -->
+                <div class="navbar-left">
+                    <div class="logo">
+                        <img src="./images/logo.png" alt="GovHub Logo">
+                    </div>
+                </div>
+
+                <!-- Navigation Links -->
+                <div class="navbar-center">
+                    <a href="./index.html" class="nav-link">HOME</a>
+                    <a href="./sobre.html" class="nav-link">SOBRE</a>
+                    <a href="./quem-somos.html" class="nav-link">QUEM SOMOS</a>
+                    <a href="./como-usar.html" class="nav-link">COMO USAR</a>
+                    <a href="./publicacoes.html" class="nav-link">PUBLICAÇÕES</a>
+                    <a href="../../contributing/guia-contribuicao/" class="nav-link">GUIA DE CONTRIBUIÇÃO</a>
+                </div>
+
+                <!-- Right Section -->
+                <div class="navbar-right">
+                    
+                    <!-- Social Icons -->
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/govhub.br" target="_blank" class="social-icon">
+                            <img src="./images/instagram.png" alt="Instagram">
+                        </a>
+                        <a href="https://github.com/GovHub-br/gov-hub" target="_blank" class="social-icon">
+                            <img src="./images/github.png" alt="GitHub">
+                        </a>
+                    </div>
+
+                    <!-- Mobile Menu Button -->
+                    <button class="mobile-menu-button" id="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                        <svg fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu -->
+                <div class="mobile-menu" id="mobile-menu">
+                    <ul>
+                        <li><a href="./index.html">HOME</a></li>
+                        <li><a href="./sobre.html">SOBRE</a></li>
+                        <li><a href="./quem-somos.html">QUEM SOMOS</a></li>
+                        <li><a href="./como-usar.html">COMO USAR</a></li>
+                        <li><a href="./publicacoes.html">PUBLICAÇÕES</a></li>
+                        <li><a href="../../contributing/guia-contribuicao/">GUIA DE CONTRIBUIÇÃO</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <h1>Sobre o Gov hub</h1>
+        
+        <!-- Animated Circles -->
+        <div class="animated-circles">
+            <div class="circle circle-1"></div>
+            <div class="circle circle-2"></div>
+            <div class="circle circle-3"></div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="content-section">
+        <div class="content-grid">
+            <!-- Left Column - Charts -->
+            <div class="charts-column">
+                <div class="charts-container">
+                    <div class="chart-group">
+                        <div class="chart-placeholder">
+                            <img src="./images/feature-1.png" alt="Gráficos de dados" class="chart-image">
+                        </div>
+                    </div>
+                    <p class="chart-note">[imagem em desenvolvimento]</p>
+                </div>
+            </div>
+            
+            <!-- Right Column - Text Content -->
+            <div class="text-column">
+                <div class="content-block">
+                    <h2>Porque existe?</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sem nisl, efficitur vitae magna vel, efficitur rhoncus urna. Aliquam efficitur iaculis ex, a mollis mi ornare a.</p>
+                </div>
+                
+                <div class="content-block">
+                    <h2>O que tem de diferente?</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sem nisl, efficitur vitae magna vel, efficitur rhoncus urna. Aliquam efficitur iaculis ex, a mollis mi ornare a.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Technologies Section -->
+    <section class="technologies-section">
+        <div class="technologies-grid">
+            <!-- Left Column - Technologies -->
+            <div class="technologies-column">
+                <h2>Tecnologias utilizadas</h2>
+                <p>O projeto adota um stack tecnológico baseado em soluções open-source, incluindo Apache Airflow para orquestração de pipelines de dados, DBT para transformação e modelagem de informações, Apache Superset para visualização e exploração, PostgreSQL como banco de dados relacional e Docker para containerização e implantação. A escolha dessas tecnologias permite maior flexibilidade, escalabilidade e integração com diferentes sistemas governamentais.</p>
+            </div>
+            
+            <!-- Right Column - Requirements -->
+            <div class="requirements-column">
+                <h2>Lista de requisitos</h2>
+                <div class="requirements-list">
+                    <div class="requirement-item">
+                        <span class="requirement-category">ORQUESTRAÇÃO DE PIPELINES DE DADOS</span>
+                        <div class="requirement-tech">
+                            <span class="tech-name">APACHE AIRFLOW</span>
+                            <span class="arrow">→</span>
+                        </div>
+                    </div>
+                    
+                    <div class="requirement-item">
+                        <span class="requirement-category">TRANSFORMAÇÃO E MODELAGEM DE DADOS</span>
+                        <div class="requirement-tech">
+                            <span class="tech-name">DATA BUILD TOOL</span>
+                            <span class="arrow">→</span>
+                        </div>
+                    </div>
+                    
+                    <div class="requirement-item">
+                        <span class="requirement-category">VISUALIZAÇÃO E EXPLORAÇÃO DE DADOS</span>
+                        <div class="requirement-tech">
+                            <span class="tech-name">APACHE SUPERSET</span>
+                            <span class="arrow">→</span>
+                        </div>
+                    </div>
+                    
+                    <div class="requirement-item">
+                        <span class="requirement-category">BANCO DE DADOS RELACIONAL</span>
+                        <div class="requirement-tech">
+                            <span class="tech-name">POSTGRESQL</span>
+                            <span class="arrow">→</span>
+                        </div>
+                    </div>
+                    
+                    <div class="requirement-item">
+                        <span class="requirement-category">CONTAINERIZAÇÃO E IMPLANTAÇÃO DE APLICAÇÕES</span>
+                        <div class="requirement-tech">
+                            <span class="tech-name">DOCKER</span>
+                            <span class="arrow">→</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Requirements Section -->
+    <section class="requirements-section">
+        <div class="requirements-grid">
+            <!-- Left Column - Minimum Requirements -->
+            <div class="minimum-requirements-column">
+                <h2>Requisitos Mínimos de uso</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sem nisl, efficitur vitae magna vel, efficitur rhoncus urna. Aliquam efficitur iaculis ex, a mollis mi ornare a.</p>
+            </div>
+            
+            <!-- Right Column - Requirements List -->
+            <div class="requirements-list-column">
+                <h2>Lista de requisitos</h2>
+                <div class="requirements-items">
+                    <div class="requirement-block">
+                        <h3>Requisito 1</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sem nisl.</p>
+                    </div>
+                    
+                    <div class="requirement-block">
+                        <h3>Requisito 2</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sem nisl.</p>
+                    </div>
+                    
+                    <div class="requirement-block">
+                        <h3>Requisito 3</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sem nisl.</p>
+                    </div>
+                    
+                    <div class="requirement-block">
+                        <h3>Requisito 4</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sem nisl.</p>
+                    </div>
+                    
+                    <div class="requirement-block">
+                        <h3>Requisito 5</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sem nisl.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Construction Section -->
+    <section class="construction-section">
+        <div class="construction-content">
+            <h2>Como que é Construído?</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sem nisl, efficitur vitae magna vel, efficitur rhoncus urna. Aliquam efficitur iaculis ex, a mollis mi ornare a.</p>
+            
+            <h2>Sistemas estruturantes</h2>
+            <p>Os sistemas estruturantes são o núcleo operacional do governo federal, projetados para apoiar atividades essenciais de gestão e garantir a padronização e eficiência na administração pública. Eles desempenham um papel fundamental na consolidação, integração e qualificação de dados, tornando-se indispensáveis para a formulação e execução de políticas públicas.</p>
+            
+            <h3>Para saber mais detalhes como:</h3>
+            <ul class="details-list">
+                <li>O que são os Sistemas Estruturantes;</li>
+                <li>Desafios e Problemas;</li>
+                <li>Soluções e Abordagens do projeto;</li>
+                <li>Benefícios para Administração Pública;</li>
+                <li>e O Futuro dos Sistemas;</li>
+            </ul>
+            
+            <a href="#" class="download-link">BAIXE AGORA NOSSO PDF →</a>
+        </div>
+    </section>
+    
+    <!-- Data Management Section -->
+    <section class="data-management-section">
+        <div class="data-management-content">
+            <h2>Gestão orientada a dados</h2>
+            <h3>Transformando Decisões no Setor Público</h3>
+            <p>A gestão orientada a dados é uma abordagem estratégica para a tomada de decisão no setor público, destacando seu potencial para revolucionar a formulação e implementação de políticas públicas, garantindo eficiência, transparência e responsabilidade.</p>
+            
+            <a href="#" class="download-link-blue">BAIXE AGORA NOSSO PDF →</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./sobre.html">Sobre</a></li>
+                    <li><a href="./quem-somos.html">Quem somos</a></li>
+                    <li><a href="./publicacoes.html">Publicações</a></li>
+                    <li><a href="../../contributing/guia-contribuicao/">Guia de contribuição</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Como usar</h4>
+                <ul>
+                    <li><a href="../../setup/">Gov hub no meu Órgão</a></li>
+                    <li><a href="../../getting-started/">Tutoriais</a></li>
+                    <li><a href="../../docs/">Funcionalidades</a></li>
+                    <li><a href="../../home/">Documentação</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contato</h4>
+                <ul>
+                    <li><a href="mailto:contato@govhub.br">Email@email.com</a></li>
+                    <li>Rua Endereço, 1000 - Estado</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-logo">
+                <img src="./images/logo.png" alt="GovHub Logo">
+                <span>GovHub</span>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.instagram.com/lab.livre/" aria-label="Instagram">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5Zm8 2.25a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Z"/></svg>
+                </a>
+                <a href="https://github.com/GovHub-br" aria-label="GitHub">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
