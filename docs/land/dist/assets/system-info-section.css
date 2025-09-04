@@ -47,60 +47,9 @@
     font-family: 'Inter', sans-serif;
 }
 
-/* Subtítulo */
-.system-info-subtitle {
-    margin-bottom: 1rem;
-    font-size: 1.75rem;
-    font-weight: 800;
-    color: #000000;
-    font-family: 'Inter', sans-serif;
-}
-
-/* Subdescrição */
-.system-info-subdescription {
-    margin-bottom: 2rem;
-    font-weight: 300;
-    font-size: 1.125rem;
-    line-height: 1.5;
-    color: #000000;
-    font-family: 'Inter', sans-serif;
-}
 
 /* Links */
-.system-info-links {
-    padding-top: 1.5rem;
-    margin-top: 1.5rem;
-    border-top: 1px solid #e5e7eb;
-}
 
-.system-info-link-item {
-    margin-bottom: 1rem;
-}
-
-.system-info-link-item:last-child {
-    margin-bottom: 0;
-}
-
-.system-info-link {
-    display: inline-flex;
-    align-items: center;
-    font-size: 1rem;
-    font-weight: 500;
-    color: #7c3aed;
-    text-decoration: none;
-    transition: color 0.3s ease;
-    font-family: 'Inter', sans-serif;
-}
-
-.system-info-link:hover {
-    color: #5b21b6;
-}
-
-.system-info-link-icon {
-    width: 1.25rem;
-    height: 1.25rem;
-    margin-left: 0.25rem;
-}
 
 /* Container da imagem */
 .system-info-image-container {
