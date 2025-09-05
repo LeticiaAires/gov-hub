@@ -155,6 +155,11 @@
     transition: opacity 0.2s ease;
 }
 
+/* Links de navegação em negrito */
+.footer-nav a {
+    font-weight: 700;
+}
+
 .footer a:hover { 
     opacity: 1; 
 }
