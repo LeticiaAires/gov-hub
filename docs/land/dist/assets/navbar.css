@@ -524,7 +524,7 @@ header {
 
 @media (max-width: 480px) {
     .navbar-container {
-        padding: 0 0.75rem;
+        padding: 0 1.5rem;
     }
     
     .navbar-left .logo {
