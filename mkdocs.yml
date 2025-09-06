@@ -7,9 +7,7 @@ site_description: >-
   Este projeto aborda os desafios da fragmentação e inconsistência de dados, promovendo eficiência, 
   transparência e melhor tomada de decisão no âmbito governamental.
 
-# Repository
-repo_name: GovHub-br/govhub
-repo_url: https://github.com/GovHub-br/govhub
+
 
 # Copyright
 copyright: Lab Livre 2025
@@ -17,7 +15,11 @@ copyright: Lab Livre 2025
 # Configuration
 theme:
   name: material
+  # Repository
+  repo_name: GovHub-br/govhub
+  repo_url: https://github.com/GovHub-br/govhub
   repo_branch: main
+  edit_uri: edit/main/docs/
   custom_dir: material/overrides
   features:
     - announce.dismiss
