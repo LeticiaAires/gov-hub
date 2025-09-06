@@ -1,0 +1,59 @@
+version: '3.8'
+
+services:
+  govhub-docs:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        WITH_PLUGINS: "true"
+    container_name: govhub-documentation
+    ports:
+      - "8000:8000"
+    volumes:
+      # Mount the docs directory for live editing
+      - ./docs:/docs/docs:ro
+      - ./mkdocs.yml:/docs/mkdocs.yml:ro
+      - ./material:/docs/material:ro
+      - ./src:/docs/src:ro
+      # Mount site output directory (optional, for accessing built site)
+      - ./site:/docs/site
+    environment:
+      # Set environment variables
+      - PYTHONDONTWRITEBYTECODE=1
+      - GOOGLE_ANALYTICS_KEY=${GOOGLE_ANALYTICS_KEY:-}
+    command: ["serve", "--dev-addr=0.0.0.0:8000", "--livereload"]
+    restart: unless-stopped
+    networks:
+      - govhub-network
+
+  # Optional: Add a development container for editing
+  govhub-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        WITH_PLUGINS: "true"
+    container_name: govhub-dev
+    ports:
+      - "8001:8000"
+    volumes:
+      - .:/docs
+    environment:
+      - PYTHONDONTWRITEBYTECODE=1
+      - GOOGLE_ANALYTICS_KEY=${GOOGLE_ANALYTICS_KEY:-}
+    command: ["serve", "--dev-addr=0.0.0.0:8000", "--livereload", "--dirty"]
+    restart: unless-stopped
+    networks:
+      - govhub-network
+    profiles:
+      - dev
+
+networks:
+  govhub-network:
+    driver: bridge
+
+# Optional: Add volumes for persistent data
+volumes:
+  site_data:
+    driver: local
