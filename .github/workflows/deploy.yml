@@ -74,8 +74,17 @@ jobs:
           import yaml
           import re
           
+          # Custom YAML loader that ignores !ENV tags
+          class EnvIgnoreLoader(yaml.SafeLoader):
+              pass
+          
+          def env_constructor(loader, node):
+              return 'ENV_PLACEHOLDER'
+          
+          EnvIgnoreLoader.add_constructor('!ENV', env_constructor)
+          
           with open('mkdocs.yml', 'r', encoding='utf-8') as f:
-              config = yaml.safe_load(f)
+              config = yaml.load(f, Loader=EnvIgnoreLoader)
           
           referenced_files = set()
           
