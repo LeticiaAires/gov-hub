@@ -3,7 +3,7 @@ date: 2024-01-05
 categories:
   - Superset
   - Dashboards
-  - Visualização
+  - Visualizacao
 cover_image: ./images/superset-dashboard.png
 ---
 
