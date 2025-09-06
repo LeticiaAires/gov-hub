@@ -17,6 +17,7 @@ copyright: Lab Livre 2025
 # Configuration
 theme:
   name: material
+  repo_branch: main
   custom_dir: material/overrides
   features:
     - announce.dismiss
