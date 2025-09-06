@@ -286,7 +286,6 @@ Custom CSS for MkDocs styling to match landing page
 } */
 
 .md-nav--primary .md-nav__title {
-    background: linear-gradient(135deg, #7A34F3 0%, #8b5cf6 100%) !important;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
     font-weight: 900 !important;
     padding: 0.75rem 1rem !important;

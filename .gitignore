@@ -1,0 +1,24 @@
+# saída do mkdocs build
+site/
+mkdocs.yml.bak
+mkdocs.local.yml
+
+# Arquivos temporários
+*.log
+*.tmp
+*.swp
+*.bak
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# Virtualenvs
+.env
+.venv
+venv/
+env/
+
