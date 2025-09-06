@@ -194,6 +194,32 @@ function initApp() {
 // Inicializar a aplicação
 initApp();
 
+// Função para download do ebook
+function downloadEbook() {
+    try {
+        // Usar caminho local dentro da pasta dist
+        const link = document.createElement('a');
+        link.href = './ebook/GovHub_Livro-digital_0905.pdf';
+        link.download = 'GovHub_Livro-digital_0905.pdf';
+        link.target = '_blank';
+        
+        // Adicionar ao DOM temporariamente
+        document.body.appendChild(link);
+        
+        // Simular clique
+        link.click();
+        
+        // Remover do DOM
+        document.body.removeChild(link);
+        
+    } catch (error) {
+        console.error('Erro no download:', error);
+        // Fallback: abrir em nova aba
+        window.open('./ebook/GovHub_Livro-digital_0905.pdf', '_blank');
+    }
+}
+
 // Exportar funções para uso global (se necessário)
 window.moveCarousel = moveCarousel;
 window.showImage = showImage;
+window.downloadEbook = downloadEbook;
