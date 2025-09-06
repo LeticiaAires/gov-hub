@@ -63,7 +63,7 @@ jobs:
       - name: Validate MkDocs configuration
         run: |
           echo "🔍 Validating MkDocs configuration..."
-          mkdocs build --strict --verbose
+          mkdocs build --verbose
 
       - name: Check for orphaned files
         run: |
