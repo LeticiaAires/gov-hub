@@ -92,7 +92,7 @@
         <!-- Filter Bar -->
         <div class="filter-bar">
             <div class="filtros-pesquisa">
-                <div class="filtros-container">
+                <div class="filtros-container" style="visibility: hidden;">
                     <button class="filtro-btn">
                         <span>FILTROS</span>
                         <svg class="chevron-down" fill="currentColor" viewBox="0 0 20 20">
@@ -137,7 +137,7 @@
                     </button>
                 </div>
                 
-                <div class="pesquisa-container">
+                <div class="pesquisa-container" style="visibility: hidden;">
                     <button class="pesquisa-btn" id="pesquisa-btn">
                         <span>PESQUISAR</span>
                         <svg class="search-icon" fill="currentColor" viewBox="0 0 20 20">
@@ -160,79 +160,79 @@
         <!-- Publications Grid -->
         <div class="publications-grid">
             <!-- Card 1 -->
-            <div class="publication-card">
+            <div class="publication-card" onclick="window.open('../../blog/2024/01/15/govhub-transformando-dados-em-decisões-estratégicas/', '_blank')" style="cursor: pointer;">
                 <div class="publication-image">
-                    <img src="./images/computador.png" alt="Computador Gov Hub" class="card-image">
-                    <div class="publication-category">CATEGORIA</div>
+                    <img src="./images/govhub-platform.png" alt="GovHub Platform" class="card-image">
+                    <div class="publication-category">PLATAFORMA</div>
                 </div>
                 <div class="publication-content">
-                    <h3 class="publication-title">Titulo da materia ou nome da pessoa</h3>
-                    <p class="publication-caption">Legenda da matéria de duas linhas no máximo para ser apenas introdutório</p>
+                    <h3 class="publication-title">GovHub: Transformando Dados em Decisões Estratégicas</h3>
+                    <p class="publication-caption">O GovHub é uma plataforma de software livre desenvolvida para transformar dados brutos em informações estratégicas</p>
                     <div class="publication-arrow">→</div>
                 </div>
             </div>
 
             <!-- Card 2 -->
-            <div class="publication-card">
+            <div class="publication-card" onclick="window.open('../../blog/2024/01/10/como-usar-dbt-no-govhub-guia-completo/', '_blank')" style="cursor: pointer;">
                 <div class="publication-image">
-                    <img src="./images/computador.png" alt="Computador Gov Hub" class="card-image">
-                    <div class="publication-category">CATEGORIA</div>
+                    <img src="./images/dbt-tutorial.png" alt="DBT Tutorial" class="card-image">
+                    <div class="publication-category">TUTORIAL</div>
                 </div>
                 <div class="publication-content">
-                    <h3 class="publication-title">Titulo da materia ou nome da pessoa</h3>
-                    <p class="publication-caption">Legenda da matéria de duas linhas no máximo para ser apenas introdutório</p>
+                    <h3 class="publication-title">Como Usar DBT no GovHub: Guia Completo</h3>
+                    <p class="publication-caption">O DBT é uma ferramenta essencial para transformação de dados no GovHub. Aprenda como configurar e usar</p>
                     <div class="publication-arrow">→</div>
                 </div>
             </div>
 
             <!-- Card 3 -->
-            <div class="publication-card">
+            <div class="publication-card" onclick="window.open('../../blog/2024/01/05/criando-dashboards-eficazes-com-apache-superset/', '_blank')" style="cursor: pointer;">
                 <div class="publication-image">
-                    <img src="./images/computador.png" alt="Computador Gov Hub" class="card-image">
-                    <div class="publication-category">CATEGORIA</div>
+                    <img src="./images/superset-dashboard.png" alt="Superset Dashboard" class="card-image">
+                    <div class="publication-category">SUPERSET</div>
                 </div>
                 <div class="publication-content">
-                    <h3 class="publication-title">Titulo da materia ou nome da pessoa</h3>
-                    <p class="publication-caption">Legenda da matéria de duas linhas no máximo para ser apenas introdutório</p>
+                    <h3 class="publication-title">Criando Dashboards Eficazes com Apache Superset</h3>
+                    <p class="publication-caption">O Apache Superset é a ferramenta de visualização de dados do GovHub. Aprenda como criar dashboards impactantes</p>
                     <div class="publication-arrow">→</div>
                 </div>
             </div>
 
             <!-- Card 4 -->
-            <div class="publication-card">
+            <div class="publication-card" onclick="window.open('../../blog/', '_blank')">
                 <div class="publication-image">
                     <img src="./images/computador.png" alt="Computador Gov Hub" class="card-image">
-                    <div class="publication-category">CATEGORIA</div>
+                    <div class="publication-category">BLOG</div>
                 </div>
                 <div class="publication-content">
-                    <h3 class="publication-title">Titulo da materia ou nome da pessoa</h3>
-                    <p class="publication-caption">Legenda da matéria de duas linhas no máximo para ser apenas introdutório</p>
+                    <h3 class="publication-title">Visite Nosso Blog</h3>
+                    <p class="publication-caption">Acesse nosso blog para ver todas as publicações, tutoriais e novidades sobre a plataforma GovHub</p>
                     <div class="publication-arrow">→</div>
                 </div>
             </div>
 
             <!-- Card 5 -->
-            <div class="publication-card">
+            <div class="publication-card" onclick="window.open('../../documentacao/instalacao/', '_blank')">
                 <div class="publication-image">
                     <img src="./images/computador.png" alt="Computador Gov Hub" class="card-image">
-                    <div class="publication-category">CATEGORIA</div>
+                    <div class="publication-category">DOCUMENTAÇÃO</div>
                 </div>
                 <div class="publication-content">
-                    <h3 class="publication-title">Titulo da materia ou nome da pessoa</h3>
-                    <p class="publication-caption">Legenda da matéria de duas linhas no máximo para ser apenas introdutório</p>
+                    <h3 class="publication-title">Guia de Instalação</h3>
+                    <p class="publication-caption">Aprenda como instalar e configurar o GovHub em seu ambiente. Documentação completa passo a passo</p>
                     <div class="publication-arrow">→</div>
                 </div>
             </div>
 
             <!-- Card 6 -->
-            <div class="publication-card">
+            <div class="publication-card" onclick="window.open('../../comunidade/guia-contribuicao/', '_blank')">
                 <div class="publication-image">
                     <img src="./images/computador.png" alt="Computador Gov Hub" class="card-image">
-                    <div class="publication-category">CATEGORIA</div>
+                    <div class="publication-category">COMUNIDADE</div>
                 </div>
                 <div class="publication-content">
-                    <h3 class="publication-title">Titulo da materia ou nome da pessoa</h3>
-                    <p class="publication-caption">Legenda da matéria de duas linhas no máximo para ser apenas introdutório</p>
+                    <h3 class="publication-title">Guia de Contribuição</h3>
+                    <p class="publication-caption">Saiba como contribuir com o projeto GovHub. Diretrizes para desenvolvedores e colaboradores</p>
                     <div class="publication-arrow">→</div>
                 </div>
             </div>

@@ -53,30 +53,39 @@ theme:
         name: Switch to light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: indigo
-      accent: indigo
+      primary: purple
+      accent: purple
       toggle:
         icon: material/toggle-switch
         name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: black
-      accent: indigo
+      primary: purple
+      accent: purple
       toggle:
         icon: material/toggle-switch-off
         name: Switch to system preference
   font:
-    text: Roboto
-    code: Roboto Mono
+    text: Inter
+    code: 'JetBrains Mono'
   favicon: assets/favicon.png
-  icon:
-    logo: logo
+  logo: assets/logo.png
   language: pt-BR
 
 # Plugins
 plugins:
   - search:
       separator: '[\s\u200b\-_,:!=\[\]()"\`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  - blog:
+      blog_dir: blog
+      blog_toc: true
+      post_dir: "{blog}/posts"
+      post_date_format: full
+      post_url_date_format: yyyy/MM/dd
+      post_url_format: "{date}/{slug}"
+      pagination_per_page: 10
+      archive_toc: true
+      categories_toc: true
 
 # Hooks
 hooks:
@@ -94,6 +103,11 @@ extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/GovHub-br/govhub.githubio
+
+# Custom CSS for Inter font and footer styling
+extra_css:
+  - https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap
+  - assets/custom-footer.css
 
 # Extensions
 markdown_extensions:
@@ -188,4 +202,6 @@ nav:
     - Licença: comunidade/licenca.md
     - Dashboards Templates: comunidade/dashboards-templates.md
     - Pré-requisitos: comunidade/pre-requisitos.md
-  - Blog: blog/index.md
+  - Publicações: 
+      - Blog: blog/index.md
+      - Ver Todas: land/dist/publicacoes.html
