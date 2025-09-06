@@ -84,9 +84,14 @@ jobs:
           def python_name_constructor(loader, node):
               return 'PYTHON_NAME_PLACEHOLDER'
           
+          def python_object_constructor(loader, node):
+              return 'PYTHON_OBJECT_PLACEHOLDER'
+          
           CustomLoader.add_constructor('!ENV', env_constructor)
           CustomLoader.add_constructor('tag:yaml.org,2002:python/name:material.extensions.emoji.to_svg', python_name_constructor)
           CustomLoader.add_constructor('tag:yaml.org,2002:python/name:material.extensions.emoji.twemoji', python_name_constructor)
+          CustomLoader.add_constructor('tag:yaml.org,2002:python/name:pymdownx.superfences.fence_code_format', python_name_constructor)
+          CustomLoader.add_constructor('tag:yaml.org,2002:python/object/apply:pymdownx.slugs.slugify', python_object_constructor)
           
           with open('mkdocs.yml', 'r', encoding='utf-8') as f:
               config = yaml.load(f, Loader=CustomLoader)
