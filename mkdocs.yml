@@ -49,29 +49,29 @@ theme:
     - toc.follow
     # - toc.integrate
   palette:
-    - media: "(prefers-color-scheme)"
-      toggle:
-        icon: material/link
-        name: Switch to light mode
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: purple
-      accent: purple
-      toggle:
-        icon: material/toggle-switch
-        name: Switch to dark mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: purple
-      accent: purple
-      toggle:
-        icon: material/toggle-switch-off
-        name: Switch to system preference
+  - media: "(prefers-color-scheme)"
+    toggle:
+      icon: material/brightness-4
+      name: Switch to system preference
+  - media: "(prefers-color-scheme: light)"
+    scheme: default
+    primary: purple
+    accent: purple
+    toggle:
+      icon: material/weather-night
+      name: Switch to dark mode
+  - media: "(prefers-color-scheme: dark)"
+    scheme: slate
+    primary: purple
+    accent: purple
+    toggle:
+      icon: material/weather-sunny
+      name: Switch to light mode
   font:
     text: Inter
     code: 'JetBrains Mono'
-  favicon: assets/favicon.png
-  logo: assets/logo.png
+  favicon: assets/favicon-96x96.png
+  logo: assets/logo.svg
   language: pt-BR
 
 # Plugins
