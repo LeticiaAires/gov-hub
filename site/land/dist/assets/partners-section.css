@@ -1,0 +1,110 @@
+/* Seção Principais Parceiros */
+
+.partners-section {
+    background-color: #ffffff;
+    padding: 4rem 0;
+    position: relative;
+}
+
+.partners-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+
+/* Título */
+.partners-title {
+    color: #7c3aed;
+    font-size: 2.5rem;
+    font-weight: 800;
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 3rem;
+    margin-left: 2rem;
+}
+
+/* Container dos logos */
+.partners-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12em;
+    flex-wrap: wrap;
+}
+
+/* Links dos parceiros */
+.partner-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease;
+}
+
+.partner-link:hover {
+    opacity: 0.9;
+}
+
+/* Logos dos parceiros */
+.partner-logo {
+    height: auto;
+    max-height: 102px;
+    width: auto;
+    max-width: 250px;
+    object-fit: contain;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .partners-title {
+        font-size: 2rem;
+        margin-left: 1rem;
+    }
+    
+    .partners-logos {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .partners-section {
+        padding: 2rem 0;
+    }
+    
+    .partners-title {
+        font-size: 1.75rem;
+        margin-left: 0;
+        text-align: center;
+    }
+    
+    .partners-logos {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .partner-logo {
+        max-height: 80px;
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .partners-section {
+        padding: 1.5rem 0;
+    }
+    
+    .partners-title {
+        font-size: 1.5rem;
+    }
+    
+    .partners-logos {
+        gap: 1.5rem;
+    }
+    
+    .partner-logo {
+        max-height: 60px;
+        max-width: 150px;
+    }
+}
+

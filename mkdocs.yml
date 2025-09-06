@@ -77,8 +77,6 @@ theme:
 plugins:
   - search:
       separator: '[\s\u200b\-_,:!=\[\]()"\`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
-  - minify:
-      minify_html: true
 
 # Hooks
 hooks:
@@ -148,8 +146,8 @@ markdown_extensions:
   - pymdownx.tilde
 
 nav:
-  - Land: index.md
-  - Home: home.md
+  - Home: index.md
+  - Sobre: home.md
   - E-book:
     - Gov Hub - plataforma livre de integração de dados e informações governamentais: ebook.md
   - Sobre o Projeto:
@@ -188,3 +186,6 @@ nav:
   - Comunidade: 
     - Guia de Contribuição: comunidade/guia-contribuicao.md
     - Licença: comunidade/licenca.md
+    - Dashboards Templates: comunidade/dashboards-templates.md
+    - Pré-requisitos: comunidade/pre-requisitos.md
+  - Blog: blog/index.md
