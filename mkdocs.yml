@@ -71,16 +71,14 @@ theme:
   favicon: assets/favicon.png
   icon:
     logo: logo
-  theme:
   language: pt-BR
 
 # Plugins
 plugins:
- # - blog
- # - search:
- #     separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
- # - minify:
- #     minify_html: true
+  - search:
+      separator: '[\s\u200b\-_,:!=\[\]()"\`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  - minify:
+      minify_html: true
 
 # Hooks
 hooks:
