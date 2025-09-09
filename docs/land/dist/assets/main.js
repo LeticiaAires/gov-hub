@@ -2,9 +2,11 @@
 // GOVHUB - MAIN JAVASCRIPT FILE
 // ========================================
 
-// Função para carrossel de clientes
+// Função para carrossel de clientes (desktop)
 function moveCarousel(direction) {
     const carousel = document.querySelector('.clients-cards');
+    if (!carousel) return;
+    
     const cardWidth = 280 + 24; // largura do card + gap
     const scrollAmount = cardWidth * direction;
     
@@ -12,6 +14,20 @@ function moveCarousel(direction) {
         left: scrollAmount,
         behavior: 'smooth'
     });
+}
+
+// Função para inicializar carrossel arrastável (mobile)
+function initCarouselDrag() {
+    const clientsCards = document.getElementById('clientsCards');
+    
+    if (!clientsCards) return;
+
+    // Simples: apenas permitir scroll nativo no mobile
+    if (window.innerWidth <= 768) {
+        clientsCards.style.overflowX = 'auto';
+        clientsCards.style.scrollBehavior = 'smooth';
+        clientsCards.style.webkitOverflowScrolling = 'touch';
+    }
 }
 
 // Função para mostrar imagens na seção interativa
@@ -186,6 +202,7 @@ function initApp() {
         initScrollAnimations();
         preloadImages();
         initTouchEvents(); // Adicionar chamada para initTouchEvents
+        initCarouselDrag(); // Inicializar carrossel arrastável
         
         console.log('GovHub - Aplicação inicializada com sucesso! 🚀');
     });

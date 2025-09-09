@@ -337,17 +337,17 @@
 
     <!-- Start block - Seção de Clientes -->
     <section class="clients-section">
-        <div class="clients-container">
+        <div class="container clients-container">
             <h2 class="clients-title">Clientes</h2>
             
             <div class="clients-carousel">
-                <button class="carousel-arrow carousel-arrow-left" onclick="moveCarousel(-1)">
+                <button class="carousel-arrow carousel-arrow-left d-none d-md-block" onclick="moveCarousel(-1)">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M15 18l-6-6 6-6"/>
                     </svg>
                 </button>
                 
-                <div class="clients-cards">
+                <div class="clients-cards" id="clientsCards">
                     <div class="client-card">
                         <div class="client-image">
                             <img src="./images/Avataricon.jpg" alt="Cliente 1">
@@ -393,10 +393,10 @@
                     </div>
                 </div>
                 
-                <button class="carousel-arrow carousel-arrow-right" onclick="moveCarousel(1)">
+                <button class="carousel-arrow carousel-arrow-right d-none d-md-block" onclick="moveCarousel(1)">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M9 18l6-6-6-6"/>
-                </svg> 
+                    </svg>
                 </button>
             </div>
         </div>
@@ -586,6 +586,9 @@
             </div>
         </div>
     </footer>
+    
+    <!-- Main JavaScript -->
+    <script src="./assets/main.js"></script>
 </body>
 </html>
 
