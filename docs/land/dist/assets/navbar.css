@@ -243,6 +243,15 @@ header {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+/* Bootstrap collapse states */
+.mobile-menu.collapse {
+    display: none;
+}
+
+.mobile-menu.collapse.show {
+    display: block;
+}
+
 .mobile-menu ul {
     list-style: none;
     display: flex;
@@ -507,9 +516,6 @@ header {
         border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
     
-    .mobile-menu.active {
-        display: block;
-    }
     
     .mobile-menu ul {
         padding: 1rem 0;
