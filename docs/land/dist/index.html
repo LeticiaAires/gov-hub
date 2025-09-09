@@ -472,14 +472,6 @@
                             <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
                         </svg>
                     </a>
-                    
-                    
-                    
-
-                    
-                    
-                    
-                        
             </div>
         </div>
       </section>
@@ -487,10 +479,10 @@
 
     <!-- Start block - Seção Informações sobre o sistema -->
     <section class="system-info-section">
-        <div class="system-info-container">
-            <div class="system-info-content">
+        <div class="container">
+            <div class="row align-items-center">
                 <!-- Left Column - Texto -->
-                <div class="system-info-text">
+                <div class="col-12 col-lg-6 system-info-text">
                     <h2 class="system-info-title">Transformando Dados em Valor para Gestão Pública</h2>
                     <p class="system-info-description">Potencializamos informações de sistemas como TransfereGov, Siape, Siafi, ComprasGov e Siorg para gerar diagnósticos estratégicos, indicadores confiáveis e decisões baseadas em evidências.</p>
                     
@@ -541,8 +533,8 @@
             </div>
                 
                 <!-- Right Column - Imagem -->
-                <div class="system-info-image-container">
-                    <img class="system-info-image" src="./images/imagem_informacoes.jpg" alt="Diagrama de informações sobre o sistema">
+                <div class="col-12 col-lg-6 system-info-image-container">
+                    <img class="system-info-image img-fluid" src="./images/imagem_informacoes.jpg" alt="Diagrama de informações sobre o sistema">
                 </div>
             </div>
         </div>
@@ -552,7 +544,7 @@
     <!-- Start block - Seção de Clientes -->
     <section class="clients-section">
         <div class="container clients-container">
-            <h2 class="clients-title">Clientes</h2>
+            <h2 class="clients-title text-center">Clientes</h2>
             
             <div class="clients-carousel">
                 <button class="carousel-arrow carousel-arrow-left d-none d-md-block" onclick="moveCarousel(-1)">
@@ -667,15 +659,16 @@
 
   <!-- Start block - Seção Publicações em Destaque -->
   <section class="publications-section">
-    <div class="publications-container">
-      <div class="publications-header">
+    <div class="container">
+      <div class="publications-header text-center">
         <h2 class="publications-title">Publicações em destaque</h2>
         <p class="publications-description">Confira nossas publicações mais recentes sobre a plataforma GovHub, tutoriais técnicos e novidades do projeto. Mantenha-se atualizado com as últimas informações e guias práticos.</p>
       </div>
       
-      <div class="publications-cards">
+      <div class="row">
         <!-- Card 1 -->
-        <div class="publication-card" onclick="window.open('../../blog/2024/01/15/govhub-transformando-dados-em-decisões-estratégicas/', '_blank')" style="cursor: pointer;">
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+          <div class="publication-card" onclick="window.open('../../blog/2024/01/15/govhub-transformando-dados-em-decisões-estratégicas/', '_blank')" style="cursor: pointer;">
           <div class="publication-image-container">
             <img src="./images/govhub-platform.png" alt="GovHub Platform" class="publication-image">
             <span class="publication-category">PLATAFORMA</span>
@@ -685,10 +678,12 @@
             <p class="publication-caption">O GovHub é uma plataforma de software livre desenvolvida para transformar dados brutos em informações estratégicas</p>
             <span class="publication-arrow">→</span>
           </div>
+          </div>
         </div>
         
         <!-- Card 2 -->
-        <div class="publication-card" onclick="window.open('../../blog/2024/01/10/como-usar-dbt-no-govhub-guia-completo/', '_blank')" style="cursor: pointer;">
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+          <div class="publication-card" onclick="window.open('../../blog/2024/01/10/como-usar-dbt-no-govhub-guia-completo/', '_blank')" style="cursor: pointer;">
           <div class="publication-image-container">
             <img src="./images/dbt-tutorial.png" alt="DBT Tutorial" class="publication-image">
             <span class="publication-category">TUTORIAL</span>
@@ -698,10 +693,12 @@
             <p class="publication-caption">O DBT é uma ferramenta essencial para transformação de dados no GovHub. Aprenda como configurar e usar</p>
             <span class="publication-arrow">→</span>
           </div>
+          </div>
         </div>
         
         <!-- Card 3 -->
-        <div class="publication-card" onclick="window.open('../../blog/2024/01/05/criando-dashboards-eficazes-com-apache-superset/', '_blank')" style="cursor: pointer;">
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+          <div class="publication-card" onclick="window.open('../../blog/2024/01/05/criando-dashboards-eficazes-com-apache-superset/', '_blank')" style="cursor: pointer;">
           <div class="publication-image-container">
             <img src="./images/superset-dashboard.png" alt="Superset Dashboard" class="publication-image">
             <span class="publication-category">SUPERSET</span>
@@ -714,10 +711,10 @@
         </div>
       </div>
       
-      <div class="publications-button-container">
+      <div class="publications-button-container text-center">
         <a href="./publicacoes.html" class="publications-button">VEJA MAIS PUBLICAÇÕES</a>
-                </div>
-                </div>
+      </div>
+    </div>
   </section>
   <!-- End block - Seção Publicações em Destaque -->
     <!-- Footer -->
