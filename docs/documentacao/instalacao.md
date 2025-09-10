@@ -62,8 +62,15 @@ docker-compose up -d
 Uma vez que os serviços estejam em execução, você pode acessar as ferramentas principais nos seguintes URLs:
 
 - Airflow: http://localhost:8080
+
+Login: `airflow`<br>
+Senha: `airflow`
+
 - Jupyter: http://localhost:8888
 - Superset: http://localhost:8088
+
+Login: `admin`<br>
+Senha: `admin`
 
 Certifique-se de que todas as portas mencionadas estejam disponíveis no seu ambiente.
 
@@ -71,7 +78,7 @@ Certifique-se de que todas as portas mencionadas estejam disponíveis no seu amb
 
 A estrutura do projeto é organizada para separar cada componente da stack, facilitando a manutenção e o desenvolvimento:
 
-```bash
+```bash 
 .
 ├── airflow_lappis
 │   ├── dags
@@ -183,6 +190,9 @@ Este passo a passo descreve o passo a passo para configurar e executar o pipelin
 - Acesse o airflow:
 
 Airflow: http://localhost:8080
+
+Login: `airflow`<br>
+Senha: `airflow`
 
 
 - Após subir os containers via Docker (`docker compose up -d`), é necessário configurar as variáveis de ambiente no **Airflow → Admin → Variables**.
@@ -370,7 +380,7 @@ Nos arquivos de snapshot (`tables_snapshot.yml`), troque todos os `database: ana
 
 ## 5. Testar conexão do dbt com o banco
 
-No diretório do projeto dbt, rode:
+No diretório do projeto dbt, navegue até o diretório `airflow_lappis/dags/dbt/ipea` e rode:
 
 ```bash
 dbt debug
