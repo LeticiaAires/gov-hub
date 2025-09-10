@@ -35,9 +35,8 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <script async defer src="https://buttons.github.io/buttons.js"></script>
-    
-  <script type="module" crossorigin src="./assets/index-CA4Jb7I4.js"></script>
-  
+    <script type="module" crossorigin src="./assets/index-CA4Jb7I4.js"></script>
+    <script src="https://kit.fontawesome.com/31f9c08e31.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" crossorigin href="./assets/index-BV99bCjj.css">
     <link rel="stylesheet" crossorigin href="./assets/navbar.css">
@@ -52,218 +51,6 @@
     
     <!-- Bootstrap CSS - Carregado por último para não sobrescrever estilos customizados -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- CSS para sobrescrever Bootstrap e manter design original -->
-    <style>
-        /* Resetar estilos do Bootstrap que conflitam */
-        .navbar-container {
-            max-width: 1200px !important;
-            margin: 0 auto !important;
-            display: flex !important;
-            align-items: center !important;
-            justify-content: space-between !important;
-            padding: 0 1rem 0 0.5rem !important;
-            height: 60px !important;
-            position: relative !important;
-        }
-        
-        .custom-navbar {
-            background: linear-gradient(135deg, #7A34F3 0%, #8b5cf6 100%) !important;
-            padding: 0 !important;
-            height: 60px !important;
-            position: relative !important;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
-        }
-        
-        .navbar-left .logo {
-            display: flex !important;
-            align-items: center !important;
-            justify-content: flex-start !important;
-            gap: 0.75rem !important;
-            height: 60px !important;
-            min-height: 50px !important;
-            min-width: 120px !important;
-            padding: 0 0.5rem 0 0.25rem !important;
-            overflow: visible !important;
-        }
-        
-        .navbar-center {
-            display: flex !important;
-            gap: 0.5rem !important;
-            align-items: center !important;
-            margin-left: auto !important;
-            margin-right: 4rem !important;
-        }
-        
-        .nav-link {
-            color: #ffffff !important;
-            text-decoration: none !important;
-            font-weight: 600 !important;
-            font-size: 0.875rem !important;
-            letter-spacing: 0.5px !important;
-            transition: all 0.3s ease !important;
-            padding: 0.5rem 1rem !important;
-            border-radius: 6px !important;
-            text-transform: uppercase !important;
-            white-space: nowrap !important;
-            background: none !important;
-            border: none !important;
-        }
-        
-        .nav-link:hover {
-            background: #F19F42 !important;
-            transform: translateY(-2px) !important;
-            color: #ffffff !important;
-        }
-        
-        .navbar-right {
-            display: flex !important;
-            align-items: center !important;
-            gap: 1rem !important;
-            margin-left: 0 !important;
-        }
-        
-        .cta-button {
-            background: #f97316 !important;
-            color: #ffffff !important;
-            text-decoration: none !important;
-            padding: 0.75rem 1.5rem !important;
-            border-radius: 25px !important;
-            font-weight: 700 !important;
-            font-size: 0.875rem !important;
-            letter-spacing: 0.5px !important;
-            transition: all 0.3s ease !important;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
-            text-transform: uppercase !important;
-            border: none !important;
-        }
-        
-        .cta-button:hover {
-            background: #ea580c !important;
-            transform: translateY(-2px) !important;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15) !important;
-            color: #ffffff !important;
-        }
-        
-        .social-icons {
-            display: flex !important;
-            gap: 1.25rem !important;
-            align-items: center !important;
-            margin-left: auto !important;
-        }
-        
-        .social-icon {
-            display: flex !important;
-            align-items: center !important;
-            justify-content: center !important;
-            width: 28px !important;
-            height: 28px !important;
-            transition: all 0.3s ease !important;
-            border-radius: 4px !important;
-            overflow: hidden !important;
-            text-decoration: none !important;
-        }
-        
-        .social-icon:hover {
-            transform: scale(1.15) !important;
-            background: rgba(255, 255, 255, 0.1) !important;
-        }
-        
-        .social-icon img {
-            width: 100% !important;
-            height: 100% !important;
-            object-fit: contain !important;
-            filter: brightness(0) invert(1) !important;
-            transition: all 0.3s ease !important;
-        }
-        
-        .social-icon:hover img {
-            filter: brightness(0) invert(1) sepia(1) saturate(5) hue-rotate(30deg) !important;
-        }
-        
-        .mobile-menu-button {
-            display: none !important;
-            color: #ffffff !important;
-            background: none !important;
-            border: none !important;
-            padding: 0.5rem !important;
-            border-radius: 6px !important;
-            cursor: pointer !important;
-            transition: all 0.3s ease !important;
-            width: 40px !important;
-            height: 40px !important;
-            align-items: center !important;
-            justify-content: center !important;
-            margin-left: 0.5rem !important;
-        }
-        
-        .mobile-menu-button:hover {
-            background: rgba(255, 255, 255, 0.1) !important;
-        }
-        
-        .mobile-menu-button svg {
-            width: 24px !important;
-            height: 24px !important;
-        }
-        
-        .mobile-menu {
-            display: none !important;
-            width: 100% !important;
-            position: absolute !important;
-            top: 100% !important;
-            left: 0 !important;
-            right: 0 !important;
-            background: linear-gradient(135deg, #7A34F3 0%, #8b5cf6 100%) !important;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
-            z-index: 1000 !important;
-            border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
-        }
-        
-        .mobile-menu.active {
-            display: block !important;
-        }
-        
-        .mobile-menu ul {
-            list-style: none !important;
-            display: flex !important;
-            flex-direction: column !important;
-            gap: 0.5rem !important;
-            padding: 1rem 0 !important;
-            margin: 0 !important;
-        }
-        
-        .mobile-menu li {
-            list-style: none !important;
-        }
-        
-        .mobile-menu li a {
-            display: block !important;
-            color: #ffffff !important;
-            text-decoration: none !important;
-            padding: 1rem 1.5rem !important;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
-            transition: all 0.3s ease !important;
-            text-transform: uppercase !important;
-            font-weight: 500 !important;
-            font-size: 0.9rem !important;
-        }
-        
-        .mobile-menu li a:hover {
-            background: rgba(255, 255, 255, 0.1) !important;
-            color: #ffffff !important;
-        }
-        
-        /* Responsive - mostrar botão mobile */
-        @media (max-width: 920px) {
-            .mobile-menu-button {
-                display: flex !important;
-            }
-            
-            .navbar-center {
-                display: none !important;
-            }
-        }
-    </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -296,10 +83,10 @@
                     <!-- Social Icons -->
                     <div class="social-icons">
                         <a href="https://www.instagram.com/govhub.br" target="_blank" class="social-icon">
-                            <img src="./images/instagram.png" alt="Instagram">
+                            <i class="fa-brands fa-instagram" alt="Instagram"></i>
                         </a>
                         <a href="https://github.com/GovHub-br/gov-hub" target="_blank" class="social-icon">
-                            <img src="./images/github.png" alt="GitHub">
+                            <i class="fa-brands fa-github" alt="GitHub"></i>
                         </a>
                     </div>
 
@@ -337,20 +124,20 @@
         <div class="image-area">
             <!-- Imagem padrão -->
             <div id="image-1" class="image-container image-fade-in">
-                <img src="./images/contratos_home.png" alt="Exemplo da tela contratos" class="main-image">
+                <img src="./images/contratos_homev2.png" alt="Exemplo da tela contratos" class="main-image">
             </div>
             
             <!-- Outras imagens -->
             <div id="image-2" class="image-container image-fade-out">
-                <img src="./images/teds_home.png" alt="Exemplo da tela TEDS" class="main-image">
+                <img src="./images/teds_homev2.png" alt="Exemplo da tela TEDS" class="main-image">
             </div>
             
             <div id="image-3" class="image-container image-fade-out">
-                <img src="./images/pessoal_home.png" alt="Exemplo da tela pessoal" class="main-image">
+                <img src="./images/pessoal_homev2.png" alt="Exemplo da tela pessoal" class="main-image">
             </div>
             
             <div id="image-4" class="image-container image-fade-out">
-                <img src="./images/orcamento_home.png" alt="Exemplo de orçamento" class="main-image">
+                <img src="./images/orcamento_homev2.png" alt="Exemplo de orçamento" class="main-image">
             </div>
             
             <div id="image-5" class="image-container image-fade-out">
@@ -367,7 +154,7 @@
                 <!-- Primeira linha - 3 cards -->
                 <div class="features-row-1">
                     <!-- Item 1 - Contratos -->
-                    <div class="feature-card" onclick="showImage(1)">
+                    <div class="feature-card" onmouseenter="showImage(1)">
                         <div class="feature-image">
                             <img src="./images/contratos.png" alt="Contratos" class="feature-png">
                         </div>
@@ -377,7 +164,7 @@
                     </div>
                     
                     <!-- Item 2 - TEDS -->
-                    <div class="feature-card" onclick="showImage(2)">
+                    <div class="feature-card" onmouseenter="showImage(2)">
                         <div class="feature-image">
                             <img src="./images/teds.png" alt="TEDS" class="feature-png">
                         </div>
@@ -387,7 +174,7 @@
                     </div>
                     
                     <!-- Item 3 - Pessoal -->
-                    <div class="feature-card" onclick="showImage(3)">
+                    <div class="feature-card" onmouseenter="showImage(3)">
                         <div class="feature-image">
                             <img src="./images/pessoal.png" alt="Pessoal" class="feature-png">
                         </div>
@@ -400,7 +187,7 @@
                 <!-- Segunda linha - 2 cards centralizados -->
                 <div class="features-row-2">
                     <!-- Item 4 - Orçamento -->
-                    <div class="feature-card" onclick="showImage(4)">
+                    <div class="feature-card" onmouseenter="showImage(4)">
                         <div class="feature-image">
                             <img src="./images/orcamento.png" alt="Orçamento" class="feature-png">
                         </div>
@@ -410,7 +197,7 @@
                     </div>
                     
                     <!-- Item 5 - IA -->
-                    <div class="feature-card" onclick="showImage(5)">
+                    <div class="feature-card" onmouseenter="showImage(5)">
                         <div class="feature-image">
                             <img src="./images/ia.png" alt="Inteligência Artificial" class="feature-png">
                         </div>
@@ -782,13 +569,13 @@
                         </ul>
                         <div class="footer-social">
                             <a href="https://github.com/GovHub-br" target="_blank" aria-label="GitHub">
-                                <img src="./images/github.png" alt="GitHub">
+                                <i class="fa-brands fa-github" alt="GitHub"></i>
                             </a>
                             <a href="https://www.linkedin.com/company/lappis-rocks/" target="_blank" aria-label="LinkedIn">
-                                <img src="./images/linkedin.png" alt="LinkedIn">
+                                <i class="fa-brands fa-linkedin-in" alt="LinkedIn"></i>
                             </a>
                             <a href="https://www.instagram.com/lab.livre/" target="_blank" aria-label="Instagram">
-                                <img src="./images/instagram.png" alt="Instagram">
+                                <i class="fa-brands fa-instagram" alt="Instagram"></i>
                             </a>
                         </div>
                     </div>
