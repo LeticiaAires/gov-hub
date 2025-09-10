@@ -9,43 +9,31 @@
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
-.footer-container {
-    max-width: 1000px;
-    margin: 0;
-    margin-left: 2rem;
-}
-
 /* Header Section - Initiative and Support text */
 .footer-top {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1rem;
     margin-bottom: 1.5rem;
 }
 
-.footer-initiative-text {
+.footer-initiative-text .footer-support-text{
     display: flex;
     align-items: flex-end;
 }
 
-.footer-initiative-text p {
+.footer-initiative-text p, .footer-support-text p {
     margin: 0;
     font-size: 16px;
     font-weight: bold;
     line-height: 1.3;
 }
 
-.footer-support-text {
+/* Espaçamento invisível para alinhamento */
+.footer-spacer {
     display: flex;
-    align-items: flex-end;
-    justify-content: flex-start;
-    grid-column: 3; /* Posiciona na terceira coluna */
+    visibility: hidden;
 }
 
-.footer-support-text p {
+.footer-spacer p {
     margin: 0;
-    font-size: 16px;
-    font-weight: bold;
     line-height: 1.3;
 }
 
@@ -99,9 +87,6 @@
 
 /* Main Content Section */
 .footer-middle {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1rem;
     margin-bottom: 2.5rem;
 }
 
@@ -203,14 +188,6 @@
     .footer {
         padding: 3rem 1rem 2rem 2rem;
     }
-    
-    .footer-container {
-        margin-left: 0;
-    }
-    
-    .footer-middle {
-        gap: 3rem;
-    }
 }
 
 /* Tablet Portrait */
@@ -219,30 +196,21 @@
         padding: 3rem 1rem 2rem 1rem;
     }
     
-    .footer-container {
-        margin-left: 0;
-    }
-    
     .footer-top {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
         text-align: center;
     }
     
+    .footer-initiative-text,
     .footer-support-text {
-        grid-column: 1;
         justify-content: center;
-    }
-    
-    .footer-middle { 
-        grid-template-columns: 1fr; 
-        gap: 2.5rem; 
+        margin-bottom: 1rem;
     }
     
     .footer-column {
         align-items: center;
         text-align: center;
         gap: 1.5rem;
+        margin-bottom: 2rem;
     }
     
     .footer-logo-section {
@@ -267,10 +235,6 @@
         padding: 2.5rem 1rem 2rem 1rem;
     }
     
-    .footer-container {
-        margin-left: 0;
-    }
-    
     /* Esconder seções desnecessárias no mobile */
     .footer-nav,
     .footer-how-to-use,
@@ -280,23 +244,17 @@
     
     /* Layout simplificado - "Gov hub é uma iniciativa" e "Apoio" na mesma linha */
     .footer-top {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 2rem;
         margin-bottom: 2rem;
     }
     
-    /* Alinhar "Apoio" com o início da logo do IPEA */
     .footer-initiative-text {
-        flex: 1;
         text-align: left;
+        margin-bottom: 0.5rem;
     }
     
     .footer-support-text {
-        flex: 1;
-        text-align: center;
-         
+        text-align: right;
+        margin-bottom: 0.5rem;
     }
     
     /* Diminuir fonte da iniciativa */
@@ -306,11 +264,6 @@
         margin: 0;
     }
     
-    /* Mostrar "Apoio" na mesma linha */
-    .footer-support-text {
-        display: block;
-    }
-    
     .footer-support-text p {
         font-size: 14px;
         font-weight: 600;
@@ -318,10 +271,6 @@
     }
     
     .footer-middle {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 2rem;
         margin-bottom: 2rem;
     }
     
@@ -329,7 +278,9 @@
         display: flex;
         flex-direction: row;
         align-items: center;
+        justify-content: center;
         gap: 2rem;
+        margin-bottom: 1rem;
     }
     
     .footer-logo-section {
@@ -371,10 +322,6 @@
         padding: 2rem 1rem 1.5rem 1rem;
     }
     
-    .footer-middle {
-        gap: 1.5rem;
-    }
-    
     .footer-column {
         gap: 1.5rem;
     }
@@ -405,10 +352,6 @@
 @media (max-width: 360px) {
     .footer {
         padding: 1.5rem 0.8rem 1rem 0.8rem;
-    }
-    
-    .footer-middle {
-        gap: 1rem;
     }
     
     .footer-column {
