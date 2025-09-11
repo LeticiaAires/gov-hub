@@ -162,7 +162,7 @@ markdown_extensions:
   - pymdownx.tilde
 
 nav:
-  - Home: index.md
+  - Home: land/dist/index.html
   - Sobre: home.md
   - E-book:
     - Gov Hub - plataforma livre de integração de dados e informações governamentais: ebook.md
