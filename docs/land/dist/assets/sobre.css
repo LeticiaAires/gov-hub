@@ -23,7 +23,7 @@ body {
 /* Content Section */
 .content-section {
     width: 100%;
-    padding: 4rem 2rem;
+    padding: 4rem 1rem 4rem 3rem;
     background-color: #F7F7F7;
 }
 
@@ -47,9 +47,9 @@ body {
     gap: 6rem;
     align-items: start;
     margin-top: 0rem;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+    /* max-width: 1200px; */
+    /* margin-left: auto; */
+    /* margin-right: auto; */
 }
 
 /* Charts Column */
@@ -203,7 +203,7 @@ body {
     background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
     color: white;
     text-align: center;
-    padding: 4rem 2rem;
+    padding: 4rem 1rem 4rem 3rem;
 }
 
 .cta-section h2 {
@@ -244,15 +244,15 @@ body {
 .technologies-section {
     width: 100%;
     background-color: #FFFFFF;
-    padding: 4rem 2rem;
+    padding: 4rem 1rem 4rem 3rem;
 }
 
 .technologies-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
-    max-width: 1200px;
-    margin: 5rem auto;
+    /* max-width: 1200px; */
+    /* margin: 5rem auto; */
 }
 
 .technologies-column h2,
@@ -315,15 +315,15 @@ body {
 .requirements-section {
     width: 100%;
     background-color: #FFFFFF;
-    padding: 4rem 2rem;
+    padding: 4rem 1rem 4rem 3rem;
 }
 
 .requirements-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
-    max-width: 1200px;
-    margin: 5rem auto;
+    /* max-width: 1200px; */
+    /* margin: 5rem auto; */
 }
 
 .minimum-requirements-column h2,
@@ -374,12 +374,12 @@ body {
 .construction-section {
     width: 100%;
     background-color: #F7F7F7;
-    padding: 4rem 2rem;
+    padding: 4rem 1rem 4rem 3rem;
 }
 
 .construction-content {
-    max-width: 1200px;
-    margin: 0 auto;
+    /* max-width: 1200px; */
+    /* margin: 0 auto; */
 }
 
 .construction-content h2 {
@@ -456,12 +456,12 @@ body {
 .data-management-section {
     width: 100%;
     background-color: #F7F7F7;
-    padding: 4rem 2rem;
+    padding: 4rem 1rem 4rem 3rem;
 }
 
 .data-management-content {
-    max-width: 1200px;
-    margin: 0 auto;
+    /* max-width: 1200px; */
+    /* margin: 0 auto; */
 }
 
 .data-management-content h2 {
@@ -695,7 +695,7 @@ body {
 }
 
 .licenca-container {
-    max-width: 1000px;
+    /* max-width: 1000px; */
     margin: 0;
     margin-left: 2rem;
     text-align: left;

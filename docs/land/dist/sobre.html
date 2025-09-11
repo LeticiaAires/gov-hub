@@ -98,28 +98,34 @@
 
     <!-- Main Content -->
     <section class="content-section">
-        <div class="content-grid">
-            <!-- Left Column - Charts -->
-            <div class="charts-column">
-                <div class="charts-container">
-                    <div class="chart-group">
-                        <div class="chart-placeholder">
-                            <img src="./images/cards.png" alt="Cards de dados" class="chart-image">
+        <div class="container">
+            <div class="row">
+                <!-- Left Column - Charts -->
+                <div class="col-12 col-lg-6">
+                    <div class="charts-column">
+                        <div class="charts-container">
+                            <div class="chart-group">
+                                <div class="chart-placeholder">
+                                    <img src="./images/cards.png" alt="Cards de dados" class="chart-image">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            
-            <!-- Right Column - Text Content -->
-            <div class="text-column">
-                <div class="content-block">
-                    <h2>Porque existe?</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sem nisl, efficitur vitae magna vel, efficitur rhoncus urna. Aliquam efficitur iaculis ex, a mollis mi ornare a.</p>
-                </div>
                 
-                <div class="content-block">
-                    <h2>O que tem de diferente?</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sem nisl, efficitur vitae magna vel, efficitur rhoncus urna. Aliquam efficitur iaculis ex, a mollis mi ornare a.</p>
+                <!-- Right Column - Text Content -->
+                <div class="col-12 col-lg-6">
+                    <div class="text-column">
+                        <div class="content-block">
+                            <h2>Porque existe?</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sem nisl, efficitur vitae magna vel, efficitur rhoncus urna. Aliquam efficitur iaculis ex, a mollis mi ornare a.</p>
+                        </div>
+                        
+                        <div class="content-block">
+                            <h2>O que tem de diferente?</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sem nisl, efficitur vitae magna vel, efficitur rhoncus urna. Aliquam efficitur iaculis ex, a mollis mi ornare a.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -127,54 +133,60 @@
     
     <!-- Technologies Section -->
     <section class="technologies-section">
-        <div class="technologies-grid">
-            <!-- Left Column - Technologies -->
-            <div class="technologies-column">
-                <h2><span class="blur-letter" style="position: relative; display: inline-block;"><span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 40px; height: 40px; background: #FFD700; border-radius: 50%; filter: blur(8px); opacity: 0.2;"></span>T</span>ecnologias utilizadas</h2>
-                <p>O projeto adota um stack tecnológico baseado em soluções open-source, incluindo Apache Airflow para orquestração de pipelines de dados, DBT para transformação e modelagem de informações, Apache Superset para visualização e exploração, PostgreSQL como banco de dados relacional e Docker para containerização e implantação. A escolha dessas tecnologias permite maior flexibilidade, escalabilidade e integração com diferentes sistemas governamentais.</p>
-            </div>
-            
-            <!-- Right Column - Requirements -->
-            <div class="requirements-column">
-                <h2>Lista de requisitos</h2>
-                <div class="requirements-list">
-                    <div class="requirement-item">
-                        <span class="requirement-category">ORQUESTRAÇÃO DE PIPELINES DE DADOS</span>
-                        <div class="requirement-tech">
-                            <span class="tech-name">APACHE AIRFLOW</span>
-                            <span class="arrow">→</span>
-                        </div>
+        <div class="container">
+            <div class="row">
+                <!-- Left Column - Technologies -->
+                <div class="col-12 col-lg-6">
+                    <div class="technologies-column">
+                        <h2><span class="blur-letter" style="position: relative; display: inline-block;"><span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 40px; height: 40px; background: #9B59B6; border-radius: 50%; filter: blur(8px); opacity: 0.2;"></span>T</span>ecnologias utilizadas</h2>
+                        <p>O projeto adota um stack tecnológico baseado em soluções open-source, incluindo Apache Airflow para orquestração de pipelines de dados, DBT para transformação e modelagem de informações, Apache Superset para visualização e exploração, PostgreSQL como banco de dados relacional e Docker para containerização e implantação. A escolha dessas tecnologias permite maior flexibilidade, escalabilidade e integração com diferentes sistemas governamentais.</p>
                     </div>
-                    
-                    <div class="requirement-item">
-                        <span class="requirement-category">TRANSFORMAÇÃO E MODELAGEM DE DADOS</span>
-                        <div class="requirement-tech">
-                            <span class="tech-name">DATA BUILD TOOL</span>
-                            <span class="arrow">→</span>
-                        </div>
-                    </div>
-                    
-                    <div class="requirement-item">
-                        <span class="requirement-category">VISUALIZAÇÃO E EXPLORAÇÃO DE DADOS</span>
-                        <div class="requirement-tech">
-                            <span class="tech-name">APACHE SUPERSET</span>
-                            <span class="arrow">→</span>
-                        </div>
-                    </div>
-                    
-                    <div class="requirement-item">
-                        <span class="requirement-category">BANCO DE DADOS RELACIONAL</span>
-                        <div class="requirement-tech">
-                            <span class="tech-name">POSTGRESQL</span>
-                            <span class="arrow">→</span>
-                        </div>
-                    </div>
-                    
-                    <div class="requirement-item">
-                        <span class="requirement-category">CONTAINERIZAÇÃO E IMPLANTAÇÃO DE APLICAÇÕES</span>
-                        <div class="requirement-tech">
-                            <span class="tech-name">DOCKER</span>
-                            <span class="arrow">→</span>
+                </div>
+                
+                <!-- Right Column - Requirements -->
+                <div class="col-12 col-lg-6">
+                    <div class="requirements-column">
+                        <h2>Lista de requisitos</h2>
+                        <div class="requirements-list">
+                            <div class="requirement-item">
+                                <span class="requirement-category">ORQUESTRAÇÃO DE PIPELINES DE DADOS</span>
+                                <div class="requirement-tech">
+                                    <span class="tech-name">APACHE AIRFLOW</span>
+                                    <span class="arrow">→</span>
+                                </div>
+                            </div>
+                            
+                            <div class="requirement-item">
+                                <span class="requirement-category">TRANSFORMAÇÃO E MODELAGEM DE DADOS</span>
+                                <div class="requirement-tech">
+                                    <span class="tech-name">DATA BUILD TOOL</span>
+                                    <span class="arrow">→</span>
+                                </div>
+                            </div>
+                            
+                            <div class="requirement-item">
+                                <span class="requirement-category">VISUALIZAÇÃO E EXPLORAÇÃO DE DADOS</span>
+                                <div class="requirement-tech">
+                                    <span class="tech-name">APACHE SUPERSET</span>
+                                    <span class="arrow">→</span>
+                                </div>
+                            </div>
+                            
+                            <div class="requirement-item">
+                                <span class="requirement-category">BANCO DE DADOS RELACIONAL</span>
+                                <div class="requirement-tech">
+                                    <span class="tech-name">POSTGRESQL</span>
+                                    <span class="arrow">→</span>
+                                </div>
+                            </div>
+                            
+                            <div class="requirement-item">
+                                <span class="requirement-category">CONTAINERIZAÇÃO E IMPLANTAÇÃO DE APLICAÇÕES</span>
+                                <div class="requirement-tech">
+                                    <span class="tech-name">DOCKER</span>
+                                    <span class="arrow">→</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -184,40 +196,46 @@
     
     <!-- Requirements Section -->
     <section class="requirements-section">
-        <div class="requirements-grid">
-            <!-- Left Column - Minimum Requirements -->
-            <div class="minimum-requirements-column">
-                <h2>Requisitos Mínimos de uso</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sem nisl, efficitur vitae magna vel, efficitur rhoncus urna. Aliquam efficitur iaculis ex, a mollis mi ornare a.</p>
-            </div>
-            
-            <!-- Right Column - Requirements List -->
-            <div class="requirements-list-column">
-                <h2>Lista de requisitos</h2>
-                <div class="requirements-items">
-                    <div class="requirement-block">
-                        <h3>Requisito 1</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sem nisl.</p>
+        <div class="container">
+            <div class="row">
+                <!-- Left Column - Minimum Requirements -->
+                <div class="col-12 col-lg-6">
+                    <div class="minimum-requirements-column">
+                        <h2>Requisitos Mínimos de uso</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sem nisl, efficitur vitae magna vel, efficitur rhoncus urna. Aliquam efficitur iaculis ex, a mollis mi ornare a.</p>
                     </div>
-                    
-                    <div class="requirement-block">
-                        <h3>Requisito 2</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sem nisl.</p>
-                    </div>
-                    
-                    <div class="requirement-block">
-                        <h3>Requisito 3</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sem nisl.</p>
-                    </div>
-                    
-                    <div class="requirement-block">
-                        <h3>Requisito 4</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sem nisl.</p>
-                    </div>
-                    
-                    <div class="requirement-block">
-                        <h3>Requisito 5</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sem nisl.</p>
+                </div>
+                
+                <!-- Right Column - Requirements List -->
+                <div class="col-12 col-lg-6">
+                    <div class="requirements-list-column">
+                        <h2>Lista de requisitos</h2>
+                        <div class="requirements-items">
+                            <div class="requirement-block">
+                                <h3>Requisito 1</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sem nisl.</p>
+                            </div>
+                            
+                            <div class="requirement-block">
+                                <h3>Requisito 2</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sem nisl.</p>
+                            </div>
+                            
+                            <div class="requirement-block">
+                                <h3>Requisito 3</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sem nisl.</p>
+                            </div>
+                            
+                            <div class="requirement-block">
+                                <h3>Requisito 4</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sem nisl.</p>
+                            </div>
+                            
+                            <div class="requirement-block">
+                                <h3>Requisito 5</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sem nisl.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -226,34 +244,38 @@
     
     <!-- Construction Section -->
     <section class="construction-section">
-        <div class="construction-content">
-            <h2>Como que é Construído?</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sem nisl, efficitur vitae magna vel, efficitur rhoncus urna. Aliquam efficitur iaculis ex, a mollis mi ornare a.</p>
-            
-            <h2>Sistemas estruturantes</h2>
-            <p>Os sistemas estruturantes são o núcleo operacional do governo federal, projetados para apoiar atividades essenciais de gestão e garantir a padronização e eficiência na administração pública. Eles desempenham um papel fundamental na consolidação, integração e qualificação de dados, tornando-se indispensáveis para a formulação e execução de políticas públicas.</p>
-            
-            <h3>Para saber mais detalhes como:</h3>
-            <ul class="details-list">
-                <li>O que são os Sistemas Estruturantes;</li>
-                <li>Desafios e Problemas;</li>
-                <li>Soluções e Abordagens do projeto;</li>
-                <li>Benefícios para Administração Pública;</li>
-                <li>e O Futuro dos Sistemas;</li>
-            </ul>
-            
-            <a href="#" class="download-link">BAIXE AGORA NOSSO PDF →</a>
+        <div class="container">
+            <div class="construction-content">
+                <h2>Como que é Construído?</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sem nisl, efficitur vitae magna vel, efficitur rhoncus urna. Aliquam efficitur iaculis ex, a mollis mi ornare a.</p>
+                
+                <h2>Sistemas estruturantes</h2>
+                <p>Os sistemas estruturantes são o núcleo operacional do governo federal, projetados para apoiar atividades essenciais de gestão e garantir a padronização e eficiência na administração pública. Eles desempenham um papel fundamental na consolidação, integração e qualificação de dados, tornando-se indispensáveis para a formulação e execução de políticas públicas.</p>
+                
+                <h3>Para saber mais detalhes como:</h3>
+                <ul class="details-list">
+                    <li>O que são os Sistemas Estruturantes;</li>
+                    <li>Desafios e Problemas;</li>
+                    <li>Soluções e Abordagens do projeto;</li>
+                    <li>Benefícios para Administração Pública;</li>
+                    <li>e O Futuro dos Sistemas;</li>
+                </ul>
+                
+                <a href="#" class="download-link">BAIXE AGORA NOSSO PDF →</a>
+            </div>
         </div>
     </section>
     
     <!-- Data Management Section -->
     <section class="data-management-section">
-        <div class="data-management-content">
-            <h2>Gestão orientada a dados</h2>
-            <h3>Transformando Decisões no Setor Público</h3>
-            <p>A gestão orientada a dados é uma abordagem estratégica para a tomada de decisão no setor público, destacando seu potencial para revolucionar a formulação e implementação de políticas públicas, garantindo eficiência, transparência e responsabilidade.</p>
-            
-            <a href="#" class="download-link-blue">BAIXE AGORA NOSSO PDF →</a>
+        <div class="container">
+            <div class="data-management-content">
+                <h2>Gestão orientada a dados</h2>
+                <h3>Transformando Decisões no Setor Público</h3>
+                <p>A gestão orientada a dados é uma abordagem estratégica para a tomada de decisão no setor público, destacando seu potencial para revolucionar a formulação e implementação de políticas públicas, garantindo eficiência, transparência e responsabilidade.</p>
+                
+                <a href="#" class="download-link-blue">BAIXE AGORA NOSSO PDF →</a>
+            </div>
         </div>
     </section>
 
