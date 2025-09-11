@@ -18,11 +18,6 @@ body {
     padding: 7rem 2rem;
 }
 
-.overview-content {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
 .overview-content h2 {
     color: #7A34F3;
     font-size: 2.5rem;
@@ -53,8 +48,6 @@ body {
 }
 
 .impact-content {
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
 .impact-content h2 {
