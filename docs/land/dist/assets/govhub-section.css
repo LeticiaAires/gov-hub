@@ -5,17 +5,27 @@
     padding: 2rem 0;
 }
 
-.govhub-container {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 1rem;
+/* Espaçamento global para todas as seções - 20px */
+.row.g-4 {
+    --bs-gutter-x: 20px;
+    --bs-gutter-y: 20px;
 }
 
-.govhub-content {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    align-items: center;
+.row.g-5 {
+    --bs-gutter-x: 20px;
+    --bs-gutter-y: 20px;
+}
+
+/* Aplicar gutter de 20px em todas as rows por padrão */
+.row {
+    --bs-gutter-x: 20px;
+    --bs-gutter-y: 20px;
+}
+
+@media (min-width: 992px) {
+    .govhub-section .row.g-5 {
+        --bs-gutter-x: 20px;
+    }
 }
 
 /* Container da imagem */
@@ -47,7 +57,7 @@
     content: "";
     position: absolute;
     top: -10%;
-    right: -10%;
+    right: 5%;
     width: 280px;
     height: 280px;
     background: radial-gradient(circle, rgba(124,58,237,0.4) 0%, rgba(124,58,237,0.0) 70%);
@@ -73,13 +83,12 @@
 }
 
 .govhub-image {
-    width: 120%;
+    width: 100%;
     max-width: none;
     border-radius: 0.5rem;
     height: auto;
     position: relative;
     z-index: 1;
-    transform: translateX(-10%);
 }
 
 
@@ -94,8 +103,8 @@
 /* Título principal */
 .govhub-title {
     margin-bottom: 1rem;
-    font-size: 1.75rem;
-    font-weight: 800;
+    font-size: 36px;
+    font-weight: 600;
     line-height: 1.2;
     color: #7c3aed;
     letter-spacing: -0.025em;
@@ -105,8 +114,8 @@
 /* Descrição principal */
 .govhub-description {
     margin-bottom: 0.5rem;
-    font-weight: 300;
-    font-size: 15px;
+    font-weight: 400;
+    font-size: 16px;
     line-height: 1.5;
     color: #000000;
     font-family: 'Inter', sans-serif;
@@ -121,7 +130,7 @@
 .govhub-link {
     display: inline-flex;
     align-items: center;
-    font-size: 1rem;
+    font-size: 14px;
     font-weight: 500;
     color: #7c3aed;
     text-decoration: none;
@@ -181,31 +190,16 @@
         padding: 6rem 0;
     }
     
-    .govhub-container {
-        padding: 0 1.5rem;
-    }
-    
-    .govhub-content {
-        grid-template-columns: 1fr 1fr;
-        gap: 6rem;
-    }
-    
     .govhub-title {
-        font-size: 1.875rem;
+        font-size: 36px;
     }
     
     .govhub-description {
-        font-size: 1.125rem;
+        font-size: 16px;
     }
     
     .govhub-subdescription {
         font-size: 1.25rem;
-    }
-}
-
-@media (min-width: 1280px) {
-    .govhub-content {
-        gap: 4rem;
     }
 }
 
@@ -214,17 +208,12 @@
         padding: 4rem 0;
     }
     
-    .govhub-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    
     .govhub-image-container {
         order: -1;
     }
     
     .govhub-title {
-        font-size: 1.625rem;
+        font-size: 2rem;
     }
     
     .govhub-description {
@@ -237,12 +226,8 @@
         padding: 3rem 1rem;
     }
     
-    .govhub-container {
-        padding: 0 1rem;
-    }
-    
     .govhub-title {
-        font-size: 1.5rem;
+        font-size: 1.75rem;
     }
     
     .govhub-description {
@@ -267,12 +252,8 @@
         padding: 2rem 0.5rem;
     }
     
-    .govhub-container {
-        padding: 0 0.5rem;
-    }
-    
     .govhub-title {
-        font-size: 1.25rem;
+        font-size: 1.5rem;
     }
     
     .govhub-description {

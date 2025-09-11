@@ -29,15 +29,14 @@
 .ebook-images {
     position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 
 .ebook-book-left {
     width: 320px;
     height: auto;
-    transform: rotate(-15deg) translateX(-120px) translateY(-70px);
-    transform: rotate(5deg) translateX(-120px) translateY(-20px);
+    transform: rotate(5deg) translateY(-20px);
     filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.3));
     transition: transform 0.3s ease;
     z-index: 1;
@@ -47,19 +46,18 @@
     width: 360px;
     height: auto;
     position: absolute;
-    transform: rotate(20deg) translateX(80px) translateY(10px);
+    transform: rotate(20deg) translateX(180px) translateY(10px);
     filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.3));
     transition: transform 0.3s ease;
     z-index: 2;
 }
 
 .ebook-book-left:hover {
-    transform: rotate(-25deg) translateX(-120px) translateY(-70px) scale(1.05);
-    transform: rotate(-5deg) translateX(-120px) translateY(-20px) scale(1.05);
+    transform: rotate(-5deg) translateY(-20px) scale(1.05);
 }
 
 .ebook-book-right:hover {
-    transform: rotate(10deg) translateX(80px) translateY(0px) scale(1.05);
+    transform: rotate(10deg) translateX(180px) translateY(0px) scale(1.05);
 }
 
 /* Lado direito - Texto e botão */
