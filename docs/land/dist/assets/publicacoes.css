@@ -1,5 +1,21 @@
 /* Página de Publicações */
 
+/* Bootstrap Grid Customization - 12 colunas com gutter 20px */
+:root {
+    --bs-gutter-x: 20px;
+    --bs-gutter-y: 20px;
+}
+
+.container {
+    --bs-gutter-x: 20px;
+    --bs-gutter-y: 20px;
+}
+
+.row {
+    --bs-gutter-x: 20px;
+    --bs-gutter-y: 20px;
+}
+
 /* Publications Page Section */
 .publications-page-section {
     background-color: #f8f9fa;

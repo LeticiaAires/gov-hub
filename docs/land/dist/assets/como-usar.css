@@ -11,6 +11,22 @@ body {
     padding: 0;
 }
 
+/* Bootstrap Grid Customization - 12 colunas com gutter 20px */
+:root {
+    --bs-gutter-x: 20px;
+    --bs-gutter-y: 20px;
+}
+
+.container {
+    --bs-gutter-x: 20px;
+    --bs-gutter-y: 20px;
+}
+
+.row {
+    --bs-gutter-x: 20px;
+    --bs-gutter-y: 20px;
+}
+
 /* Gov Hub no meu Órgão Section */
 .orgao-section {
     width: 100%;
@@ -19,8 +35,8 @@ body {
 }
 
 .orgao-content {
-    max-width: 1200px;
-    margin: 0 auto;
+    /* max-width: 1200px; */
+    /* margin: 0 auto; */
 }
 
 .orgao-content h2 {
@@ -56,8 +72,8 @@ body {
 }
 
 .tutoriais-content {
-    max-width: 1200px;
-    margin: 0 auto;
+    /* max-width: 1200px; */
+    /* margin: 0 auto; */
 }
 
 .tutoriais-content h2 {
@@ -300,8 +316,8 @@ body {
 }
 
 .funcionalidades-content {
-    max-width: 1200px;
-    margin: 0 auto;
+    /* max-width: 1200px; */
+    /* margin: 0 auto; */
 }
 
 .funcionalidades-content h2 {
@@ -329,8 +345,8 @@ body {
 }
 
 .documentacao-content {
-    max-width: 1200px;
-    margin: 0 auto;
+    /* max-width: 1200px; */
+    /* margin: 0 auto; */
 }
 
 .documentacao-content h2 {

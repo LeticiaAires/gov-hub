@@ -11,6 +11,22 @@ body {
     padding: 0;
 }
 
+/* Bootstrap Grid Customization - 12 colunas com gutter 20px */
+:root {
+    --bs-gutter-x: 20px;
+    --bs-gutter-y: 20px;
+}
+
+.container {
+    --bs-gutter-x: 20px;
+    --bs-gutter-y: 20px;
+}
+
+.row {
+    --bs-gutter-x: 20px;
+    --bs-gutter-y: 20px;
+}
+
 
 
 .hero-section p {
