@@ -55,7 +55,7 @@
 .system-info-image-container {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .system-info-image {
@@ -63,6 +63,7 @@
     max-width: 32rem;
     border-radius: 0.5rem;
     height: auto;
+    margin-bottom: 10rem;
 }
 
 /* Responsividade */
