@@ -189,11 +189,11 @@ function initScrollAnimations() {
 // Função para preload de imagens
 function preloadImages() {
     const imagesToPreload = [
-        './images/exemploamarelo.png',
-        './images/exemploroxo.png',
-        './images/exemplopreto.png',
-        './images/exemplovermelho.png',
-        './images/exemploazul.png',
+        './images/contratos_homev2.png',
+        './images/teds_homev2.png',
+        './images/pessoal_homev2.png',
+        './images/orcamento_homev2.png',
+        './images/assitente_de_IA.mp4',
         './images/computador.png',
         './images/book.png'
     ];
