@@ -1,0 +1,115 @@
+/* PDF Viewer Styles */
+.pdf-viewer-container {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: none;
+}
+
+.pdf-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.pdf-btn {
+  background: #7c3aed;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.pdf-btn:hover:not(:disabled) {
+  background: #6d28d9;
+  transform: translateY(-2px);
+}
+
+.pdf-btn:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.pdf-viewer-container .download-btn {
+  background: #059669;
+  color: white;
+}
+
+.pdf-viewer-container .download-btn:hover {
+  background: #047857;
+  color: white;
+}
+
+.page-info, .zoom-info {
+  font-weight: 600;
+  color: #374151;
+  min-width: 120px;
+  text-align: center;
+}
+
+.pdf-viewer {
+  display: flex;
+  justify-content: center;
+  background: white;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: auto;
+  max-height: 90vh;
+  min-height: 70vh;
+  width: 100%;
+}
+
+#pdfCanvas {
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  height: auto;
+}
+
+.pdf-loading {
+  text-align: center;
+  padding: 3rem;
+  display: none;
+}
+
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f4f6;
+  border-top: 4px solid #7c3aed;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsividade do PDF Viewer */
+@media (max-width: 768px) {
+  .pdf-controls {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .pdf-btn {
+    width: 100%;
+    max-width: 200px;
+  }
+}
