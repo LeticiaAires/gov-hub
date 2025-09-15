@@ -11,23 +11,11 @@ body {
     padding: 0;
 }
 
-/* Bootstrap Grid Customization - 12 colunas com gutter 20px */
+/* Bootstrap Grid Customization */
 :root {
     --bs-gutter-x: 20px;
     --bs-gutter-y: 20px;
 }
-
-.container {
-    --bs-gutter-x: 20px;
-    --bs-gutter-y: 20px;
-}
-
-.row {
-    --bs-gutter-x: 20px;
-    --bs-gutter-y: 20px;
-}
-
-
 
 .hero-section p {
     font-size: 1.2rem;
@@ -38,9 +26,8 @@ body {
 
 /* Content Section */
 .content-section {
-    width: 100%;
-    padding: 4rem 1rem 4rem 3rem;
     background-color: #F7F7F7;
+    padding: 3rem 1rem 2rem 3rem;
 }
 
 .content-section h2 {
@@ -56,17 +43,6 @@ body {
     text-align: justify;
 }
 
-/* Content Grid Layout */
-.content-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 6rem;
-    align-items: start;
-    margin-top: 0rem;
-    /* max-width: 1200px; */
-    /* margin-left: auto; */
-    /* margin-right: auto; */
-}
 
 /* Charts Column */
 .charts-column {
@@ -169,7 +145,7 @@ body {
 /* Team Section */
 .team-section {
     background: #f8f9fa;
-    padding: 4rem 2rem;
+    padding: 3rem 1rem 2rem 3rem;
 }
 
 .team-grid {
@@ -219,7 +195,7 @@ body {
     background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
     color: white;
     text-align: center;
-    padding: 4rem 1rem 4rem 3rem;
+    padding: 3rem 1rem 2rem 3rem;
 }
 
 .cta-section h2 {
@@ -258,17 +234,8 @@ body {
 
 /* Technologies Section */
 .technologies-section {
-    width: 100%;
     background-color: #FFFFFF;
-    padding: 4rem 1rem 4rem 3rem;
-}
-
-.technologies-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    /* max-width: 1200px; */
-    /* margin: 5rem auto; */
+    padding: 3rem 1rem 2rem 3rem;
 }
 
 .technologies-column h2,
@@ -329,17 +296,8 @@ body {
 
 /* Requirements Section */
 .requirements-section {
-    width: 100%;
     background-color: #FFFFFF;
-    padding: 4rem 1rem 4rem 3rem;
-}
-
-.requirements-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    /* max-width: 1200px; */
-    /* margin: 5rem auto; */
+    padding: 3rem 1rem 2rem 3rem;
 }
 
 .minimum-requirements-column h2,
@@ -388,15 +346,11 @@ body {
 
 /* Construction Section */
 .construction-section {
-    width: 100%;
     background-color: #F7F7F7;
-    padding: 4rem 1rem 4rem 3rem;
+    padding: 3rem 1rem 2rem 3rem;
 }
 
-.construction-content {
-    /* max-width: 1200px; */
-    /* margin: 0 auto; */
-}
+/* Construction content - estilos aplicados nos elementos filhos */
 
 .construction-content h2 {
     color: #7A34F3;
@@ -470,15 +424,11 @@ body {
 
 /* Data Management Section */
 .data-management-section {
-    width: 100%;
     background-color: #F7F7F7;
-    padding: 4rem 1rem 4rem 3rem;
+    padding: 3rem 1rem 2rem 3rem;
 }
 
-.data-management-content {
-    /* max-width: 1200px; */
-    /* margin: 0 auto; */
-}
+/* Data management content - estilos aplicados nos elementos filhos */
 
 .data-management-content h2 {
     color: #7A34F3;
@@ -530,17 +480,6 @@ body {
         font-size: 2rem;
     }
     
-    .content-grid {
-        gap: 3rem;
-    }
-    
-    .technologies-grid {
-        gap: 3rem;
-    }
-    
-    .requirements-grid {
-        gap: 3rem;
-    }
     
     .construction-content h2 {
         font-size: 2rem;
@@ -570,30 +509,16 @@ body {
     }
     
     .content-section {
-        padding: 3rem 1rem;
+        padding: 2.5rem 1rem 2rem 1rem;
     }
     
     .content-section h2 {
         font-size: 1.8rem;
     }
     
-    .content-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    
-    .technologies-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    
-    .requirements-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
     
     .construction-section {
-        padding: 3rem 1rem;
+        padding: 2.5rem 1rem 2rem 1rem;
     }
     
     .construction-content h2 {
@@ -601,7 +526,7 @@ body {
     }
     
     .data-management-section {
-        padding: 3rem 1rem;
+        padding: 2.5rem 1rem 2rem 1rem;
     }
     
     .data-management-content h2 {
@@ -609,7 +534,7 @@ body {
     }
     
     .team-section {
-        padding: 3rem 1rem;
+        padding: 2.5rem 1rem 2rem 1rem;
     }
     
     .team-grid {
@@ -618,7 +543,7 @@ body {
     }
     
     .cta-section {
-        padding: 3rem 1rem;
+        padding: 2.5rem 1rem 2rem 1rem;
     }
     
     .cta-section h2 {
@@ -640,24 +565,13 @@ body {
     }
     
     .content-section {
-        padding: 2rem 1rem;
+        padding: 2rem 0;
     }
     
     .content-section h2 {
         font-size: 1.6rem;
     }
     
-    .content-grid {
-        gap: 1.5rem;
-    }
-    
-    .technologies-grid {
-        gap: 1.5rem;
-    }
-    
-    .requirements-grid {
-        gap: 1.5rem;
-    }
     
     .construction-content h2 {
         font-size: 1.6rem;
@@ -690,7 +604,7 @@ body {
     }
     
     .cta-section {
-        padding: 2rem 1rem;
+        padding: 2rem 0;
     }
     
     .cta-section h2 {
@@ -703,19 +617,14 @@ body {
     }
 }
 
-/* Licença de Uso Section */
+/* Licença de Uso Section - Agora dentro do footer */
 .licenca-section {
     background-color: #7A34F3;
-    padding: 4rem 1rem 4rem 3rem;
-    width: 100%;
+    padding: 0;
+    margin: 0;
 }
 
-.licenca-container {
-    /* max-width: 1000px; */
-    margin: 0;
-    margin-left: 2rem;
-    text-align: left;
-}
+/* Licença container - usando container Bootstrap padrão */
 
 .licenca-title {
     color: white;
@@ -729,14 +638,14 @@ body {
     color: white;
     font-size: 1.1rem;
     line-height: 1.7;
-    margin: 0;
+    margin-bottom: 4rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Responsive Design for Licença Section */
 @media (max-width: 768px) {
     .licenca-section {
-        padding: 3rem 1rem 3rem 2rem;
+        padding: 3rem 0;
     }
     
     .licenca-container {
@@ -750,11 +659,9 @@ body {
     .licenca-text {
         font-size: 1rem;
     }
-}
-
-@media (max-width: 480px) {
+}@media (max-width: 480px) {
     .licenca-section {
-        padding: 2rem 1rem;
+        padding: 2rem 0;
     }
     
     .licenca-container {
@@ -769,3 +676,4 @@ body {
         font-size: 0.95rem;
     }
 }
+
