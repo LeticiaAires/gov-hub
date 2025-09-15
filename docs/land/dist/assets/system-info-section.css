@@ -55,15 +55,14 @@
 .system-info-image-container {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .system-info-image {
-    width: 100%;
-    max-width: 32rem;
+    width: 90%;
     border-radius: 0.5rem;
     height: auto;
-    margin-bottom: 10rem;
+    transform: translateY(-2rem);
 }
 
 /* Responsividade */
