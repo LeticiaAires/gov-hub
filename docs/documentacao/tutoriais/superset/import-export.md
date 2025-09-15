@@ -82,3 +82,43 @@ Abaixo, o guia de cada uma.
 | **Export** (metadados)  | Lista de **Dashboards** → **Actions → Export**          | `.zip`           | JSON/YAML com **layout + charts** (sem dados)              | Migrar, versionar, backup                   |
 | **Download** (snapshot) | Dentro do **dashboard** → **⋯ → Download → PDF/Imagem** | `.pdf` ou `.png` | **Imagem estática** do dashboard com **filtros aplicados** | Relatórios, apresentações, compartilhamento |
 
+---
+
+# Importação de Dashboards no Superset
+
+![Superset](../../../../assets/images/import.png)
+
+## Passo a passo
+
+### 1. Acessar a tela de Dashboards
+
+* No menu superior do Superset, clique em **Dashboards**.
+* Você será direcionado para a listagem de dashboards existentes.
+
+### 2. Localizar a opção de importação
+
+* No canto superior direito da tela, ao lado do botão **+ DASHBOARD**, clique no ícone de seta para baixo.
+* Passe o mouse sobre o ícone e confirme que aparece a opção **Import dashboards**.
+
+### 3. Iniciar o processo de importação
+
+* Clique em **Import dashboards**.
+* Uma janela será aberta para seleção do arquivo.
+
+### 4. Selecionar o arquivo de exportação
+
+* Escolha o arquivo `.zip` previamente exportado (por exemplo, `dashboard_export_data.zip`).
+* Esse arquivo deve ter sido gerado a partir da função de exportação do Superset.
+
+### 5. Confirmar a importação
+
+* Clique em **Abrir** para carregar o arquivo no Superset.
+* Aguarde o processamento.
+* O sistema importará o layout do dashboard e os gráficos associados.
+
+### 6. Verificar o dashboard importado
+
+* Após a conclusão, o dashboard aparecerá automaticamente na lista de dashboards.
+* Clique sobre o nome do dashboard para confirmar que todos os gráficos estão sendo exibidos corretamente.
+
+
