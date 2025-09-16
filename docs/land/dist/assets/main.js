@@ -30,17 +30,6 @@ function initCarouselDrag() {
     }
 }
 
-// Função para menu hambúrguer
-function initMobileMenu() {
-    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
-    
-    if (!mobileMenuToggle || !mobileMenu) return;
-    
-    mobileMenuToggle.addEventListener('click', function() {
-        mobileMenu.classList.toggle('active');
-    });
-}
 
 // Função para mostrar imagens na seção interativa
 function showImage(imageNumber) {

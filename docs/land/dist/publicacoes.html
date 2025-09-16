@@ -19,6 +19,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="./assets/main.js"></script>
     <script src="./assets/publicacoes.js"></script>
     <script src="https://kit.fontawesome.com/31f9c08e31.js" crossorigin="anonymous"></script>
     <!-- Bootstrap CSS -->
@@ -32,43 +33,48 @@
     <!-- Header -->
     <header>
         <nav class="custom-navbar">
-            <div class="navbar-container">
-                <!-- Left Section - Logo -->
-                <div class="navbar-left">
-                    <a href="./index.html" class="logo">
-                        <img src="./images/logo.svg" alt="GovHub Logo" class="logo-img">
-                    </a>
-                </div>
-                
-                                 <!-- Center Section - Navigation Links -->
-                 <div class="navbar-center">
-                     <a href="./index.html" class="nav-link">HOME</a>
-                     <a href="./sobre.html" class="nav-link">SOBRE</a>
-                     <a href="./quem-somos.html" class="nav-link">QUEM SOMOS</a>
-                     <a href="./publicacoes.html" class="nav-link">PUBLICAÇÕES</a>
-                     <a href="../../comunidade/guia-contribuicao/" class="nav-link">GUIA DE CONTRIBUIÇÃO</a>
-                     <a href="./como-usar.html" class="nav-link">COMO USAR</a>
-                 </div>
-                
-                <!-- Right Section - Social Icons and CTA -->
-                <div class="navbar-right">
-                    
-                    <!-- Social Icons -->
-                    <div class="social-icons">
-                        <a href="https://www.instagram.com/govhub.br" target="_blank" class="social-icon">
-                            <i class="fa-brands fa-instagram" alt="Instagram"></i>
-                        </a>
-                        <a href="https://github.com/GovHub-br/gov-hub" target="_blank" class="social-icon">
-                            <i class="fa-brands fa-github" alt="GitHub"></i>
+            <div class="container">
+                <div class="row align-items-center g-0">
+                    <!-- Logo Section -->
+                    <div class="col-auto">
+                        <a href="./index.html" class="logo">
+                            <img src="./images/logo.svg" alt="GovHub Logo" class="logo-img">
                         </a>
                     </div>
 
+                    <!-- Navigation Links -->
+                    <div class="col d-none d-lg-flex justify-content-center">
+                        <div class="navbar-center">
+                            <a href="./index.html" class="nav-link">HOME</a>
+                            <a href="./sobre.html" class="nav-link">SOBRE</a>
+                            <a href="./quem-somos.html" class="nav-link">QUEM SOMOS</a>
+                            <a href="./publicacoes.html" class="nav-link">PUBLICAÇÕES</a>
+                            <a href="../../comunidade/guia-contribuicao/" class="nav-link">GUIA DE CONTRIBUIÇÃO</a>
+                            <a href="./como-usar.html" class="nav-link">COMO USAR</a>
+                        </div>
+                    </div>
+
+                    <!-- Right Section -->
+                    <div class="col-auto d-none d-md-flex">
+                        <!-- Social Icons -->
+                        <div class="social-icons">
+                            <a href="https://www.instagram.com/govhub.br" target="_blank" class="social-icon">
+                                <i class="fa-brands fa-instagram" alt="Instagram"></i>
+                            </a>
+                            <a href="https://github.com/GovHub-br/gov-hub" target="_blank" class="social-icon">
+                                <i class="fa-brands fa-github" alt="GitHub"></i>
+                            </a>
+                        </div>
+                    </div>
+
                     <!-- Mobile Menu Button -->
-                    <button class="mobile-menu-button" id="mobile-menu-toggle" aria-label="Toggle mobile menu">
-                        <svg fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
-                        </svg>
-                    </button>
+                    <div class="col-auto d-lg-none">
+                        <button class="mobile-menu-button" id="mobile-menu-toggle" type="button" aria-label="Toggle navigation">
+                            <svg fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
 
                                  <!-- Mobile Menu -->
@@ -81,6 +87,15 @@
                          <li><a href="../../comunidade/guia-contribuicao/">GUIA DE CONTRIBUIÇÃO</a></li>
                          <li><a href="./como-usar.html">COMO USAR</a></li>
                      </ul>
+                     <!-- Social Icons dentro do menu mobile -->
+                     <div class="social-icons">
+                         <a href="https://www.instagram.com/govhub.br" target="_blank" class="social-icon">
+                             <i class="fa-brands fa-instagram" alt="Instagram"></i>
+                         </a>
+                         <a href="https://github.com/GovHub-br/gov-hub" target="_blank" class="social-icon">
+                             <i class="fa-brands fa-github" alt="GitHub"></i>
+                         </a>
+                     </div>
                  </div>
             </div>
         </nav>
