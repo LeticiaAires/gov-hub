@@ -1,5 +1,21 @@
 /* Página de Publicações */
 
+/* Bootstrap Grid Customization - 12 colunas com gutter 20px */
+:root {
+    --bs-gutter-x: 20px;
+    --bs-gutter-y: 20px;
+}
+
+.container {
+    --bs-gutter-x: 20px;
+    --bs-gutter-y: 20px;
+}
+
+.row {
+    --bs-gutter-x: 20px;
+    --bs-gutter-y: 20px;
+}
+
 /* Publications Page Section */
 .publications-page-section {
     background-color: #f8f9fa;
@@ -9,8 +25,8 @@
 
 /* Filter Bar */
 .filter-bar {
-    max-width: 1280px;
-    margin: 0 auto 0 auto;
+    /* max-width: 1280px; */
+    /* margin: 0 auto 0 auto; */
     padding: 0 1rem;
     display: flex;
     justify-content: space-between;
@@ -178,12 +194,12 @@
 
 /* Publications Grid */
 .publications-grid {
-    max-width: 1280px;
-    margin: 0 auto;
+    /* max-width: 1280px; */
+    /* margin: 0 auto; */
     padding: 0 1rem;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+    /* display: grid; */
+    /* grid-template-columns: repeat(3, 1fr); */
+    /* gap: 1.5rem; */
     margin-bottom: 2rem;
 }
 

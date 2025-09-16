@@ -2,9 +2,11 @@
 // GOVHUB - MAIN JAVASCRIPT FILE
 // ========================================
 
-// Função para carrossel de clientes
+// Função para carrossel de clientes (desktop)
 function moveCarousel(direction) {
     const carousel = document.querySelector('.clients-cards');
+    if (!carousel) return;
+    
     const cardWidth = 280 + 24; // largura do card + gap
     const scrollAmount = cardWidth * direction;
     
@@ -13,6 +15,21 @@ function moveCarousel(direction) {
         behavior: 'smooth'
     });
 }
+
+// Função para inicializar carrossel arrastável (mobile)
+function initCarouselDrag() {
+    const clientsCards = document.getElementById('clientsCards');
+    
+    if (!clientsCards) return;
+
+    // Simples: apenas permitir scroll nativo no mobile
+    if (window.innerWidth <= 768) {
+        clientsCards.style.overflowX = 'auto';
+        clientsCards.style.scrollBehavior = 'smooth';
+        clientsCards.style.webkitOverflowScrolling = 'touch';
+    }
+}
+
 
 // Função para mostrar imagens na seção interativa
 function showImage(imageNumber) {
@@ -161,11 +178,11 @@ function initScrollAnimations() {
 // Função para preload de imagens
 function preloadImages() {
     const imagesToPreload = [
-        './images/exemploamarelo.png',
-        './images/exemploroxo.png',
-        './images/exemplopreto.png',
-        './images/exemplovermelho.png',
-        './images/exemploazul.png',
+        './images/contratos_homev2.png',
+        './images/teds_homev2.png',
+        './images/pessoal_homev2.png',
+        './images/orcamento_homev2.png',
+        './images/assitente_de_IA.mp4',
         './images/computador.png',
         './images/book.png'
     ];
@@ -186,6 +203,7 @@ function initApp() {
         initScrollAnimations();
         preloadImages();
         initTouchEvents(); // Adicionar chamada para initTouchEvents
+        initCarouselDrag(); // Inicializar carrossel arrastável
         
         console.log('GovHub - Aplicação inicializada com sucesso! 🚀');
     });

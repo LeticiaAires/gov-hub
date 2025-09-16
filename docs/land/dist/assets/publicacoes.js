@@ -1,20 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Funcionalidade do menu mobile
-    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
-
-    mobileMenuToggle.addEventListener('click', function() {
-        mobileMenu.classList.toggle('active');
-    });
-
-    // Fechar menu ao clicar em um link
-    const mobileLinks = mobileMenu.querySelectorAll('a');
-    mobileLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            mobileMenu.classList.remove('active');
-        });
-    });
-
     // Funcionalidade da caixa de pesquisa
     const pesquisaBtn = document.getElementById('pesquisa-btn');
     const pesquisaInputContainer = document.getElementById('pesquisa-input-container');

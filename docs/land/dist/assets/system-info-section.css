@@ -59,10 +59,10 @@
 }
 
 .system-info-image {
-    width: 100%;
-    max-width: 32rem;
+    width: 90%;
     border-radius: 0.5rem;
     height: auto;
+    transform: translateY(-2rem);
 }
 
 /* Responsividade */

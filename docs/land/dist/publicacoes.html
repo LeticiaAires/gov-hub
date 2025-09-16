@@ -19,7 +19,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="./assets/main.js"></script>
     <script src="./assets/publicacoes.js"></script>
+    <script src="https://kit.fontawesome.com/31f9c08e31.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
     <div id="topo"></div>
@@ -27,43 +33,48 @@
     <!-- Header -->
     <header>
         <nav class="custom-navbar">
-            <div class="navbar-container">
-                <!-- Left Section - Logo -->
-                <div class="navbar-left">
-                    <a href="./index.html" class="logo">
-                        <img src="./images/logo.svg" alt="GovHub Logo" class="logo-img">
-                    </a>
-                </div>
-                
-                                 <!-- Center Section - Navigation Links -->
-                 <div class="navbar-center">
-                     <a href="./index.html" class="nav-link">HOME</a>
-                     <a href="./sobre.html" class="nav-link">SOBRE</a>
-                     <a href="./quem-somos.html" class="nav-link">QUEM SOMOS</a>
-                     <a href="./publicacoes.html" class="nav-link">PUBLICAÇÕES</a>
-                     <a href="../../comunidade/guia-contribuicao/" class="nav-link">GUIA DE CONTRIBUIÇÃO</a>
-                     <a href="./como-usar.html" class="nav-link">COMO USAR</a>
-                 </div>
-                
-                <!-- Right Section - Social Icons and CTA -->
-                <div class="navbar-right">
-                    
-                    <!-- Social Icons -->
-                    <div class="social-icons">
-                        <a href="https://www.instagram.com/govhub.br" target="_blank" class="social-icon">
-                            <img src="./images/instagram.png" alt="Instagram">
-                        </a>
-                        <a href="https://github.com/GovHub-br/gov-hub" target="_blank" class="social-icon">
-                            <img src="./images/github.png" alt="GitHub">
+            <div class="container">
+                <div class="row align-items-center g-0">
+                    <!-- Logo Section -->
+                    <div class="col-auto">
+                        <a href="./index.html" class="logo">
+                            <img src="./images/logo.svg" alt="GovHub Logo" class="logo-img">
                         </a>
                     </div>
 
+                    <!-- Navigation Links -->
+                    <div class="col d-none d-lg-flex justify-content-center">
+                        <div class="navbar-center">
+                            <a href="./index.html" class="nav-link">HOME</a>
+                            <a href="./sobre.html" class="nav-link">SOBRE</a>
+                            <a href="./quem-somos.html" class="nav-link">QUEM SOMOS</a>
+                            <a href="./publicacoes.html" class="nav-link">PUBLICAÇÕES</a>
+                            <a href="../../comunidade/guia-contribuicao/" class="nav-link">GUIA DE CONTRIBUIÇÃO</a>
+                            <a href="./como-usar.html" class="nav-link">COMO USAR</a>
+                        </div>
+                    </div>
+
+                    <!-- Right Section -->
+                    <div class="col-auto d-none d-md-flex">
+                        <!-- Social Icons -->
+                        <div class="social-icons">
+                            <a href="https://www.instagram.com/govhub.br" target="_blank" class="social-icon">
+                                <i class="fa-brands fa-instagram" alt="Instagram"></i>
+                            </a>
+                            <a href="https://github.com/GovHub-br/gov-hub" target="_blank" class="social-icon">
+                                <i class="fa-brands fa-github" alt="GitHub"></i>
+                            </a>
+                        </div>
+                    </div>
+
                     <!-- Mobile Menu Button -->
-                    <button class="mobile-menu-button" id="mobile-menu-toggle" aria-label="Toggle mobile menu">
-                        <svg fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
-                        </svg>
-                    </button>
+                    <div class="col-auto d-lg-none">
+                        <button class="mobile-menu-button" id="mobile-menu-toggle" type="button" aria-label="Toggle navigation">
+                            <svg fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
 
                                  <!-- Mobile Menu -->
@@ -76,6 +87,15 @@
                          <li><a href="../../comunidade/guia-contribuicao/">GUIA DE CONTRIBUIÇÃO</a></li>
                          <li><a href="./como-usar.html">COMO USAR</a></li>
                      </ul>
+                     <!-- Social Icons dentro do menu mobile -->
+                     <div class="social-icons">
+                         <a href="https://www.instagram.com/govhub.br" target="_blank" class="social-icon">
+                             <i class="fa-brands fa-instagram" alt="Instagram"></i>
+                         </a>
+                         <a href="https://github.com/GovHub-br/gov-hub" target="_blank" class="social-icon">
+                             <i class="fa-brands fa-github" alt="GitHub"></i>
+                         </a>
+                     </div>
                  </div>
             </div>
         </nav>
@@ -95,165 +115,190 @@
 
     <!-- Publications Section -->
     <section class="publications-page-section">
-        <!-- Filter Bar -->
-        <div class="filter-bar">
-            <div class="filtros-pesquisa">
-                <div class="filtros-container" style="visibility: hidden;">
-                    <button class="filtro-btn">
-                        <span>FILTROS</span>
-                        <svg class="chevron-down" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                        </svg>
-                    </button>
-                    <button class="filtro-btn">
-                        <span>FILTROS</span>
-                        <svg class="chevron-down" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                        </svg>
-                    </button>
-                    <button class="filtro-btn">
-                        <span>FILTROS</span>
-                        <svg class="chevron-down" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                        </svg>
-                    </button>
-                    <button class="filtro-btn">
-                        <span>FILTROS</span>
-                        <svg class="chevron-down" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                        </svg>
-                    </button>
-                    <button class="filtro-btn">
-                        <span>FILTROS</span>
-                        <svg class="chevron-down" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                        </svg>
-                    </button>
-                    <button class="filtro-btn">
-                        <span>FILTROS</span>
-                        <svg class="chevron-down" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                        </svg>
-                    </button>
-                    <button class="filtro-btn">
-                        <span>FILTROS</span>
-                        <svg class="chevron-down" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                        </svg>
-                    </button>
-                </div>
-                
-                <div class="pesquisa-container" style="visibility: hidden;">
-                    <button class="pesquisa-btn" id="pesquisa-btn">
-                        <span>PESQUISAR</span>
-                        <svg class="search-icon" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path>
-                        </svg>
-                    </button>
-                    
-                    <div class="pesquisa-input-container" id="pesquisa-input-container">
-                        <input type="text" class="pesquisa-input" id="pesquisa-input" placeholder="Digite sua pesquisa..." />
-                        <button class="fechar-pesquisa-btn" id="fechar-pesquisa-btn">
-                            <svg fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+        <div class="container">
+            <!-- Filter Bar -->
+            <div class="filter-bar">
+                <div class="filtros-pesquisa">
+                    <div class="filtros-container" style="visibility: hidden;">
+                        <button class="filtro-btn">
+                            <span>FILTROS</span>
+                            <svg class="chevron-down" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                        <button class="filtro-btn">
+                            <span>FILTROS</span>
+                            <svg class="chevron-down" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                        <button class="filtro-btn">
+                            <span>FILTROS</span>
+                            <svg class="chevron-down" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                        <button class="filtro-btn">
+                            <span>FILTROS</span>
+                            <svg class="chevron-down" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                        <button class="filtro-btn">
+                            <span>FILTROS</span>
+                            <svg class="chevron-down" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                        <button class="filtro-btn">
+                            <span>FILTROS</span>
+                            <svg class="chevron-down" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                        <button class="filtro-btn">
+                            <span>FILTROS</span>
+                            <svg class="chevron-down" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
                             </svg>
                         </button>
                     </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Publications Grid -->
-        <div class="publications-grid">
-            <!-- Card 1 -->
-            <div class="publication-card" onclick="window.open('../../blog/2024/01/15/govhub-transformando-dados-em-decisões-estratégicas/', '_blank')" style="cursor: pointer;">
-                <div class="publication-image">
-                    <img src="./images/publicacoes/paper.svg" alt="GovHub Platform" class="card-image">
-                    <div class="publication-category">PLATAFORMA</div>
-                </div>
-                <div class="publication-content">
-                    <h3 class="publication-title">GovHub: Transformando Dados em Decisões Estratégicas</h3>
-                    <p class="publication-caption">O GovHub é uma plataforma de software livre desenvolvida para transformar dados brutos em informações estratégicas</p>
-                    <div class="publication-arrow">→</div>
-                </div>
-            </div>
-
-            <!-- Card 2 -->
-            <div class="publication-card" onclick="window.open('../../blog/2024/01/10/como-usar-dbt-no-govhub-guia-completo/', '_blank')" style="cursor: pointer;">
-                <div class="publication-image">
-                    <img src="./images/publicacoes/dbt.svg" alt="DBT Tutorial" class="card-image">
-                    <div class="publication-category">TUTORIAL</div>
-                </div>
-                <div class="publication-content">
-                    <h3 class="publication-title">Como Usar DBT no GovHub: Guia Completo</h3>
-                    <p class="publication-caption">O DBT é uma ferramenta essencial para transformação de dados no GovHub. Aprenda como configurar e usar</p>
-                    <div class="publication-arrow">→</div>
+                    
+                    <div class="pesquisa-container" style="visibility: hidden;">
+                        <button class="pesquisa-btn" id="pesquisa-btn">
+                            <span>PESQUISAR</span>
+                            <svg class="search-icon" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                        
+                        <div class="pesquisa-input-container" id="pesquisa-input-container">
+                            <input type="text" class="pesquisa-input" id="pesquisa-input" placeholder="Digite sua pesquisa..." />
+                            <button class="fechar-pesquisa-btn" id="fechar-pesquisa-btn">
+                                <svg fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Card 3 -->
-            <div class="publication-card" onclick="window.open('../../blog/2024/01/05/criando-dashboards-eficazes-com-apache-superset/', '_blank')" style="cursor: pointer;">
-                <div class="publication-image">
-                    <img src="./images/publicacoes/superset.svg" alt="Superset Dashboard" class="card-image">
-                    <div class="publication-category">SUPERSET</div>
+            <!-- Publications Grid -->
+            <div class="row">
+                <!-- Card 1 -->
+                <div class="col-12 col-sm-6 col-lg-4 mb-4">
+                    <div class="publication-card" onclick="window.open('../../blog/2024/01/15/govhub-transformando-dados-em-decisões-estratégicas/', '_blank')" style="cursor: pointer;">
+                        <div class="publication-image">
+                            <img src="./images/govhub-platform.png" alt="GovHub Platform" class="card-image">
+                            <div class="publication-category">PLATAFORMA</div>
+                        </div>
+                        <div class="publication-content">
+                            <h3 class="publication-title">GovHub: Transformando Dados em Decisões Estratégicas</h3>
+                            <p class="publication-caption">O GovHub é uma plataforma de software livre desenvolvida para transformar dados brutos em informações estratégicas</p>
+                            <div class="publication-arrow">→</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="publication-content">
-                    <h3 class="publication-title">Criando Dashboards Eficazes com Apache Superset</h3>
-                    <p class="publication-caption">O Apache Superset é a ferramenta de visualização de dados do GovHub. Aprenda como criar dashboards impactantes</p>
-                    <div class="publication-arrow">→</div>
+
+                <!-- Card 2 -->
+                <div class="col-12 col-sm-6 col-lg-4 mb-4">
+                    <div class="publication-card" onclick="window.open('../../blog/2024/01/10/como-usar-dbt-no-govhub-guia-completo/', '_blank')" style="cursor: pointer;">
+                        <div class="publication-image">
+                            <img src="./images/dbt-tutorial.png" alt="DBT Tutorial" class="card-image">
+                            <div class="publication-category">TUTORIAL</div>
+                        </div>
+                        <div class="publication-content">
+                            <h3 class="publication-title">Como Usar DBT no GovHub: Guia Completo</h3>
+                            <p class="publication-caption">O DBT é uma ferramenta essencial para transformação de dados no GovHub. Aprenda como configurar e usar</p>
+                            <div class="publication-arrow">→</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="col-12 col-sm-6 col-lg-4 mb-4">
+                    <div class="publication-card" onclick="window.open('../../blog/2024/01/05/criando-dashboards-eficazes-com-apache-superset/', '_blank')" style="cursor: pointer;">
+                        <div class="publication-image">
+                            <img src="./images/superset-dashboard.png" alt="Superset Dashboard" class="card-image">
+                            <div class="publication-category">SUPERSET</div>
+                        </div>
+                        <div class="publication-content">
+                            <h3 class="publication-title">Criando Dashboards Eficazes com Apache Superset</h3>
+                            <p class="publication-caption">O Apache Superset é a ferramenta de visualização de dados do GovHub. Aprenda como criar dashboards impactantes</p>
+                            <div class="publication-arrow">→</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="col-12 col-sm-6 col-lg-4 mb-4">
+                    <div class="publication-card" onclick="window.open('../../blog/', '_blank')">
+                        <div class="publication-image">
+                            <img src="./images/computador.png" alt="Computador Gov Hub" class="card-image">
+                            <div class="publication-category">BLOG</div>
+                        </div>
+                        <div class="publication-content">
+                            <h3 class="publication-title">Visite Nosso Blog</h3>
+                            <p class="publication-caption">Acesse nosso blog para ver todas as publicações, tutoriais e novidades sobre a plataforma GovHub</p>
+                            <div class="publication-arrow">→</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="col-12 col-sm-6 col-lg-4 mb-4">
+                    <div class="publication-card" onclick="window.open('../../documentacao/instalacao/', '_blank')">
+                        <div class="publication-image">
+                            <img src="./images/computador.png" alt="Computador Gov Hub" class="card-image">
+                            <div class="publication-category">DOCUMENTAÇÃO</div>
+                        </div>
+                        <div class="publication-content">
+                            <h3 class="publication-title">Guia de Instalação</h3>
+                            <p class="publication-caption">Aprenda como instalar e configurar o GovHub em seu ambiente. Documentação completa passo a passo</p>
+                            <div class="publication-arrow">→</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="col-12 col-sm-6 col-lg-4 mb-4">
+                    <div class="publication-card" onclick="window.open('../../comunidade/guia-contribuicao/', '_blank')">
+                        <div class="publication-image">
+                            <img src="./images/computador.png" alt="Computador Gov Hub" class="card-image">
+                            <div class="publication-category">COMUNIDADE</div>
+                        </div>
+                        <div class="publication-content">
+                            <h3 class="publication-title">Guia de Contribuição</h3>
+                            <p class="publication-caption">Saiba como contribuir com o projeto GovHub. Diretrizes para desenvolvedores e colaboradores</p>
+                            <div class="publication-arrow">→</div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <!-- Card 4 -->
-            <div class="publication-card" onclick="window.open('../../documentacao/instalacao/', '_blank')">
-                <div class="publication-image">
-                    <img src="./images/publicacoes/config.svg" alt="Computador Gov Hub" class="card-image">
-                    <div class="publication-category">DOCUMENTAÇÃO</div>
-                </div>
-                <div class="publication-content">
-                    <h3 class="publication-title">Guia de Instalação</h3>
-                    <p class="publication-caption">Aprenda como instalar e configurar o GovHub em seu ambiente. Documentação completa passo a passo</p>
-                    <div class="publication-arrow">→</div>
+            <!-- Load More Button -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="load-more-container">
+                        <button class="load-more-button">CARREGAR MAIS PUBLICAÇÕES</button>
+                    </div>
                 </div>
             </div>
-
-            <!-- Card 5 -->
-            <div class="publication-card" onclick="window.open('../../comunidade/guia-contribuicao/', '_blank')">
-                <div class="publication-image">
-                    <img src="./images/publicacoes/contributing.svg" alt="Computador Gov Hub" class="card-image">
-                    <div class="publication-category">COMUNIDADE</div>
-                </div>
-                <div class="publication-content">
-                    <h3 class="publication-title">Guia de Contribuição</h3>
-                    <p class="publication-caption">Saiba como contribuir com o projeto GovHub. Diretrizes para desenvolvedores e colaboradores</p>
-                    <div class="publication-arrow">→</div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Load More Button -->
-        <div class="load-more-container">
-            <button class="load-more-button">CARREGAR MAIS PUBLICAÇÕES</button>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-container">
-            <!-- Top Section with Initiative and Support text -->
-            <div class="footer-top">
-                <div class="footer-initiative-text">
-                    <p>Gov hub é uma iniciativa</p>
-                </div>
-                <div class="footer-support-text">
-                    <p>Apoio</p>
-                </div>
-            </div>
-
+        <div class="container">
+            
             <!-- Three Column Layout -->
-            <div class="footer-middle">
+            <div class="row footer-middle g-4">
                 <!-- Column 1 - Lab Livre + Navigation -->
-                <div class="footer-column">
+                <div class="col-12 col-md-4 footer-column">
+                    <div class="footer-initiative-text">
+                        <p>Gov hub é uma iniciativa</p>
+                    </div>
                     <div class="footer-logo-section">
                         <div class="footer-logo-lablivre">
                             <img src="./images/lablivre_footer.png" alt="Lab Livre Logo">
@@ -271,8 +316,14 @@
                 </div>
 
                 <!-- Column 2 - UnB + How to use -->
-                <div class="footer-column">
+                <div class="col-12 col-md-4 footer-column">
+                    <div class="footer-spacer">
+                        <p>&nbsp;</p>
+                    </div>
                     <div class="footer-logo-section">
+                        <div class="footer-logo-lablivre mobile-only">
+                            <img src="./images/lablivre_footer.png" alt="Lab Livre Logo">
+                        </div>
                         <div class="footer-logo-unb">
                             <img src="./images/unb_footer.png" alt="UnB Logo">
                         </div>
@@ -289,7 +340,10 @@
                 </div>
 
                 <!-- Column 3 - IPEA + Contact -->
-                <div class="footer-column">
+                <div class="col-12 col-md-4 footer-column">
+                    <div class="footer-support-text">
+                        <p>Apoio</p>
+                    </div>
                     <div class="footer-logo-section">
                         <div class="footer-logo-ipea">
                             <img src="./images/ipea_footer.png" alt="IPEA Logo">
@@ -302,22 +356,32 @@
                         </ul>
                         <div class="footer-social">
                             <a href="https://github.com/GovHub-br" target="_blank" aria-label="GitHub">
-                                <img src="./images/github.png" alt="GitHub">
+                                <i class="fa-brands fa-github" alt="GitHub"></i>
                             </a>
                             <a href="https://www.linkedin.com/company/lappis-rocks/" target="_blank" aria-label="LinkedIn">
-                                <img src="./images/linkedin.png" alt="LinkedIn">
+                                <i class="fa-brands fa-linkedin-in" alt="LinkedIn"></i>
                             </a>
                             <a href="https://www.instagram.com/lab.livre/" target="_blank" aria-label="Instagram">
-                                <img src="./images/instagram.png" alt="Instagram">
+                                <i class="fa-brands fa-instagram" alt="Instagram"></i>
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
+            
+            <!-- Mobile Contact Section -->
+            <div class="footer-contact-mobile">
+                <h4>Contato</h4>
+                <ul>
+                    <li><a href="mailto:lablivreunb@gmail.com">lablivreunb@gmail.com</a></li>
+                </ul>
+            </div>
 
             <!-- Bottom Section - Copyright -->
-            <div class="footer-bottom">
-                <p>© 2025 GovHub - Uma iniciativa do Lab Livre - UnB. Licenciado sob Creative Commons.</p>
+            <div class="row">
+                <div class="col-12 footer-bottom">
+                    <p>© 2025 GovHub - Uma iniciativa do Lab Livre - UnB. Licenciado sob Creative Commons.</p>
+                </div>
             </div>
         </div>
     </footer>

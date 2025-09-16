@@ -1,4 +1,4 @@
-site_name: GovHubBR
+site_name: ""
 site_url: "https://govhub.github.io/govhub/"
 site_author: Lab Livre
 site_description: >-
@@ -110,6 +110,7 @@ extra:
 extra_css:
   - https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap
   - assets/custom-footer.css
+  - assets/pdf-viewer.css
 
 # Extensions
 markdown_extensions:
@@ -166,7 +167,7 @@ nav:
   - Sobre: home.md
   - E-book:
     - Gov Hub - plataforma livre de integração de dados e informações governamentais: ebook.md
-  - Sobre o Projeto:
+  - Sobre:
     - Visão geral: sobre-projeto/overview.md
     - Sistemas Estruturantes: sobre-projeto/sistemas-estruturantes.md
     - Gestão Orientada a Dados: sobre-projeto/gestao-dados.md

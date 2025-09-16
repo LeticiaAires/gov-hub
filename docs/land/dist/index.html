@@ -35,8 +35,8 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
     <script async defer src="https://buttons.github.io/buttons.js"></script>
-  <script type="module" crossorigin src="./assets/index-CA4Jb7I4.js"></script>
-  
+    <script type="module" crossorigin src="./assets/index-CA4Jb7I4.js"></script>
+    <script src="https://kit.fontawesome.com/31f9c08e31.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" crossorigin href="./assets/index-BV99bCjj.css">
     <link rel="stylesheet" crossorigin href="./assets/navbar.css">
@@ -48,7 +48,11 @@
     <link rel="stylesheet" crossorigin href="./assets/ebook-section.css">
     <link rel="stylesheet" crossorigin href="./assets/publications-section.css">
     <link rel="stylesheet" crossorigin href="./assets/footer.css">
-    <script src="./assets/main.js"></script>
+    
+    <!-- Bootstrap CSS - Carregado por último para não sobrescrever estilos customizados -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -57,43 +61,48 @@
     <div id="topo"></div>
     <header>
         <nav class="custom-navbar">
-            <div class="navbar-container">
-                <!-- Logo Section -->
-                <div class="navbar-left">
-                    <a href="./index.html" class="logo">
-                        <img src="./images/logo.svg" alt="GovHub Logo" class="logo-img">
-                    </a>
-                </div>
-
-                <!-- Navigation Links -->
-                <div class="navbar-center">
-                    <a href="./index.html" class="nav-link">HOME</a>
-                    <a href="./sobre.html" class="nav-link">SOBRE</a>
-                    <a href="./quem-somos.html" class="nav-link">QUEM SOMOS</a>
-                    <a href="./publicacoes.html" class="nav-link">PUBLICAÇÕES</a>
-                    <a href="../../comunidade/guia-contribuicao/" class="nav-link">GUIA DE CONTRIBUIÇÃO</a>
-                    <a href="./como-usar.html" class="nav-link">COMO USAR</a>
-                </div>
-
-                <!-- Right Section -->
-                <div class="navbar-right">
-                    
-                    <!-- Social Icons -->
-                    <div class="social-icons">
-                        <a href="https://www.instagram.com/govhub.br" target="_blank" class="social-icon">
-                            <img src="./images/instagram.png" alt="Instagram">
-                        </a>
-                        <a href="https://github.com/GovHub-br/gov-hub" target="_blank" class="social-icon">
-                            <img src="./images/github.png" alt="GitHub">
+            <div class="container">
+                <div class="row align-items-center g-0">
+                    <!-- Logo Section -->
+                    <div class="col-auto">
+                        <a href="./index.html" class="logo">
+                            <img src="./images/logo.svg" alt="GovHub Logo" class="logo-img">
                         </a>
                     </div>
 
+                    <!-- Navigation Links -->
+                    <div class="col d-none d-lg-flex justify-content-center">
+                        <div class="navbar-center">
+                            <a href="./index.html" class="nav-link">HOME</a>
+                            <a href="./sobre.html" class="nav-link">SOBRE</a>
+                            <a href="./quem-somos.html" class="nav-link">QUEM SOMOS</a>
+                            <a href="./publicacoes.html" class="nav-link">PUBLICAÇÕES</a>
+                            <a href="../../comunidade/guia-contribuicao/" class="nav-link">GUIA DE CONTRIBUIÇÃO</a>
+                            <a href="./como-usar.html" class="nav-link">COMO USAR</a>
+                        </div>
+                    </div>
+
+                    <!-- Right Section -->
+                    <div class="col-auto d-none d-md-flex">
+                        <!-- Social Icons -->
+                        <div class="social-icons">
+                            <a href="https://www.instagram.com/govhub.br" target="_blank" class="social-icon">
+                                <i class="fa-brands fa-instagram" alt="Instagram"></i>
+                            </a>
+                            <a href="https://github.com/GovHub-br/gov-hub" target="_blank" class="social-icon">
+                                <i class="fa-brands fa-github" alt="GitHub"></i>
+                            </a>
+                        </div>
+                    </div>
+
                     <!-- Mobile Menu Button -->
-                    <button class="mobile-menu-button" id="mobile-menu-toggle" aria-label="Toggle mobile menu">
-                        <svg fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
-                        </svg>
-                    </button>
+                    <div class="col-auto d-lg-none">
+                        <button class="mobile-menu-button" id="mobile-menu-toggle" type="button" aria-label="Toggle navigation">
+                            <svg fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
 
                 <!-- Mobile Menu -->
@@ -106,6 +115,15 @@
                         <li><a href="../../comunidade/guia-contribuicao/">GUIA DE CONTRIBUIÇÃO</a></li>
                         <li><a href="./como-usar.html">COMO USAR</a></li>
                     </ul>
+                    <!-- Social Icons dentro do menu mobile -->
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/govhub.br" target="_blank" class="social-icon">
+                            <i class="fa-brands fa-instagram" alt="Instagram"></i>
+                        </a>
+                        <a href="https://github.com/GovHub-br/gov-hub" target="_blank" class="social-icon">
+                            <i class="fa-brands fa-github" alt="GitHub"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -122,20 +140,20 @@
         <div class="image-area">
             <!-- Imagem padrão -->
             <div id="image-1" class="image-container image-fade-in">
-                <img src="./images/contratos_home.png" alt="Exemplo da tela contratos" class="main-image">
+                <img src="./images/contratos_homev2.png" alt="Exemplo da tela contratos" class="main-image">
             </div>
             
             <!-- Outras imagens -->
             <div id="image-2" class="image-container image-fade-out">
-                <img src="./images/teds_home.png" alt="Exemplo da tela TEDS" class="main-image">
+                <img src="./images/teds_homev2.png" alt="Exemplo da tela TEDS" class="main-image">
             </div>
             
             <div id="image-3" class="image-container image-fade-out">
-                <img src="./images/pessoal_home.png" alt="Exemplo da tela pessoal" class="main-image">
+                <img src="./images/pessoal_homev2.png" alt="Exemplo da tela pessoal" class="main-image">
             </div>
             
             <div id="image-4" class="image-container image-fade-out">
-                <img src="./images/orcamento_home.png" alt="Exemplo de orçamento" class="main-image">
+                <img src="./images/orcamento_homev2.png" alt="Exemplo de orçamento" class="main-image">
             </div>
             
             <div id="image-5" class="image-container image-fade-out">
@@ -152,7 +170,7 @@
                 <!-- Primeira linha - 3 cards -->
                 <div class="features-row-1">
                     <!-- Item 1 - Contratos -->
-                    <div class="feature-card" onclick="showImage(1)">
+                    <div class="feature-card" onmouseenter="showImage(1)">
                         <div class="feature-image">
                             <img src="./images/icons/contratos.svg" alt="Contratos" class="feature-png">
                         </div>
@@ -162,7 +180,7 @@
                     </div>
                     
                     <!-- Item 2 - TEDS -->
-                    <div class="feature-card" onclick="showImage(2)">
+                    <div class="feature-card" onmouseenter="showImage(2)">
                         <div class="feature-image">
                             <img src="./images/icons/teds.svg" alt="TEDS" class="feature-png">
                         </div>
@@ -172,7 +190,7 @@
                     </div>
                     
                     <!-- Item 3 - Pessoal -->
-                    <div class="feature-card" onclick="showImage(3)">
+                    <div class="feature-card" onmouseenter="showImage(3)">
                         <div class="feature-image">
                             <img src="./images/icons/pessoal.svg" alt="Pessoal" class="feature-png">
                         </div>
@@ -185,7 +203,7 @@
                 <!-- Segunda linha - 2 cards centralizados -->
                 <div class="features-row-2">
                     <!-- Item 4 - Orçamento -->
-                    <div class="feature-card" onclick="showImage(4)">
+                    <div class="feature-card" onmouseenter="showImage(4)">
                         <div class="feature-image">
                             <img src="./images/icons/orcamento.svg" alt="Orçamento" class="feature-png">
                         </div>
@@ -195,7 +213,7 @@
                     </div>
                     
                     <!-- Item 5 - IA -->
-                    <div class="feature-card" onclick="showImage(5)">
+                    <div class="feature-card" onmouseenter="showImage(5)">
                         <div class="feature-image">
                             <img src="./images/icons/ia.svg" alt="Inteligência Artificial" class="feature-png">
                         </div>
@@ -206,22 +224,22 @@
                 </div>
             </div>
         </div>
-</section>
+    </section>
     <!-- End block - Seção Interativa com Glass Effect -->
 
     <!-- Start block - Seção O que é o GovHub -->
     <section class="govhub-section">
-        <div class="govhub-container">
-            <!-- Row -->
-            <div class="govhub-content">
+        <div class="container">
+            <div class="row align-items-start g-5">
                 <!-- Left Column - Imagem -->
-                <div class="govhub-image-container">
-                    <img class="govhub-image" src="./images/imagem_OqueeGovHub.jpg" alt="Diagrama interconectado do GovHub">
+                <div class="col-12 col-lg-6 govhub-image-container">
+                    <div class="glow-circle-3"></div>
+                    <img class="govhub-image" src="./images/oqueeogovhub.png" alt="Diagrama interconectado do GovHub">
                 </div>
                 
                 <!-- Right Column - Texto Explicativo -->
-                <div class="govhub-text">
-                    <h2 class="govhub-title">O que é o Gov Hub?</h2>
+                <div class="col-12 col-lg-6 govhub-text">
+                    <h4 class="govhub-title">O que é o Gov Hub?</h4>
                     <p class="govhub-description">O GovHub é uma plataforma de software livre desenvolvida para transformar dados brutos em informações estratégicas, apoiando gestores públicos a tomar decisões baseadas em dados.</p>
                     
                     <p class="govhub-description">Converta dados dispersos em análises confiáveis e ações estratégicas para impulsionar a gestão pública orientada a dados com:</p>
@@ -257,14 +275,6 @@
                             <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
                         </svg>
                     </a>
-                    
-                    
-                    
-
-                    
-                    
-                    
-                        
                 </div>
             </div>
         </div>
@@ -273,10 +283,10 @@
 
     <!-- Start block - Seção Informações sobre o sistema -->
     <section class="system-info-section">
-        <div class="system-info-container">
-            <div class="system-info-content">
+        <div class="container">
+            <div class="row align-items-center g-4">
                 <!-- Left Column - Texto -->
-                <div class="system-info-text">
+                <div class="col-12 col-lg-6 system-info-text">
                     <h2 class="system-info-title">Transformando Dados em Valor para Gestão Pública</h2>
                     <p class="system-info-description">Potencializamos informações de sistemas como TransfereGov, Siape, Siafi, ComprasGov e Siorg para gerar diagnósticos estratégicos, indicadores confiáveis e decisões baseadas em evidências.</p>
                     
@@ -327,8 +337,8 @@
             </div>
                 
                 <!-- Right Column - Imagem -->
-                <div class="system-info-image-container">
-                    <img class="system-info-image" src="./images/imagem_informacoes.jpg" alt="Diagrama de informações sobre o sistema">
+                <div class="col-12 col-lg-6 system-info-image-container">
+                    <img class="system-info-image img-fluid" src="./images/img-infos-gov.jpg" alt="Diagrama de informações sobre o sistema">
                 </div>
             </div>
         </div>
@@ -337,17 +347,23 @@
 
     <!-- Start block - Seção de Clientes -->
     <section class="clients-section">
-        <div class="clients-container">
-            <h2 class="clients-title">Clientes</h2>
+        <div class="container clients-container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="clients-title text-center">Clientes</h2>
+                </div>
+            </div>
             
-            <div class="clients-carousel">
-                <button class="carousel-arrow carousel-arrow-left" onclick="moveCarousel(-1)">
+            <div class="row g-4">
+                <div class="col-12">
+                    <div class="clients-carousel">
+                <button class="carousel-arrow carousel-arrow-left d-none d-md-block" onclick="moveCarousel(-1)">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M15 18l-6-6 6-6"/>
                     </svg>
                 </button>
                 
-                <div class="clients-cards">
+                <div class="clients-cards" id="clientsCards">
                     <div class="client-card">
                         <div class="client-image">
                             <img src="./images/Avataricon.jpg" alt="Cliente 1">
@@ -393,21 +409,29 @@
                     </div>
                 </div>
                 
-                <button class="carousel-arrow carousel-arrow-right" onclick="moveCarousel(1)">
+                <button class="carousel-arrow carousel-arrow-right d-none d-md-block" onclick="moveCarousel(1)">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M9 18l6-6-6-6"/>
-                </svg> 
+                    </svg>
                 </button>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
     <!-- End block - Seção de Clientes -->
   <!-- Start block - Seção Principais Parceiros -->
   <section class="partners-section">
-    <div class="partners-container">
-      <h2 class="partners-title">Principais Parceiros</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="partners-title text-center"><span class="blur-letter" style="position: relative; display: inline-block; z-index: 1;"><span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 50px; height: 50px; background: #FFD700; border-radius: 50%; filter: blur(12px); opacity: 0.3; z-index: -1;"></span>P</span><span style="position: relative; display: inline-block; z-index: 1;">r</span><span style="position: relative; display: inline-block; z-index: 1;">i</span>ncipais Parceiros</h2>
+            </div>
+          </div>
       
-      <div class="partners-logos">
+      <div class="row justify-content-center g-4">
+        <div class="col-12">
+          <div class="partners-logos">
         <a href="https://www.linkedin.com/company/lappis-rocks/posts/?feedView=all" class="partner-link">
           <img src="./images/lablivre.png" alt="Lab Livre Logo" class="partner-logo">
         </a>
@@ -419,22 +443,24 @@
         <a href="https://www.ipea.gov.br/portal/" class="partner-link">
           <img src="./images/ipea.png" alt="Ipea Logo" class="partner-logo">
         </a>
-                    </div>
+          </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </section>
     <!-- End block - Seção Principais Parceiros -->
   <!-- Start block - Seção Download E-book -->
   <section class="ebook-section">
-    <div class="ebook-container">
-      <div class="ebook-content">
+    <div class="container">
+      <div class="row align-items-center g-4">
         <!-- Lado esquerdo - Imagens dos livros -->
-        <div class="ebook-images">
+        <div class="col-12 col-lg-6 ebook-images">
           <img src="./images/book.png" alt="E-book Gov Hub" class="ebook-book-left">
           <img src="./images/book.png" alt="E-book Gov Hub" class="ebook-book-right">
         </div>
         
         <!-- Lado direito - Texto e botão -->
-        <div class="ebook-text">
+        <div class="col-12 col-lg-6 ebook-text">
           <h2 class="ebook-title">Um guia prático para integração e qualificação de dados públicos.</h2>
           <p class="ebook-description">
             Transforme dados dispersos em decisões inteligentes.
@@ -449,15 +475,20 @@
 
   <!-- Start block - Seção Publicações em Destaque -->
   <section class="publications-section">
-    <div class="publications-container">
-      <div class="publications-header">
-        <h2 class="publications-title">Publicações em destaque</h2>
-        <p class="publications-description">Confira nossas publicações mais recentes sobre a plataforma GovHub, tutoriais técnicos e novidades do projeto. Mantenha-se atualizado com as últimas informações e guias práticos.</p>
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="publications-header text-center">
+            <h2 class="publications-title"><span class="blur-letter" style="position: relative; display: inline-block; z-index: 1;"><span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 50px; height: 50px; background: #FFD700; border-radius: 50%; filter: blur(12px); opacity: 0.3; z-index: -1;"></span>P</span><span style="position: relative; display: inline-block; z-index: 1;">u</span>blicações em destaque</h2>
+            <p class="publications-description">Confira nossas publicações mais recentes sobre a plataforma GovHub, tutoriais técnicos e novidades do projeto. Mantenha-se atualizado com as últimas informações e guias práticos.</p>
+          </div>
+        </div>
       </div>
       
-      <div class="publications-cards">
+      <div class="row g-4">
         <!-- Card 1 -->
-        <div class="publication-card" onclick="window.open('../../blog/2024/01/15/govhub-transformando-dados-em-decisões-estratégicas/', '_blank')" style="cursor: pointer;">
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+          <div class="publication-card" onclick="window.open('../../blog/2024/01/15/govhub-transformando-dados-em-decisões-estratégicas/', '_blank')" style="cursor: pointer;">
           <div class="publication-image-container">
             <img src="./images/publicacoes/paper.svg" alt="GovHub Platform" class="publication-image">
             <span class="publication-category">PLATAFORMA</span>
@@ -467,10 +498,12 @@
             <p class="publication-caption">O GovHub é uma plataforma de software livre desenvolvida para transformar dados brutos em informações estratégicas</p>
             <span class="publication-arrow">→</span>
           </div>
+          </div>
         </div>
         
         <!-- Card 2 -->
-        <div class="publication-card" onclick="window.open('../../blog/2024/01/10/como-usar-dbt-no-govhub-guia-completo/', '_blank')" style="cursor: pointer;">
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+          <div class="publication-card" onclick="window.open('../../blog/2024/01/10/como-usar-dbt-no-govhub-guia-completo/', '_blank')" style="cursor: pointer;">
           <div class="publication-image-container">
             <img src="./images/publicacoes/dbt.svg" alt="DBT Tutorial" class="publication-image">
             <span class="publication-category">TUTORIAL</span>
@@ -480,10 +513,12 @@
             <p class="publication-caption">O DBT é uma ferramenta essencial para transformação de dados no GovHub. Aprenda como configurar e usar</p>
             <span class="publication-arrow">→</span>
           </div>
+          </div>
         </div>
         
         <!-- Card 3 -->
-        <div class="publication-card" onclick="window.open('../../blog/2024/01/05/criando-dashboards-eficazes-com-apache-superset/', '_blank')" style="cursor: pointer;">
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+          <div class="publication-card" onclick="window.open('../../blog/2024/01/05/criando-dashboards-eficazes-com-apache-superset/', '_blank')" style="cursor: pointer;">
           <div class="publication-image-container">
             <img src="./images/publicacoes/superset.svg" alt="Superset Dashboard" class="publication-image">
             <span class="publication-category">SUPERSET</span>
@@ -496,29 +531,23 @@
         </div>
       </div>
       
-      <div class="publications-button-container">
+      <div class="publications-button-container text-center">
         <a href="./publicacoes.html" class="publications-button">VEJA MAIS PUBLICAÇÕES</a>
-                </div>
-                </div>
+      </div>
+    </div>
   </section>
   <!-- End block - Seção Publicações em Destaque -->
     <!-- Footer -->
     <footer class="footer">
-        <div class="footer-container">
-            <!-- Top Section with Initiative and Support text -->
-            <div class="footer-top">
-                <div class="footer-initiative-text">
-                    <p>Gov hub é uma iniciativa</p>
-                </div>
-                <div class="footer-support-text">
-                    <p>Apoio</p>
-                </div>
-            </div>
-
+        <div class="container">
+            
             <!-- Three Column Layout -->
-            <div class="footer-middle">
+            <div class="row footer-middle g-4">
                 <!-- Column 1 - Lab Livre + Navigation -->
-                <div class="footer-column">
+                <div class="col-12 col-md-4 footer-column">
+                    <div class="footer-initiative-text">
+                        <p>Gov hub é uma iniciativa</p>
+                    </div>
                     <div class="footer-logo-section">
                         <div class="footer-logo-lablivre">
                             <img src="./images/lablivre_footer.png" alt="Lab Livre Logo">
@@ -536,8 +565,14 @@
                 </div>
 
                 <!-- Column 2 - UnB + How to use -->
-                <div class="footer-column">
+                <div class="col-12 col-md-4 footer-column">
+                    <div class="footer-spacer">
+                        <p>&nbsp;</p>
+                    </div>
                     <div class="footer-logo-section">
+                        <div class="footer-logo-lablivre mobile-only">
+                            <img src="./images/lablivre_footer.png" alt="Lab Livre Logo">
+                        </div>
                         <div class="footer-logo-unb">
                             <img src="./images/unb_footer.png" alt="UnB Logo">
                         </div>
@@ -554,7 +589,10 @@
                 </div>
 
                 <!-- Column 3 - IPEA + Contact -->
-                <div class="footer-column">
+                <div class="col-12 col-md-4 footer-column">
+                    <div class="footer-support-text">
+                        <p>Apoio</p>
+                    </div>
                     <div class="footer-logo-section">
                         <div class="footer-logo-ipea">
                             <img src="./images/ipea_footer.png" alt="IPEA Logo">
@@ -567,25 +605,40 @@
                         </ul>
                         <div class="footer-social">
                             <a href="https://github.com/GovHub-br" target="_blank" aria-label="GitHub">
-                                <img src="./images/github.png" alt="GitHub">
+                                <i class="fa-brands fa-github" alt="GitHub"></i>
                             </a>
                             <a href="https://www.linkedin.com/company/lappis-rocks/" target="_blank" aria-label="LinkedIn">
-                                <img src="./images/linkedin.png" alt="LinkedIn">
+                                <i class="fa-brands fa-linkedin-in" alt="LinkedIn"></i>
                             </a>
                             <a href="https://www.instagram.com/lab.livre/" target="_blank" aria-label="Instagram">
-                                <img src="./images/instagram.png" alt="Instagram">
+                                <i class="fa-brands fa-instagram" alt="Instagram"></i>
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
+            
+            <!-- Mobile Contact Section -->
+            <div class="footer-contact-mobile">
+                <h4>Contato</h4>
+                <ul>
+                    <li><a href="mailto:lablivreunb@gmail.com">lablivreunb@gmail.com</a></li>
+                </ul>
+            </div>
 
             <!-- Bottom Section - Copyright -->
-            <div class="footer-bottom">
-                <p>© 2025 GovHub - Uma iniciativa do Lab Livre - UnB. Licenciado sob Creative Commons.</p>
+            <div class="row">
+                <div class="col-12 footer-bottom">
+                    <p>© 2025 GovHub - Uma iniciativa do Lab Livre - UnB. Licenciado sob Creative Commons.</p>
+                </div>
             </div>
         </div>
     </footer>
+    
+    
+    
+    <!-- Main JavaScript -->
+    <script src="./assets/main.js"></script>
 </body>
 </html>
 
