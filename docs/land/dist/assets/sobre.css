@@ -27,11 +27,11 @@ body {
 /* Content Section */
 .content-section {
     background-color: #F7F7F7;
-    padding: 3rem 1rem 2rem 3rem;
+    padding: 6.25rem 1rem 2.5rem 3rem;
 }
 
 .content-section h2 {
-    color: #6366f1;
+    color: #000000;
     font-size: 2.5rem;
     margin-bottom: 2rem;
     text-align: center;
@@ -96,7 +96,7 @@ body {
 }
 
 .content-block h2 {
-    color: #7A34F3;
+    color: #000000;
     font-size: 2rem;
     font-weight: 700;
     margin-bottom: 1rem;
@@ -107,7 +107,56 @@ body {
     font-size: 1.1rem;
     line-height: 1.7;
     color: #000000;
-    text-align: justify;
+    text-align: left;
+}
+
+/* Features Section */
+.features-section {
+    background-color: #FFFFFF;
+    padding: 6.25rem 1rem 2.5rem 3rem;
+}
+
+.features-title-column {
+    display: flex;
+    align-items: flex-start;
+}
+
+.features-title {
+    color: #7A34F3;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+    text-align: left;
+    text-shadow: 0 0 20px rgba(122, 52, 243, 0.3);
+    white-space: nowrap;
+}
+
+.features-list-column {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.feature-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.feature-item h3 {
+    color: #000000;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin: 0;
+    text-align: left;
+}
+
+.feature-item p {
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+    text-align: left;
 }
 
 /* Features Grid */
@@ -234,8 +283,8 @@ body {
 
 /* Technologies Section */
 .technologies-section {
-    background-color: #FFFFFF;
-    padding: 3rem 1rem 2rem 3rem;
+    background-color: #F7F7F7;
+    padding: 6.25rem 1rem 2.5rem 3rem;
 }
 
 .technologies-column h2,
@@ -294,66 +343,93 @@ body {
     font-weight: bold;
 }
 
-/* Requirements Section */
-.requirements-section {
+/* How to Use Section */
+.how-to-use-section {
     background-color: #FFFFFF;
-    padding: 3rem 1rem 2rem 3rem;
+    padding: 6.25rem 1rem 2.5rem 3rem;
 }
 
-.minimum-requirements-column h2,
-.requirements-list-column h2 {
-    color: #000000;
-    font-size: 2rem;
+.how-to-use-content h2 {
+    color: #7A34F3;
+    font-size: 2.5rem;
     font-weight: 700;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     text-align: left;
 }
 
-.minimum-requirements-column p {
+.how-to-use-content p {
     font-size: 1.1rem;
     line-height: 1.7;
     color: #333;
-    text-align: justify;
-    margin: 0;
+    text-align: left;
+    margin-bottom: 2rem;
+    max-width: 800px;
 }
 
-.requirements-items {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-
-.requirement-block {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.requirement-block h3 {
-    font-size: 1rem;
+.how-to-use-content h3 {
+    color: #333;
+    font-size: 1.3rem;
     font-weight: 600;
-    color: #7A34F3;
-    text-transform: uppercase;
-    margin: 0;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
 }
 
-.requirement-block p {
-    font-size: 1rem;
+.how-to-use-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem 0;
+    max-width: 800px;
+}
+
+.how-to-use-list li {
+    font-size: 1.1rem;
     line-height: 1.6;
     color: #333;
-    margin: 0;
+    margin-bottom: 0.5rem;
+    padding-left: 2rem;
+    position: relative;
 }
+
+.how-to-use-list li:before {
+    content: "•";
+    color: #000000 !important;
+    font-weight: bold;
+    position: absolute;
+    left: 0.5rem;
+}
+
+.how-to-use-links {
+    display: flex;
+    flex-direction: row;
+    gap: 10rem;
+    flex-wrap: wrap;
+}
+
+.how-to-use-link {
+    color: #7A34F3;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.how-to-use-link:hover {
+    color: #5a2bc7;
+}
+
+/* Requirements Section */
+/* (removido) */
 
 /* Construction Section */
 .construction-section {
     background-color: #F7F7F7;
-    padding: 3rem 1rem 2rem 3rem;
+    padding: 6.25rem 1rem 2.5rem 3rem;
 }
 
 /* Construction content - estilos aplicados nos elementos filhos */
 
 .construction-content h2 {
-    color: #7A34F3;
+    color: #000000;
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
@@ -363,10 +439,6 @@ body {
 
 .construction-content h2:first-child {
     margin-top: 0;
-}
-
-.construction-content h2:nth-child(3) {
-    margin-top: 15rem;
 }
 
 .construction-content p {
@@ -480,6 +552,9 @@ body {
         font-size: 2rem;
     }
     
+    .features-title {
+        font-size: 2rem;
+    }
     
     .construction-content h2 {
         font-size: 2rem;
@@ -509,16 +584,23 @@ body {
     }
     
     .content-section {
-        padding: 2.5rem 1rem 2rem 1rem;
+        padding: 6.25rem 1rem 2.5rem 1rem;
     }
     
     .content-section h2 {
         font-size: 1.8rem;
     }
     
+    .features-section {
+        padding: 6.25rem 1rem 2.5rem 1rem;
+    }
+    
+    .features-title {
+        font-size: 1.8rem;
+    }
     
     .construction-section {
-        padding: 2.5rem 1rem 2rem 1rem;
+        padding: 6.25rem 1rem 2.5rem 1rem;
     }
     
     .construction-content h2 {
@@ -526,7 +608,7 @@ body {
     }
     
     .data-management-section {
-        padding: 2.5rem 1rem 2rem 1rem;
+        padding: 6.25rem 1rem 2.5rem 1rem;
     }
     
     .data-management-content h2 {
@@ -555,29 +637,31 @@ body {
     .hero-section {
         padding: 80px 1rem 50px;
     }
-    
-    .hero-section h1 {
-        font-size: 1.8rem;
-    }
-    
-    .hero-section p {
-        font-size: 1rem;
-    }
-    
     .content-section {
-        padding: 2rem 0;
+        padding: 6.25rem 1rem 2rem 1rem;
+    }
+    .features-section {
+        padding: 6.25rem 1rem 2rem 1rem;
+    }
+    .technologies-section {
+        padding: 6.25rem 1rem 2rem 1rem;
+    }
+    .how-to-use-section {
+        padding: 6.25rem 1rem 2rem 1rem;
+    }
+    .construction-section {
+        padding: 6.25rem 1rem 2rem 1rem;
     }
     
     .content-section h2 {
         font-size: 1.6rem;
     }
     
-    
-    .construction-content h2 {
+    .features-title {
         font-size: 1.6rem;
     }
     
-    .data-management-content h2 {
+    .construction-content h2 {
         font-size: 1.6rem;
     }
     

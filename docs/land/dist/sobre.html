@@ -117,13 +117,57 @@
                 <div class="col-12 col-lg-6">
                     <div class="text-column">
                         <div class="content-block">
-                            <h2>Porque existe?</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sem nisl, efficitur vitae magna vel, efficitur rhoncus urna. Aliquam efficitur iaculis ex, a mollis mi ornare a.</p>
+                            <h2>O que é o Gov Hub?</h2>
+                            <p>O GovHub é uma plataforma livre que qualifica e integra dados dos sistemas estruturantes, transformando-os em informações estratégicas para gestão pública baseada em evidências.</p>
                         </div>
                         
                         <div class="content-block">
-                            <h2>O que tem de diferente?</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sem nisl, efficitur vitae magna vel, efficitur rhoncus urna. Aliquam efficitur iaculis ex, a mollis mi ornare a.</p>
+                            <h2>Porque existe?</h2>
+                            <p>Para implementar a interoperabilidade no setor público, unindo dados fragmentados e garantindo informações confiáveis para decisões e transparência.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Left Column - Title -->
+                <div class="col-12 col-lg-6">
+                    <div class="features-title-column">
+                        <h2 class="features-title"><span class="blur-letter" style="position: relative; display: inline-block;"><span style="position: absolute; top: 50%; left: 30%; transform: translate(-50%, -50%); width: 100px; height: 50px; background: #7A34F3; border-radius: 25px; filter: blur(8px); opacity: 0.1;"></span>O que</span> tem de diferente?</h2>
+                    </div>
+                </div>
+                
+                <!-- Right Column - Features List -->
+                <div class="col-12 col-lg-6">
+                    <div class="features-list-column">
+                        <div class="feature-item">
+                            <h3>Tudo em um</h3>
+                            <p>Em vez de acessar e cruzar manualmente dados de diferentes sistemas estruturantes, o GovHub reúne tudo em uma única plataforma, oferecendo informações integradas, qualificadas e prontas para uso na gestão pública.</p>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <h3>Software livre e confiável</h3>
+                            <p>O GovHub é 100% open source, garantindo autonomia, transparência e colaboração entre órgãos públicos. Sua stack tecnológica é padrão e já utilizada amplamente pelo governo.</p>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <h3>Arquitetura modular</h3>
+                            <p>A solução é desenhada para ser flexível: integrações feitas com sistemas estruturantes podem ser reutilizadas em outros órgãos, além de permitir a conexão com sistemas próprios do órgão.</p>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <h3>Medallion e governança de dados</h3>
+                            <p>A arquitetura em camadas (bronze, prata e ouro) garante qualidade progressiva dos dados, enquanto a governança assegura rastreabilidade, confiabilidade e uso estratégico das informações.</p>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <h3>Respostas inteligentes com IA</h3>
+                            <p>Com o uso de RAG (Retrieval Augmented Generation), o GovHub permite responder a perguntas negociais diretamente, sem depender apenas de dashboards, agilizando análises e decisões.</p>
                         </div>
                     </div>
                 </div>
@@ -138,7 +182,7 @@
                 <!-- Left Column - Technologies -->
                 <div class="col-12 col-lg-6">
                     <div class="technologies-column">
-                        <h2><span class="blur-letter" style="position: relative; display: inline-block;"><span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 40px; height: 40px; background: #9B59B6; border-radius: 50%; filter: blur(8px); opacity: 0.2;"></span>T</span>ecnologias utilizadas</h2>
+                        <h2><span class="blur-letter" style="position: relative; display: inline-block;"><span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 90px; height: 60px; background: #CE93D8; border-radius: 30px; filter: blur(8px); opacity: 0.2;"></span>Com</span> que foi desenvolvido?</h2>
                         <p>O projeto adota um stack tecnológico baseado em soluções open-source, incluindo Apache Airflow para orquestração de pipelines de dados, DBT para transformação e modelagem de informações, Apache Superset para visualização e exploração, PostgreSQL como banco de dados relacional e Docker para containerização e implantação. A escolha dessas tecnologias permite maior flexibilidade, escalabilidade e integração com diferentes sistemas governamentais.</p>
                     </div>
                 </div>
@@ -146,7 +190,6 @@
                 <!-- Right Column - Requirements -->
                 <div class="col-12 col-lg-6">
                     <div class="requirements-column">
-                        <h2>Lista de requisitos</h2>
                         <div class="requirements-list">
                             <div class="requirement-item">
                                 <span class="requirement-category">ORQUESTRAÇÃO DE PIPELINES DE DADOS</span>
@@ -187,6 +230,22 @@
                                     <span class="arrow">→</span>
                                 </div>
                             </div>
+                            
+                            <div class="requirement-item">
+                                <span class="requirement-category">RETRIEVAL AUGMENTED GENERATION (EM BREVE)</span>
+                                <div class="requirement-tech">
+                                    <span class="tech-name">HAYSTACK</span>
+                                    <span class="arrow">→</span>
+                                </div>
+                            </div>
+                            
+                            <div class="requirement-item">
+                                <span class="requirement-category">BANCO DE DADOS VETORIAL (EM BREVE)</span>
+                                <div class="requirement-tech">
+                                    <span class="tech-name">QDRANT</span>
+                                    <span class="arrow">→</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -194,49 +253,24 @@
         </div>
     </section>
     
-    <!-- Requirements Section -->
-    <section class="requirements-section">
+    <!-- How to Use Section -->
+    <section class="how-to-use-section">
         <div class="container">
-            <div class="row g-4">
-                <!-- Left Column - Minimum Requirements -->
-                <div class="col-12 col-lg-6">
-                    <div class="minimum-requirements-column">
-                        <h2>Requisitos Mínimos de uso</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sem nisl, efficitur vitae magna vel, efficitur rhoncus urna. Aliquam efficitur iaculis ex, a mollis mi ornare a.</p>
-                    </div>
-                </div>
+            <div class="how-to-use-content">
+                <h2><span class="blur-letter" style="position: relative; display: inline-block;"><span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 80px; height: 50px; background: #CE93D8; border-radius: 25px; filter: blur(8px); opacity: 0.2;"></span>Como</span> utilizar?</h2>
+                <p>O GovHub pode ser hospedado na infraestrutura do próprio órgão, garantindo autonomia e segurança. Os painéis são oferecidos por padrão no Superset, acessível via navegador, mas é possível conectar a base qualificada em outras ferramentas de visualização. Parte dos dados utilizados depende de acesso autorizado pelos órgãos responsáveis. A configuração é responsabilidade do órgão, com apoio disponível por meio de parceiros.</p>
                 
-                <!-- Right Column - Requirements List -->
-                <div class="col-12 col-lg-6">
-                    <div class="requirements-list-column">
-                        <h2>Lista de requisitos</h2>
-                        <div class="requirements-items">
-                            <div class="requirement-block">
-                                <h3>Requisito 1</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sem nisl.</p>
-                            </div>
-                            
-                            <div class="requirement-block">
-                                <h3>Requisito 2</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sem nisl.</p>
-                            </div>
-                            
-                            <div class="requirement-block">
-                                <h3>Requisito 3</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sem nisl.</p>
-                            </div>
-                            
-                            <div class="requirement-block">
-                                <h3>Requisito 4</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sem nisl.</p>
-                            </div>
-                            
-                            <div class="requirement-block">
-                                <h3>Requisito 5</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sem nisl.</p>
-                            </div>
-                        </div>
-                    </div>
+                <h3>Para saber mais detalhes como:</h3>
+                <ul class="how-to-use-list">
+                    <li>Solicitar acesso as bases dos sistemas estruturantes;</li>
+                    <li>Configurar GovHub na minha infraestrutura;</li>
+                    <li>Como conectar a base do GovHub em outro sistema de visualização de dados;</li>
+                    <li>Como conectar novas bases ao GovHub;</li>
+                </ul>
+                
+                <div class="how-to-use-links">
+                    <a href="#" class="how-to-use-link">ACESSE AQUI A DOCUMENTAÇÃO COMPLETA PARA IMPLANTAÇÃO E USO →</a>
+                    <a href="#" class="how-to-use-link">SOLICITE APOIO DE UM PARCEIRO →</a>
                 </div>
             </div>
         </div>
@@ -245,53 +279,20 @@
     <!-- Construction Section -->
     <section class="construction-section">
         <div class="container">
-            <div class="construction-content">
-                <h2>Como que é Construído?</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sem nisl, efficitur vitae magna vel, efficitur rhoncus urna. Aliquam efficitur iaculis ex, a mollis mi ornare a.</p>
-                
-                <h2>Sistemas estruturantes</h2>
-                <p>Os sistemas estruturantes são o núcleo operacional do governo federal, projetados para apoiar atividades essenciais de gestão e garantir a padronização e eficiência na administração pública. Eles desempenham um papel fundamental na consolidação, integração e qualificação de dados, tornando-se indispensáveis para a formulação e execução de políticas públicas.</p>
-                
-                <h3>Para saber mais detalhes como:</h3>
-                <ul class="details-list">
-                    <li>O que são os Sistemas Estruturantes;</li>
-                    <li>Desafios e Problemas;</li>
-                    <li>Soluções e Abordagens do projeto;</li>
-                    <li>Benefícios para Administração Pública;</li>
-                    <li>e O Futuro dos Sistemas;</li>
-                </ul>
-                
-                <a href="#" class="download-link">BAIXE AGORA NOSSO PDF →</a>
+            <div class="row g-4">
+                <div class="col-12 col-lg-8">
+                    <div class="construction-content">
+                        <h2><span class="blur-letter" style="position: relative; display: inline-block;"><span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 95px; height: 60px; background: #CE93D8; border-radius: 30px; filter: blur(12px); opacity: 0.25;"></span>Sob</span> que licença está o código?</h2>
+                        <p>O GovHub é totalmente open source: código livre, transparente e auditável. Isso garante autonomia aos órgãos públicos, fomenta colaboração e evita dependência de fornecedores proprietários.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
     
-    <!-- Data Management Section -->
-    <section class="data-management-section">
-        <div class="container">
-            <div class="data-management-content">
-                <h2>Gestão orientada a dados</h2>
-                <h3>Transformando Decisões no Setor Público</h3>
-                <p>A gestão orientada a dados é uma abordagem estratégica para a tomada de decisão no setor público, destacando seu potencial para revolucionar a formulação e implementação de políticas públicas, garantindo eficiência, transparência e responsabilidade.</p>
-                
-                <a href="#" class="download-link-blue">BAIXE AGORA NOSSO PDF →</a>
-            </div>
-        </div>
-    </section>
-
+    
     <!-- Footer -->
     <footer class="footer">
-        <!-- Licença de Uso Section -->
-        <section class="licenca-section">
-            <div class="container">
-                <div class="row g-4">
-                    <div class="col-12">
-                        <h2 class="licenca-title">Licença de Uso</h2>
-                        <p class="licenca-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sem nisl, efficitur vitae magna vel, efficitur rhoncus urna. Aliquam efficitur iaculis ex, a mollis mi ornare a.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
         
         <div class="container">
             
