@@ -163,7 +163,8 @@ markdown_extensions:
   - pymdownx.tilde
 
 nav:
-  - Home: index.md
+  - Home: land/dist/index.html
+  - Sobre: home.md
   - E-book:
     - Gov Hub - plataforma livre de integração de dados e informações governamentais: ebook.md
   - Sobre:
@@ -197,8 +198,9 @@ nav:
         - Criando um dashboard: documentacao/tutoriais/superset/criando-dashboard.md
         - Importando e exportando dashboards: documentacao/tutoriais/superset/import-export.md
       - Sistemas estruturantes: 
-        - DAG de ingestão: documentacao/tutoriais/sistemas-estruturantes/sistemas-estruturantes.md
         - Guia de sistemas: documentacao/tutoriais/sistemas-estruturantes/importar_bancos.md
+        - Credenciais de acesso: documentacao/tutoriais/sistemas-estruturantes/acesso-apis-siafi-siape.md
+        - DAG de ingestão: documentacao/tutoriais/sistemas-estruturantes/sistemas-estruturantes.md
   - Comunidade: 
     - Guia de Contribuição: comunidade/guia-contribuicao.md
     - Licença: comunidade/licenca.md
