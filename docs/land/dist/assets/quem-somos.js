@@ -15,7 +15,7 @@ function preloadTeamImages() {
         './images/equipe/davi.png',
         './images/equipe/joyce.png',
         './images/equipe/mateus.png',
-        './images/equipe/guilherme_gusmao.png',
+        './images/equipe/guilherme_gusmao.jpg',
         './images/equipe/vinicius.png',
         
         // IPEA Team
