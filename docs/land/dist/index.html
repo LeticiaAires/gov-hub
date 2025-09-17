@@ -43,7 +43,6 @@
     <link rel="stylesheet" crossorigin href="./assets/interactive-section.css">
     <link rel="stylesheet" crossorigin href="./assets/govhub-section.css">
     <link rel="stylesheet" crossorigin href="./assets/system-info-section.css">
-    <link rel="stylesheet" crossorigin href="./assets/clientes-section.css">
     <link rel="stylesheet" crossorigin href="./assets/partners-section.css">
     <link rel="stylesheet" crossorigin href="./assets/ebook-section.css">
     <link rel="stylesheet" crossorigin href="./assets/publications-section.css">
@@ -347,104 +346,50 @@
       </section>
     <!-- End block - Seção Informações sobre o sistema -->
 
-    <!-- Start block - Seção de Clientes -->
-    <section class="clients-section">
-        <div class="container clients-container">
-            <div class="row">
-                <div class="col-12">
-                    <h2 class="clients-title text-center">Clientes</h2>
-                </div>
-            </div>
-            
-            <div class="row g-4">
-                <div class="col-12">
-                    <div class="clients-carousel">
-                <button class="carousel-arrow carousel-arrow-left d-none d-md-block" onclick="moveCarousel(-1)">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M15 18l-6-6 6-6"/>
-                    </svg>
-                </button>
-                
-                <div class="clients-cards" id="clientsCards">
-                    <div class="client-card">
-                        <div class="client-image">
-                            <img src="./images/Avataricon.jpg" alt="Cliente 1">
-                        </div>
-                        <div class="client-info">
-                            <h3 class="client-name">Ricardo Silva</h3>
-                            <p class="client-quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            <p class="client-role">Cargo</p>
-                        </div>
-                    </div>
-                    
-                    <div class="client-card">
-                        <div class="client-image">
-                            <img src="./images/Avataricon.jpg" alt="Cliente 2">
-                        </div>
-                        <div class="client-info">
-                            <h3 class="client-name">Ricardo Silva</h3>
-                            <p class="client-quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            <p class="client-role">Cargo</p>
-                        </div>
-                    </div>
-                    
-                    <div class="client-card">
-                        <div class="client-image">
-                            <img src="./images/Avataricon.jpg" alt="Cliente 3">
-                        </div>
-                        <div class="client-info">
-                            <h3 class="client-name">Ricardo Silva</h3>
-                            <p class="client-quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            <p class="client-role">Cargo</p>
-                        </div>
-                    </div>
-                    
-                    <div class="client-card">
-                        <div class="client-image">
-                            <img src="./images/Avataricon.jpg" alt="Cliente 4">
-                        </div>
-                        <div class="client-info">
-                            <h3 class="client-name">Ricardo Silva</h3>
-                            <p class="client-quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            <p class="client-role">Cargo</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <button class="carousel-arrow carousel-arrow-right d-none d-md-block" onclick="moveCarousel(1)">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M9 18l6-6-6-6"/>
-                    </svg>
-                </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End block - Seção de Clientes -->
   <!-- Start block - Seção Principais Parceiros -->
   <section class="partners-section">
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h2 class="partners-title text-center"><span class="blur-letter" style="position: relative; display: inline-block; z-index: 1;"><span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 50px; height: 50px; background: #FFD700; border-radius: 50%; filter: blur(12px); opacity: 0.3; z-index: -1;"></span>P</span><span style="position: relative; display: inline-block; z-index: 1;">r</span><span style="position: relative; display: inline-block; z-index: 1;">i</span>ncipais Parceiros</h2>
+                <h2 class="partners-title flex-start"><span class="blur-letter" style="position: relative; display: inline-block; z-index: 1;"><span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 50px; height: 50px; background: #FFD700; border-radius: 50%; filter: blur(12px); opacity: 0.3; z-index: -1;"></span>P</span><span style="position: relative; display: inline-block; z-index: 1;">r</span><span style="position: relative; display: inline-block; z-index: 1;">i</span>ncipais Parceiros</h2>
             </div>
           </div>
       
-      <div class="row justify-content-center g-4">
-        <div class="col-12">
-          <div class="partners-logos">
-        <a href="https://www.linkedin.com/company/lappis-rocks/posts/?feedView=all" class="partner-link">
-          <img src="./images/lablivre.png" alt="Lab Livre Logo" class="partner-logo">
-        </a>
-    
-        <a href="https://www.unb.br/" class="partner-link">
-          <img src="./images/unb.png" alt="UnB Logo" class="partner-logo">
-        </a>
-    
-        <a href="https://www.ipea.gov.br/portal/" class="partner-link">
-          <img src="./images/ipea.png" alt="Ipea Logo" class="partner-logo">
-        </a>
+      <!-- Three Column Layout similar to footer -->
+      <div class="row partners-content g-4">
+        <!-- Column 1 - GOV HUB É UMA INICIATIVA + Lab Livre -->
+        <div class="col-12 col-md-4 partners-column">
+          <div class="partners-initiative-text">
+            <p>Gov Hub é uma iniciativa</p>
+          </div>
+          <div class="partners-logo-section">
+            <a href="https://www.linkedin.com/company/lappis-rocks/posts/?feedView=all" target="_blank" class="partner-link">
+              <img src="./images/lablivre.png" alt="Lab Livre Logo" class="partner-logo">
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 2 - UnB -->
+        <div class="col-12 col-md-4 partners-column">
+          <div class="partners-spacer">
+            <p>&nbsp;</p>
+          </div>
+          <div class="partners-logo-section">
+            <a href="https://www.unb.br/" target="_blank" class="partner-link">
+              <img src="./images/unb.png" alt="UnB Logo" class="partner-logo">
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 3 - APOIO + IPEA -->
+        <div class="col-12 col-md-4 partners-column">
+          <div class="partners-support-text">
+            <p>Apoio</p>
+          </div>
+          <div class="partners-logo-section">
+            <a href="https://www.ipea.gov.br/portal/" target="_blank" class="partner-link">
+              <img src="./images/ipea.png" alt="IPEA Logo" class="partner-logo">
+            </a>
           </div>
         </div>
       </div>
