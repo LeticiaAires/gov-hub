@@ -6,6 +6,11 @@
     position: relative;
 }
 
+.partners-initiative-text .partners-bold-text,
+.partners-support-text .partners-bold-text {
+    font-weight: bold;
+}
+
 .partners-container {
     max-width: 1280px;
     margin: 0 auto;
