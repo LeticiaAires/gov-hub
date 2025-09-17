@@ -103,29 +103,7 @@
     }
 }
 
-/* Alinhamento específico para 759px */
-@media (max-width: 759px) {
-    .partners-content {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .partners-column {
-        align-items: center;
-        text-align: center;
-        justify-content: center;
-    }
-    
-    .partners-logo-section {
-        justify-content: center;
-    }
-    
-    .partners-initiative-text,
-    .partners-support-text {
-        justify-content: center;
-    }
-}
+
 
 @media (max-width: 768px) {
     .partners-section {
@@ -140,6 +118,10 @@
     
     .partners-column {
         margin-bottom: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
     
     .partners-spacer {
@@ -148,6 +130,10 @@
     
     .partners-logo-section {
         padding-left: 0.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
     
     /* Remove padding da última coluna (IPEA) em tablets também */
