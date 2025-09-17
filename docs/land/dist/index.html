@@ -43,7 +43,6 @@
     <link rel="stylesheet" crossorigin href="./assets/interactive-section.css">
     <link rel="stylesheet" crossorigin href="./assets/govhub-section.css">
     <link rel="stylesheet" crossorigin href="./assets/system-info-section.css">
-    <link rel="stylesheet" crossorigin href="./assets/clientes-section.css">
     <link rel="stylesheet" crossorigin href="./assets/partners-section.css">
     <link rel="stylesheet" crossorigin href="./assets/ebook-section.css">
     <link rel="stylesheet" crossorigin href="./assets/publications-section.css">
@@ -53,6 +52,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Main JavaScript -->
+    <script src="./assets/main.js"></script>
+    <!-- Scripts específicos da home -->
+    <script src="./assets/index.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -79,6 +83,7 @@
                             <a href="./publicacoes.html" class="nav-link">PUBLICAÇÕES</a>
                             <a href="../../comunidade/guia-contribuicao/" class="nav-link">GUIA DE CONTRIBUIÇÃO</a>
                             <a href="./como-usar.html" class="nav-link">COMO USAR</a>
+                            <a href="./ebook.html" class="nav-link">E-BOOK</a>
                         </div>
                     </div>
 
@@ -114,6 +119,7 @@
                         <li><a href="./publicacoes.html">PUBLICAÇÕES</a></li>
                         <li><a href="../../comunidade/guia-contribuicao/">GUIA DE CONTRIBUIÇÃO</a></li>
                         <li><a href="./como-usar.html">COMO USAR</a></li>
+                        <li><a href="./ebook.html">E-BOOK</a></li>
                     </ul>
                     <!-- Social Icons dentro do menu mobile -->
                     <div class="social-icons">
@@ -157,7 +163,7 @@
             </div>
             
             <div id="image-5" class="image-container image-fade-out">
-                <video src="./images/assitente_de_IA.mp4" alt="Assistente de IA" class="main-image" autoplay muted loop>
+                <video src="./images/assistente_de_IA.mp4" alt="Assistente de IA" class="main-image" autoplay muted loop>
                 </video>
             </div>
         </div>
@@ -345,104 +351,61 @@
       </section>
     <!-- End block - Seção Informações sobre o sistema -->
 
-    <!-- Start block - Seção de Clientes -->
-    <section class="clients-section">
-        <div class="container clients-container">
-            <div class="row">
-                <div class="col-12">
-                    <h2 class="clients-title text-center">Clientes</h2>
-                </div>
-            </div>
-            
-            <div class="row g-4">
-                <div class="col-12">
-                    <div class="clients-carousel">
-                <button class="carousel-arrow carousel-arrow-left d-none d-md-block" onclick="moveCarousel(-1)">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M15 18l-6-6 6-6"/>
-                    </svg>
-                </button>
-                
-                <div class="clients-cards" id="clientsCards">
-                    <div class="client-card">
-                        <div class="client-image">
-                            <img src="./images/Avataricon.jpg" alt="Cliente 1">
-                        </div>
-                        <div class="client-info">
-                            <h3 class="client-name">Ricardo Silva</h3>
-                            <p class="client-quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            <p class="client-role">Cargo</p>
-                        </div>
-                    </div>
-                    
-                    <div class="client-card">
-                        <div class="client-image">
-                            <img src="./images/Avataricon.jpg" alt="Cliente 2">
-                        </div>
-                        <div class="client-info">
-                            <h3 class="client-name">Ricardo Silva</h3>
-                            <p class="client-quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            <p class="client-role">Cargo</p>
-                        </div>
-                    </div>
-                    
-                    <div class="client-card">
-                        <div class="client-image">
-                            <img src="./images/Avataricon.jpg" alt="Cliente 3">
-                        </div>
-                        <div class="client-info">
-                            <h3 class="client-name">Ricardo Silva</h3>
-                            <p class="client-quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            <p class="client-role">Cargo</p>
-                        </div>
-                    </div>
-                    
-                    <div class="client-card">
-                        <div class="client-image">
-                            <img src="./images/Avataricon.jpg" alt="Cliente 4">
-                        </div>
-                        <div class="client-info">
-                            <h3 class="client-name">Ricardo Silva</h3>
-                            <p class="client-quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            <p class="client-role">Cargo</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <button class="carousel-arrow carousel-arrow-right d-none d-md-block" onclick="moveCarousel(1)">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M9 18l6-6-6-6"/>
-                    </svg>
-                </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End block - Seção de Clientes -->
   <!-- Start block - Seção Principais Parceiros -->
   <section class="partners-section">
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h2 class="partners-title text-center"><span class="blur-letter" style="position: relative; display: inline-block; z-index: 1;"><span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 50px; height: 50px; background: #FFD700; border-radius: 50%; filter: blur(12px); opacity: 0.3; z-index: -1;"></span>P</span><span style="position: relative; display: inline-block; z-index: 1;">r</span><span style="position: relative; display: inline-block; z-index: 1;">i</span>ncipais Parceiros</h2>
+                <h2 class="partners-title flex-start"><span class="blur-letter" style="position: relative; display: inline-block; z-index: 1;"><span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 50px; height: 50px; background: #FFD700; border-radius: 50%; filter: blur(12px); opacity: 0.3; z-index: -1;"></span>P</span><span style="position: relative; display: inline-block; z-index: 1;">r</span><span style="position: relative; display: inline-block; z-index: 1;">i</span>ncipais Parceiros</h2>
             </div>
           </div>
       
-      <div class="row justify-content-center g-4">
-        <div class="col-12">
-          <div class="partners-logos">
-        <a href="https://www.linkedin.com/company/lappis-rocks/posts/?feedView=all" class="partner-link">
-          <img src="./images/lablivre.png" alt="Lab Livre Logo" class="partner-logo">
-        </a>
-    
-        <a href="https://www.unb.br/" class="partner-link">
-          <img src="./images/unb.png" alt="UnB Logo" class="partner-logo">
-        </a>
-    
-        <a href="https://www.ipea.gov.br/portal/" class="partner-link">
-          <img src="./images/ipea.png" alt="Ipea Logo" class="partner-logo">
-        </a>
+      <!-- Three Column Layout similar to footer -->
+      <div class="row partners-content g-4">
+        <!-- Column 1 - GOV HUB É UMA INICIATIVA + Lab Livre -->
+        <div class="col-12 col-md-4 partners-column">
+          <div class="partners-initiative-text">
+            <p class="partners-bold-text">Gov Hub é uma iniciativa</p>
+          </div>
+          <div class="partners-logo-section">
+            <a href="https://www.linkedin.com/company/lappis-rocks/posts/?feedView=all" target="_blank" class="partner-link">
+              <img src="./images/lablivre.png" alt="Lab Livre Logo" class="partner-logo">
+            </a>
+          </div>
+        </div>
+
+        <!-- Column 2 - UnB -->
+        <div class="col-12 col-md-4 partners-column">
+          <div class="partners-spacer">
+            <p>&nbsp;</p>
+          </div>
+          <div class="partners-logo-section">
+            <a href="https://www.unb.br/" target="_blank" class="partner-link">
+              <img src="./images/unb.png" alt="UnB Logo" class="partner-logo">
+            </a>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-4 partners-column">
+            <div class="partners-spacer">
+              <p>&nbsp;</p>
+            </div>
+            <div class="partners-logo-section">
+              <a href="https://www.unb.br/" target="_blank" class="partner-link">
+                <img src="./images/capibaribe.png" alt="Capibaribe Logo" class="partner-logo">
+              </a>
+            </div>
+          </div>
+
+        <!-- Column 3 - APOIO + IPEA -->
+        <div class="col-12 col-md-4 partners-column">
+          <div class="partners-support-text">
+            <p class="partners-bold-text">Apoio</p>
+          </div>
+          <div class="partners-logo-section">
+            <a href="https://www.ipea.gov.br/portal/" target="_blank" class="partner-link">
+              <img src="./images/ipea.png" alt="IPEA Logo" class="partner-logo">
+            </a>
           </div>
         </div>
       </div>
@@ -541,10 +504,10 @@
     <footer class="footer">
         <div class="container">
             
-            <!-- Three Column Layout -->
+            <!-- Four Column Layout -->
             <div class="row footer-middle g-4">
                 <!-- Column 1 - Lab Livre + Navigation -->
-                <div class="col-12 col-md-4 footer-column">
+                <div class="col-12 col-md-3 footer-column">
                     <div class="footer-initiative-text">
                         <p>Gov hub é uma iniciativa</p>
                     </div>
@@ -565,7 +528,7 @@
                 </div>
 
                 <!-- Column 2 - UnB + How to use -->
-                <div class="col-12 col-md-4 footer-column">
+                <div class="col-12 col-md-3 footer-column">
                     <div class="footer-spacer">
                         <p>&nbsp;</p>
                     </div>
@@ -588,8 +551,20 @@
                     </div>
                 </div>
 
-                <!-- Column 3 - IPEA + Contact -->
-                <div class="col-12 col-md-4 footer-column">
+                <!-- Column 3 - Capibaribe -->
+                <div class="col-12 col-md-3 footer-column">
+                    <div class="footer-spacer">
+                        <p>&nbsp;</p>
+                    </div>
+                    <div class="footer-logo-section">
+                        <div class="footer-logo-capibaribe">
+                            <img src="./images/capibaribe.png" alt="Capibaribe Logo">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 4 - IPEA + Contact -->
+                <div class="col-12 col-md-3 footer-column">
                     <div class="footer-support-text">
                         <p>Apoio</p>
                     </div>
@@ -601,7 +576,7 @@
                     <div class="footer-contact">
                         <h4>Contato</h4>
                         <ul>
-                            <li><a href="mailto:lablivreunb@gmail.com">lablivreunb@gmail.com</a></li>
+                            <li><a href="mailto:caguiar@unb.br">caguiar@unb.br</a></li>
                         </ul>
                         <div class="footer-social">
                             <a href="https://github.com/GovHub-br" target="_blank" aria-label="GitHub">
@@ -635,10 +610,6 @@
         </div>
     </footer>
     
-    
-    
-    <!-- Main JavaScript -->
-    <script src="./assets/main.js"></script>
 </body>
 </html>
 

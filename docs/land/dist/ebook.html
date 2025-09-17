@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-book - GovHub</title>
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    
+    <link rel="stylesheet" crossorigin href="./assets/index-BV99bCjj.css">
+    <link rel="stylesheet" crossorigin href="./assets/navbar.css">
+    <link rel="stylesheet" crossorigin href="./assets/banner.css">
+    <link rel="stylesheet" crossorigin href="./assets/ebook-section.css">
+    <link rel="stylesheet" crossorigin href="./assets/ebook.css">
+    <link rel="stylesheet" crossorigin href="./assets/footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="./assets/main.js"></script>
+    <script src="https://kit.fontawesome.com/31f9c08e31.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script src="./assets/ebook-viewer.js"></script>
+    <!-- Bootstrap CSS - Carregado por último para não sobrescrever estilos customizados -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <div id="topo"></div>
+    <header>
+        <nav class="custom-navbar">
+            <div class="container">
+                <div class="row align-items-center g-0">
+                    <!-- Logo Section -->
+                    <div class="col-auto">
+                        <a href="./index.html" class="logo">
+                            <img src="./images/logo.svg" alt="GovHub Logo" class="logo-img">
+                        </a>
+                    </div>
+
+                    <!-- Navigation Links -->
+                    <div class="col d-none d-lg-flex justify-content-center">
+                        <div class="navbar-center">
+                            <a href="./index.html" class="nav-link">HOME</a>
+                            <a href="./sobre.html" class="nav-link">SOBRE</a>
+                            <a href="./quem-somos.html" class="nav-link">QUEM SOMOS</a>
+                            <a href="./publicacoes.html" class="nav-link">PUBLICAÇÕES</a>
+                            <a href="../../comunidade/guia-contribuicao/" class="nav-link">GUIA DE CONTRIBUIÇÃO</a>
+                            <a href="./como-usar.html" class="nav-link">COMO USAR</a>
+                            <a href="./ebook.html" class="nav-link">E-BOOK</a>
+                        </div>
+                    </div>
+
+                    <!-- Right Section -->
+                    <div class="col-auto d-none d-md-flex">
+                        <!-- Social Icons -->
+                        <div class="social-icons">
+                            <a href="https://www.instagram.com/govhub.br" target="_blank" class="social-icon">
+                                <i class="fa-brands fa-instagram" alt="Instagram"></i>
+                            </a>
+                            <a href="https://github.com/GovHub-br/gov-hub" target="_blank" class="social-icon">
+                                <i class="fa-brands fa-github" alt="GitHub"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Mobile Menu Button -->
+                    <div class="col-auto d-lg-none">
+                        <button class="mobile-menu-button" id="mobile-menu-toggle" type="button" aria-label="Toggle navigation">
+                            <svg fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                                 <!-- Mobile Menu -->
+                 <div class="mobile-menu" id="mobile-menu">
+                     <ul>
+                         <li><a href="./index.html">HOME</a></li>
+                         <li><a href="./sobre.html">SOBRE</a></li>
+                         <li><a href="./quem-somos.html">QUEM SOMOS</a></li>
+                         <li><a href="./publicacoes.html">PUBLICAÇÕES</a></li>
+                         <li><a href="../../comunidade/guia-contribuicao/">GUIA DE CONTRIBUIÇÃO</a></li>
+                        <li><a href="./como-usar.html">COMO USAR</a></li>
+                        <li><a href="./ebook.html">E-BOOK</a></li>
+                    </ul>
+                     <!-- Social Icons dentro do menu mobile -->
+                     <div class="social-icons">
+                         <a href="https://www.instagram.com/govhub.br" target="_blank" class="social-icon">
+                             <i class="fa-brands fa-instagram" alt="Instagram"></i>
+                         </a>
+                         <a href="https://github.com/GovHub-br/gov-hub" target="_blank" class="social-icon">
+                             <i class="fa-brands fa-github" alt="GitHub"></i>
+                         </a>
+                     </div>
+                 </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <h1>E-book GovHub</h1>
+       
+        
+        <!-- Animated Circles -->
+        <div class="animated-circles">
+            <div class="circle circle-1"></div>
+            <div class="circle circle-2"></div>
+            <div class="circle circle-3"></div>
+        </div>
+    </section>
+
+    <!-- PDF Viewer Section -->
+    <section class="pdf-viewer-section">
+        <div class="container">
+            <div class="pdf-viewer-container">
+                <div class="pdf-header">
+                    <h3>E-book GovHub - Guia Completo</h3>
+                    <div class="pdf-actions">
+                        <a href="./ebook/GovHub_Livro-digital_0905.pdf" class="btn btn-outline-primary" download>
+                            <i class="fas fa-download me-2"></i>
+                            Baixar PDF
+                        </a>
+                        <button class="btn btn-outline-secondary" onclick="toggleFullscreen()">
+                            <i class="fas fa-expand me-2"></i>
+                            Tela Cheia
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="pdf-viewer-container-main">
+                    <div class="pdf-sidebar">
+                        <div class="pdf-sidebar-header">
+                            <h4>Páginas</h4>
+                            <button id="toggleSidebar" class="sidebar-toggle">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                        </div>
+                        <div class="pdf-thumbnails" id="pdfThumbnails">
+                            <!-- Thumbnails will be generated here -->
+                        </div>
+                    </div>
+                    <div class="pdf-viewer">
+                        <canvas id="pdfCanvas"></canvas>
+                    </div>
+                </div>
+                
+                <div class="pdf-controls">
+                    <button id="prevPage" class="pdf-btn" disabled>
+                        <i class="fas fa-chevron-left me-1"></i>
+                        Página Anterior
+                    </button>
+                    <span id="pageInfo" class="page-info">Página 1 de 1</span>
+                    <button id="nextPage" class="pdf-btn" disabled>
+                        Próxima Página
+                        <i class="fas fa-chevron-right ms-1"></i>
+                    </button>
+                    <button id="zoomOut" class="pdf-btn">
+                        <i class="fas fa-search-minus me-1"></i>
+                        Zoom -
+                    </button>
+                    <span id="zoomLevel" class="zoom-info">100%</span>
+                    <button id="zoomIn" class="pdf-btn">
+                        <i class="fas fa-search-plus me-1"></i>
+                        Zoom +
+                    </button>
+                </div>
+                
+                <div class="pdf-loading">
+                    <div class="loading-spinner"></div>
+                    <p>Carregando e-book...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            
+            <!-- Four Column Layout -->
+            <div class="row footer-middle g-4">
+                <!-- Column 1 - Lab Livre + Navigation -->
+                <div class="col-12 col-md-3 footer-column">
+                    <div class="footer-initiative-text">
+                        <p>Gov hub é uma iniciativa</p>
+                    </div>
+                    <div class="footer-logo-section">
+                        <div class="footer-logo-lablivre">
+                            <img src="./images/lablivre_footer.png" alt="Lab Livre Logo">
+                        </div>
+                    </div>
+                    <div class="footer-nav">
+                        <ul>
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="./sobre.html">Sobre</a></li>
+                            <li><a href="./publicacoes.html">Publicações</a></li>
+                            <li><a href="./quem-somos.html">Quem somos</a></li>
+                            <li><a href="../../comunidade/guia-contribuicao/">Guia de contribuição</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Column 2 - UnB + How to use -->
+                <div class="col-12 col-md-3 footer-column">
+                    <div class="footer-spacer">
+                        <p>&nbsp;</p>
+                    </div>
+                    <div class="footer-logo-section">
+                        <div class="footer-logo-lablivre mobile-only">
+                            <img src="./images/lablivre_footer.png" alt="Lab Livre Logo">
+                        </div>
+                        <div class="footer-logo-unb">
+                            <img src="./images/unb_footer.png" alt="UnB Logo">
+                        </div>
+                    </div>
+                    <div class="footer-how-to-use">
+                        <h4>Como usar</h4>
+                        <ul>
+                            <li><a href="../../setup/">Gov hub no meu órgão</a></li>
+                            <li><a href="../../getting-started/">Tutoriais</a></li>
+                            <li><a href="../../docs/">Funcionalidades</a></li>
+                            <li><a href="../../home/">Documentação</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Column 3 - Capibaribe -->
+                <div class="col-12 col-md-3 footer-column">
+                    <div class="footer-spacer">
+                        <p>&nbsp;</p>
+                    </div>
+                    <div class="footer-logo-section">
+                        <div class="footer-logo-capibaribe">
+                            <img src="./images/capibaribe.png" alt="Capibaribe Logo">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 4 - IPEA + Contact -->
+                <div class="col-12 col-md-3 footer-column">
+                    <div class="footer-support-text">
+                        <p>Apoio</p>
+                    </div>
+                    <div class="footer-logo-section">
+                        <div class="footer-logo-ipea">
+                            <img src="./images/ipea_footer.png" alt="IPEA Logo">
+                        </div>
+                    </div>
+                    <div class="footer-contact">
+                        <h4>Contato</h4>
+                        <ul>
+                            <li><a href="mailto:caguiar@unb.br">caguiar@unb.br</a></li>
+                        </ul>
+                        <div class="footer-social">
+                            <a href="https://github.com/GovHub-br" target="_blank" aria-label="GitHub">
+                                <i class="fa-brands fa-github" alt="GitHub"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/company/lappis-rocks/" target="_blank" aria-label="LinkedIn">
+                                <i class="fa-brands fa-linkedin-in" alt="LinkedIn"></i>
+                            </a>
+                            <a href="https://www.instagram.com/lab.livre/" target="_blank" aria-label="Instagram">
+                                <i class="fa-brands fa-instagram" alt="Instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mobile Contact Section -->
+            <div class="footer-contact-mobile">
+                <h4>Contato</h4>
+                <ul>
+                    <li><a href="mailto:lablivreunb@gmail.com">lablivreunb@gmail.com</a></li>
+                </ul>
+            </div>
+
+            <!-- Bottom Section - Copyright -->
+            <div class="row">
+                <div class="col-12 footer-bottom">
+                    <p>© 2025 GovHub - Uma iniciativa do Lab Livre - UnB. Licenciado sob Creative Commons.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+</html>

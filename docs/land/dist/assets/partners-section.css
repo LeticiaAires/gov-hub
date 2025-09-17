@@ -1,9 +1,14 @@
 /* Seção Principais Parceiros */
 
 .partners-section {
-    background-color: #ffffff;
+    background-color: #f7f7f7;
     padding: 4rem 0;
     position: relative;
+}
+
+.partners-initiative-text .partners-bold-text,
+.partners-support-text .partners-bold-text {
+    font-weight: bold;
 }
 
 .partners-container {
@@ -22,17 +27,44 @@
     font-weight: 800;
     font-family: 'Inter', sans-serif;
     margin-bottom: 3rem;
-    margin-left: 2rem;
 }
 
 
-/* Container dos logos */
-.partners-logos {
+/* Container dos logos - novo layout em colunas */
+.partners-content {
+    margin-top: 2rem;
+}
+
+.partners-column {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: center;
+}
+
+/* Textos das seções */
+.partners-initiative-text p,
+.partners-support-text p
+.partners-spacer p {
+    font-size: 12px;
+    font-weight: 600;
+    color: #202020;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+/* Seção dos logos */
+.partners-logo-section {
+    display: flex;
+    justify-content: flex-start;
     align-items: center;
-    gap: 12em;
-    flex-wrap: wrap;
+    width: 100%;
+    padding-left: 1rem;
+}
+
+/* Remove padding da última coluna (IPEA) */
+.partners-column:last-child .partners-logo-section {
+    padding-left: 0;
 }
 
 /* Links dos parceiros */
@@ -44,16 +76,17 @@
 }
 
 .partner-link:hover {
-    opacity: 0.9;
+    opacity: 0.8;
 }
 
-/* Logos dos parceiros */
+/* Logos dos parceiros - agora em preto */
 .partner-logo {
-    height: auto;
-    max-height: 102px;
+    height: 80px;
+    max-height: 80px;
     width: auto;
-    max-width: 250px;
+    max-width: 200px;
     object-fit: contain;
+    filter: brightness(0) saturate(100%); /* Torna as imagens pretas */
 }
 
 /* Responsividade */
@@ -63,10 +96,14 @@
         margin-left: 1rem;
     }
     
-    .partners-logos {
-        gap: 2rem;
+    .partners-initiative-text p,
+    .partners-support-text p {
+        font-size: 1rem;
+        margin-bottom: 1.2rem;
     }
 }
+
+
 
 @media (max-width: 768px) {
     .partners-section {
@@ -79,14 +116,34 @@
         text-align: center;
     }
     
-    .partners-logos {
-        flex-direction: column;
-        gap: 2rem;
+    .partners-column {
+        margin-bottom: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .partners-spacer {
+        margin-bottom: 1.5rem;
+    }
+    
+    .partners-logo-section {
+        padding-left: 0.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    
+    /* Remove padding da última coluna (IPEA) em tablets também */
+    .partners-column:last-child .partners-logo-section {
+        padding-left: 0;
     }
     
     .partner-logo {
-        max-height: 80px;
-        max-width: 200px;
+        max-height: 70px;
+        max-width: 180px;
     }
 }
 
@@ -99,8 +156,15 @@
         font-size: 1.5rem;
     }
     
-    .partners-logos {
-        gap: 1.5rem;
+    .partners-initiative-text p,
+    .partners-support-text p {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+    
+    .partners-logo-section {
+        padding-left: 0;
+        justify-content: center;
     }
     
     .partner-logo {

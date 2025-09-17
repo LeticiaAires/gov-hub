@@ -2,35 +2,6 @@
 // GOVHUB - MAIN JAVASCRIPT FILE
 // ========================================
 
-// Função para carrossel de clientes (desktop)
-function moveCarousel(direction) {
-    const carousel = document.querySelector('.clients-cards');
-    if (!carousel) return;
-    
-    const cardWidth = 280 + 24; // largura do card + gap
-    const scrollAmount = cardWidth * direction;
-    
-    carousel.scrollBy({
-        left: scrollAmount,
-        behavior: 'smooth'
-    });
-}
-
-// Função para inicializar carrossel arrastável (mobile)
-function initCarouselDrag() {
-    const clientsCards = document.getElementById('clientsCards');
-    
-    if (!clientsCards) return;
-
-    // Simples: apenas permitir scroll nativo no mobile
-    if (window.innerWidth <= 768) {
-        clientsCards.style.overflowX = 'auto';
-        clientsCards.style.scrollBehavior = 'smooth';
-        clientsCards.style.webkitOverflowScrolling = 'touch';
-    }
-}
-
-
 // Função para mostrar imagens na seção interativa
 function showImage(imageNumber) {
     // Esconde todas as imagens
@@ -175,20 +146,26 @@ function initScrollAnimations() {
     animatedElements.forEach(el => observer.observe(el));
 }
 
-// Função para preload de imagens
-function preloadImages() {
-    const imagesToPreload = [
-        './images/contratos_homev2.png',
-        './images/teds_homev2.png',
-        './images/pessoal_homev2.png',
-        './images/orcamento_homev2.png',
-        './images/assitente_de_IA.mp4',
-        './images/computador.png',
-        './images/book.png'
+// Função para preload de imagens globais
+function preloadGlobalImages() {
+    const globalImages = [
+        // Logos globais usados em todas as páginas
+        './images/logo.png',
+        './images/lablivre_footer.png',
+        './images/unb_footer.png',
+        './images/ipea_footer.png'
     ];
     
-    imagesToPreload.forEach(src => {
+    console.log('🌐 Iniciando preload de imagens globais...');
+    
+    globalImages.forEach(src => {
         const img = new Image();
+        img.onload = function() {
+            console.log(`✅ Imagem global carregada: ${src}`);
+        };
+        img.onerror = function() {
+            console.warn(`⚠️ Erro ao carregar imagem global: ${src}`);
+        };
         img.src = src;
     });
 }
@@ -201,7 +178,7 @@ function initApp() {
         initSmoothScroll();
         initNavbarScroll();
         initScrollAnimations();
-        preloadImages();
+        preloadGlobalImages();
         initTouchEvents(); // Adicionar chamada para initTouchEvents
         initCarouselDrag(); // Inicializar carrossel arrastável
         

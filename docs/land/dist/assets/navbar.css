@@ -52,7 +52,6 @@ header {
 
 /* Container da navbar com Bootstrap Grid System */
 .custom-navbar .container {
-    max-width: 1200px;
     margin: 0 auto;
     padding: 0 1rem;
 }
@@ -312,11 +311,12 @@ a.logo {
         height: 32px;
     }
 }
-
 /* Medium screens (992px - 1199px) */
-@media (max-width: 1199.98px) {
+@media (max-width: 1249.98px) {
     .custom-navbar .container {
-        padding: 0 0.8rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 0.08rem;
     }
     
     .nav-link {
@@ -331,6 +331,25 @@ a.logo {
     
     .navbar-center {
         gap: 0.2rem;
+    }
+    /* Esconder navegação principal */
+    .custom-navbar .col.d-none.d-lg-flex {
+        display: none !important;
+    }
+    
+    /* Esconder ícones sociais da navbar principal */
+    .custom-navbar .col-auto.d-none.d-md-flex {
+        display: none !important;
+    }
+    
+    /* Mostrar botão do menu hambúrguer */
+    .custom-navbar .col-auto.d-lg-none {
+        display: flex !important;
+        margin-left: auto; /* Move para a margem direita */
+    }
+    
+    .mobile-menu-button {
+        display: flex !important;
     }
 }
 
@@ -385,7 +404,6 @@ a.logo {
     }
     
     .mobile-menu-button {
-        display: flex !important;
         width: 36px;
         height: 36px;
     }
