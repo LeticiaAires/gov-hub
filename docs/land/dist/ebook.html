@@ -3,29 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Como Usar - GovHub</title>
+    <title>E-book - GovHub</title>
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="96x96" href="./favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
-
+    
     <link rel="stylesheet" crossorigin href="./assets/index-BV99bCjj.css">
     <link rel="stylesheet" crossorigin href="./assets/navbar.css">
     <link rel="stylesheet" crossorigin href="./assets/banner.css">
-    <link rel="stylesheet" crossorigin href="./assets/como-usar.css">
+    <link rel="stylesheet" crossorigin href="./assets/ebook-section.css">
+    <link rel="stylesheet" crossorigin href="./assets/ebook.css">
     <link rel="stylesheet" crossorigin href="./assets/footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="./assets/main.js"></script>
     <script src="https://kit.fontawesome.com/31f9c08e31.js" crossorigin="anonymous"></script>
-    <!-- Bootstrap CSS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script src="./assets/ebook-viewer.js"></script>
+    <!-- Bootstrap CSS - Carregado por último para não sobrescrever estilos customizados -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
+    <!-- Navbar -->
     <div id="topo"></div>
-    
-    <!-- Header -->
     <header>
         <nav class="custom-navbar">
             <div class="container">
@@ -80,7 +85,7 @@
                          <li><a href="./sobre.html">SOBRE</a></li>
                          <li><a href="./quem-somos.html">QUEM SOMOS</a></li>
                          <li><a href="./publicacoes.html">PUBLICAÇÕES</a></li>
-                         <li><a href="#guia-contribuicao">GUIA DE CONTRIBUIÇÃO</a></li>
+                         <li><a href="../../comunidade/guia-contribuicao/">GUIA DE CONTRIBUIÇÃO</a></li>
                         <li><a href="./como-usar.html">COMO USAR</a></li>
                         <li><a href="./ebook.html">E-BOOK</a></li>
                     </ul>
@@ -97,10 +102,10 @@
             </div>
         </nav>
     </header>
-
     <!-- Hero Section -->
     <section class="hero-section">
-        <h1>Como usar o GovHub</h1>
+        <h1>E-book GovHub</h1>
+       
         
         <!-- Animated Circles -->
         <div class="animated-circles">
@@ -110,77 +115,72 @@
         </div>
     </section>
 
-    <!-- Cards -->
-    <section class="como-usar-cards">
+    <!-- PDF Viewer Section -->
+    <section class="pdf-viewer-section">
         <div class="container">
-            <div class="row g-4">
-                <div class="col-12 col-lg-6">
-                    <a class="gh-card" href="#">
-                        <div class="gh-card-head">
-                            <h3>Acesso às bases de dados</h3>
-                            <div class="gh-badge"><img src="./images/cadeado_icon.png" alt="Acesso"></div>
-                        </div>
-                        <p>Antes de tudo, é necessário garantir que sua instituição possua acesso às bases de dados que serão integradas ao GovHub.</p>
-                        <p class="gh-link">Solicite acesso junto aos responsáveis de cada sistema.</p>
-                        <span class="gh-arrow" aria-hidden="true"></span>
-                    </a>
-                </div>
-                <div class="col-12 col-lg-6">
-                    <a class="gh-card" href="#">
-                        <div class="gh-card-head">
-                            <h3>Configuração da infraestrutura</h3>
-                            <div class="gh-badge"><img src="./images/infra_icon.png" alt="Infraestrutura"></div>
-                        </div>
-                        <p>O GovHub precisa ser configurado no ambiente da instituição pela equipe técnica de TI.</p>
-                        <p class="gh-link">Siga o tutorial técnico para configuração da infraestrutura</p>
-                        <span class="gh-arrow" aria-hidden="true"></span>
-                    </a>
-                </div>
-                <div class="col-12 col-lg-6">
-                    <a class="gh-card" href="#">
-                        <div class="gh-card-head">
-                            <h3>Parametrização do sistema</h3>
-                            <div class="gh-badge"><img src="./images/engrenagem_icon.png" alt="Parâmetros"></div>
-                        </div>
-                        <p>Depois de configurada a infraestrutura, é necessário cadastrar no GovHub os códigos e informações específicas da instituição.</p>
-                        <p class="gh-link">Acesse o guia de parametrização do sistema</p>
-                        <span class="gh-arrow" aria-hidden="true"></span>
-                    </a>
-                </div>
-                <div class="col-12 col-lg-6">
-                    <a class="gh-card" href="#">
-                        <div class="gh-card-head">
-                            <h3>Execução do sistema</h3>
-                            <div class="gh-badge"><img src="./images/sistema_icon.png" alt="Execução"></div>
-                        </div>
-                        <p>Com as bases acessíveis, a infraestrutura e os parâmetros ajustados, basta executar os fluxos de dados.</p>
-                        <p class="gh-link">Veja como executar e monitorar o sistema</p>
-                        <span class="gh-arrow" aria-hidden="true"></span>
-                    </a>
-                </div>
-                <div class="col-12">
-                    <div class="gh-card gh-card-wide">
-                        <div class="gh-card-head">
-                            <h3>GovHub em produção!</h3>
-                            <div class="gh-badge"><img src="./images/foguete_icon.png" alt="Produção"></div>
-                        </div>
-                        <p>Com todos os passos concluídos, o GovHub já está em funcionamento em sua instituição. Agora é possível:</p>
-                        <ul class="checks">
-                            <li>Acessar dados integrados em um só lugar</li>
-                            <li>Acompanhar indicadores estratégicos em tempo real</li>
-                            <li>Explorar dashboards já disponíveis</li>
-                            <li>Personalizar visualizações conforme a necessidade</li>
-                            <li>Criar novos modelos e relatórios para ampliar as análises</li>
-                        </ul>
-                        <span class="gh-arrow" aria-hidden="true"></span>
+            <div class="pdf-viewer-container">
+                <div class="pdf-header">
+                    <h3>E-book GovHub - Guia Completo</h3>
+                    <div class="pdf-actions">
+                        <a href="./ebook/GovHub_Livro-digital_0905.pdf" class="btn btn-outline-primary" download>
+                            <i class="fas fa-download me-2"></i>
+                            Baixar PDF
+                        </a>
+                        <button class="btn btn-outline-secondary" onclick="toggleFullscreen()">
+                            <i class="fas fa-expand me-2"></i>
+                            Tela Cheia
+                        </button>
                     </div>
+                </div>
+                
+                <div class="pdf-viewer-container-main">
+                    <div class="pdf-sidebar">
+                        <div class="pdf-sidebar-header">
+                            <h4>Páginas</h4>
+                            <button id="toggleSidebar" class="sidebar-toggle">
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                        </div>
+                        <div class="pdf-thumbnails" id="pdfThumbnails">
+                            <!-- Thumbnails will be generated here -->
+                        </div>
+                    </div>
+                    <div class="pdf-viewer">
+                        <canvas id="pdfCanvas"></canvas>
+                    </div>
+                </div>
+                
+                <div class="pdf-controls">
+                    <button id="prevPage" class="pdf-btn" disabled>
+                        <i class="fas fa-chevron-left me-1"></i>
+                        Página Anterior
+                    </button>
+                    <span id="pageInfo" class="page-info">Página 1 de 1</span>
+                    <button id="nextPage" class="pdf-btn" disabled>
+                        Próxima Página
+                        <i class="fas fa-chevron-right ms-1"></i>
+                    </button>
+                    <button id="zoomOut" class="pdf-btn">
+                        <i class="fas fa-search-minus me-1"></i>
+                        Zoom -
+                    </button>
+                    <span id="zoomLevel" class="zoom-info">100%</span>
+                    <button id="zoomIn" class="pdf-btn">
+                        <i class="fas fa-search-plus me-1"></i>
+                        Zoom +
+                    </button>
+                </div>
+                
+                <div class="pdf-loading">
+                    <div class="loading-spinner"></div>
+                    <p>Carregando e-book...</p>
                 </div>
             </div>
         </div>
     </section>
-     
-     <!-- Footer -->
-     <footer class="footer">
+
+    <!-- Footer -->
+    <footer class="footer">
         <div class="container">
             
             <!-- Three Column Layout -->
@@ -277,9 +277,6 @@
         </div>
     </footer>
 
-    <!-- JavaScript para funcionalidades da página -->
-    <script src="./assets/como-usar.js"></script>
+
 </body>
 </html>
-
-
