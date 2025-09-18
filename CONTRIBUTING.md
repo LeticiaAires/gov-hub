@@ -1,4 +1,4 @@
-## Guia de Contribuição
+## Documentação
 
 Antes de começar, obrigado por considerar contribuir com o **Gov Hub BR**. acreditamos que a colaboração é essencial para construir soluções públicas mais eficientes, transparentes e sustentáveis.
 
