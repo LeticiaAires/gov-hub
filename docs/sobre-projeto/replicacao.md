@@ -24,7 +24,7 @@ Esta seção está dividida em tópicos que cobrem desde os pré-requisitos téc
 - [Dashboards e Templates](../comunidade/dashboards-templates.md)  
   Apresentação de templates genéricos para a camada Gold e dashboards no Superset.
 
-- [Guia de Contribuição](../comunidade/guia-contribuicao.md)  
+- [Documentação](../comunidade/guia-contribuicao.md)  
   Boas práticas e sugestões para facilitar a adaptação da plataforma em diferentes contextos organizacionais.
 
 ---

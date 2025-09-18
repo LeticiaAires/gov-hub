@@ -169,7 +169,6 @@ markdown_extensions:
 
 nav:
   - Home: land/dist/index.html
-  - Sobre: home.md
   - E-book:
     - Gov Hub - plataforma livre de integração de dados e informações governamentais: ebook.md
   - Sobre:
@@ -207,7 +206,7 @@ nav:
         - Credenciais de acesso: documentacao/tutoriais/sistemas-estruturantes/acesso-apis-siafi-siape.md
         - DAG de ingestão: documentacao/tutoriais/sistemas-estruturantes/sistemas-estruturantes.md
   - Comunidade: 
-    - Guia de Contribuição: comunidade/guia-contribuicao.md
+    - Documentação: comunidade/guia-contribuicao.md
     - Licença: comunidade/licenca.md
     - Dashboards Templates: comunidade/dashboards-templates.md
     - Pré-requisitos: comunidade/pre-requisitos.md
