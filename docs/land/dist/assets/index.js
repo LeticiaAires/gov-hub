@@ -9,7 +9,6 @@ function preloadHomeImages() {
         './images/teds_homev2.png',
         './images/pessoal_homev2.png',
         './images/orcamento_homev2.png',
-        './images/assitente_de_IA.mp4',
         './images/oqueeogovhub.png',
         './images/img-infos-gov.jpg',
         './images/lablivre.png',

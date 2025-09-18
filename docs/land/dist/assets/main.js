@@ -150,6 +150,9 @@ function initScrollAnimations() {
 function preloadGlobalImages() {
     const globalImages = [
         // Logos globais usados em todas as páginas
+        './images/icons/instagram.svg',
+        './images/icons/github.svg',
+        './images/icons/linkedin.svg',
         './images/logo.png',
         './images/lablivre_footer.png',
         './images/unb_footer.png',
@@ -180,7 +183,6 @@ function initApp() {
         initScrollAnimations();
         preloadGlobalImages();
         initTouchEvents(); // Adicionar chamada para initTouchEvents
-        initCarouselDrag(); // Inicializar carrossel arrastável
         
         console.log('GovHub - Aplicação inicializada com sucesso! 🚀');
     });
@@ -215,6 +217,5 @@ function downloadEbook() {
 }
 
 // Exportar funções para uso global (se necessário)
-window.moveCarousel = moveCarousel;
 window.showImage = showImage;
 window.downloadEbook = downloadEbook;

@@ -181,6 +181,17 @@
     opacity: 1;
 }
 
+/* Estilos para ícones SVG no footer */
+.footer-social .social-icon-img {
+    width: 32px;
+    height: 32px;
+    transition: all 0.3s ease;
+}
+
+.footer-social a:hover .social-icon-img {
+    transform: scale(1.1);
+}
+
 /* Bottom Section - Copyright */
 .footer-bottom {
     text-align: left;
