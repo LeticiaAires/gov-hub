@@ -45,9 +45,11 @@ function initTouchEvents() {
 function initMobileMenu() {
     const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
+    const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+    const mobileMenuClose = document.getElementById('mobile-menu-close');
     
     // Verificar se os elementos existem
-    if (!mobileMenuToggle || !mobileMenu) {
+    if (!mobileMenuToggle || !mobileMenu || !mobileMenuOverlay || !mobileMenuClose) {
         console.warn('Elementos do menu mobile não encontrados');
         return;
     }
@@ -55,6 +57,7 @@ function initMobileMenu() {
     // Toggle do menu mobile
     mobileMenuToggle.addEventListener('click', function() {
         mobileMenu.classList.toggle('active');
+        mobileMenuOverlay.classList.toggle('active');
         
         // Adicionar/remover classe no body para prevenir scroll
         if (mobileMenu.classList.contains('active')) {
@@ -64,11 +67,26 @@ function initMobileMenu() {
         }
     });
     
+    // Fechar menu ao clicar no overlay
+    mobileMenuOverlay.addEventListener('click', function() {
+        mobileMenu.classList.remove('active');
+        mobileMenuOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+    });
+    
+    // Fechar menu ao clicar no botão X
+    mobileMenuClose.addEventListener('click', function() {
+        mobileMenu.classList.remove('active');
+        mobileMenuOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+    });
+    
     // Fechar menu ao clicar em um link
     const mobileLinks = mobileMenu.querySelectorAll('a');
     mobileLinks.forEach(link => {
         link.addEventListener('click', function() {
             mobileMenu.classList.remove('active');
+            mobileMenuOverlay.classList.remove('active');
             document.body.style.overflow = '';
         });
     });
@@ -150,6 +168,9 @@ function initScrollAnimations() {
 function preloadGlobalImages() {
     const globalImages = [
         // Logos globais usados em todas as páginas
+        './images/icons/instagram.svg',
+        './images/icons/github.svg',
+        './images/icons/linkedin.svg',
         './images/logo.png',
         './images/lablivre_footer.png',
         './images/unb_footer.png',
@@ -180,7 +201,6 @@ function initApp() {
         initScrollAnimations();
         preloadGlobalImages();
         initTouchEvents(); // Adicionar chamada para initTouchEvents
-        initCarouselDrag(); // Inicializar carrossel arrastável
         
         console.log('GovHub - Aplicação inicializada com sucesso! 🚀');
     });
@@ -215,6 +235,5 @@ function downloadEbook() {
 }
 
 // Exportar funções para uso global (se necessário)
-window.moveCarousel = moveCarousel;
 window.showImage = showImage;
 window.downloadEbook = downloadEbook;

@@ -27,7 +27,8 @@
     <link rel="stylesheet" crossorigin href="./assets/footer.css">
     <script src="./assets/main.js"></script>
     <script src="./assets/quem-somos.js"></script>
-    <script src="https://kit.fontawesome.com/31f9c08e31.js" crossorigin="anonymous"></script>
+    
+    <link rel="preload" href="./images/icons/github.svg" as="image" type="image/svg+xml">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap JS -->
@@ -53,12 +54,12 @@
                         <div class="navbar-center">
                             <a href="./index.html" class="nav-link">HOME</a>
                             <a href="./sobre.html" class="nav-link">SOBRE</a>
-                            <a href="./quem-somos.html" class="nav-link">QUEM SOMOS</a>
+                            <a href="./quem-somos.html" class="nav-link active">QUEM SOMOS</a>
                             <a href="./publicacoes.html" class="nav-link">PUBLICAÇÕES</a>
-                            <a href="../../comunidade/guia-contribuicao/" class="nav-link">DOCUMENTAÇÃO</a>
-                            <a href="https://govhub.ipea.gov.br/dashboard/list/" class="nav-link">DEMO</a>
                             <a href="./como-usar.html" class="nav-link">COMO USAR</a>
                             <a href="./ebook.html" class="nav-link">E-BOOK</a>
+                            <a href="../../comunidade/guia-contribuicao/" class="nav-link">DOCUMENTAÇÃO</a>
+                            <a href="https://govhub.ipea.gov.br/dashboard/list/" class="nav-link">DEMO</a>
                         </div>
                     </div>
 
@@ -67,10 +68,10 @@
                         <!-- Social Icons -->
                         <div class="social-icons">
                             <a href="https://www.instagram.com/govhub.br" target="_blank" class="social-icon">
-                                <i class="fa-brands fa-instagram" alt="Instagram"></i>
+                                <img src="./images/icons/instagram.svg" alt="Instagram" class="social-icon-img">
                             </a>
                             <a href="https://github.com/GovHub-br/gov-hub" target="_blank" class="social-icon">
-                                <i class="fa-brands fa-github" alt="GitHub"></i>
+                                <img src="./images/icons/github.svg" alt="GitHub" class="social-icon-img">
                             </a>
                         </div>
                     </div>
@@ -85,25 +86,35 @@
                     </div>
                 </div>
 
-                                 <!-- Mobile Menu -->
-                 <div class="mobile-menu" id="mobile-menu">
+                <!-- Mobile Menu Overlay -->
+                <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
+                
+                <!-- Mobile Menu -->
+                <div class="mobile-menu" id="mobile-menu">
+                    <!-- Botão de fechar -->
+                    <button class="mobile-menu-close" id="mobile-menu-close" type="button" aria-label="Fechar menu">
+                        <svg fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                    
                      <ul>
                         <li><a href="./index.html">HOME</a></li>
                         <li><a href="./sobre.html">SOBRE</a></li>
-                        <li><a href="./quem-somos.html">QUEM SOMOS</a></li>
+                        <li><a href="./quem-somos.html" class="active">QUEM SOMOS</a></li>
                         <li><a href="./publicacoes.html">PUBLICAÇÕES</a></li>
-                        <li><a href="../../comunidade/guia-contribuicao/">DOCUMENTAÇÃO</a></li>
-                        <li><a href="https://govhub.ipea.gov.br/dashboard/list/">DEMO</a></li>
                         <li><a href="./como-usar.html">COMO USAR</a></li>
                         <li><a href="./ebook.html">E-BOOK</a></li>
+                        <li><a href="../../comunidade/guia-contribuicao/">DOCUMENTAÇÃO</a></li>
+                        <li><a href="https://govhub.ipea.gov.br/dashboard/list/">DEMO</a></li>
                     </ul>
                      <!-- Social Icons dentro do menu mobile -->
                      <div class="social-icons">
                          <a href="https://www.instagram.com/govhub.br" target="_blank" class="social-icon">
-                             <i class="fa-brands fa-instagram" alt="Instagram"></i>
+                             <img src="./images/icons/instagram.svg" alt="Instagram" class="social-icon-img">
                          </a>
                          <a href="https://github.com/GovHub-br/gov-hub" target="_blank" class="social-icon">
-                             <i class="fa-brands fa-github" alt="GitHub"></i>
+                             <img src="./images/icons/github.svg" alt="GitHub" class="social-icon-img">
                          </a>
                      </div>
                  </div>
@@ -113,7 +124,9 @@
 
     <!-- Hero Section -->
     <section class="hero-section">
-        <h1>Quem Somos</h1>
+        <div class="container">
+            <h1>Quem Somos</h1>
+        </div>
         
         <!-- Animated Circles -->
         <div class="animated-circles">
@@ -127,7 +140,7 @@
     <section class="overview-section">
         <div class="container">
             <div class="row">
-                <div class="col-9">
+                <div class="col-12 col-lg-8">
                     <div class="overview-content">
                         <h2><span class="blur-letter" style="position: relative; display: inline-block; z-index: 1;"><span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 120px; height: 50px; background: #FFD700; border-radius: 50%; filter: blur(12px); opacity: 0.3; z-index: -1;"></span>Qual</span> o objetivo do GovHub?</h2>
                         <p><strong>Nosso objetivo é qualificar e integrar dados governamentais para fortalecer a gestão pública e a transparência.</strong></p>
@@ -142,26 +155,16 @@
     </section>
     
     
-    <!-- Impactos esperados Section -->
-    <!--
-    <section class="impact-section">
-        <div class="container">
-            <div class="impact-content">
-                <h2>Impactos esperados</h2>
-                <p>A qualificação e integração dos dados contribuem diretamente para a redução da fragmentação e das inconsistências nos sistemas estruturantes, permitindo que decisões sejam baseadas em informações corretas e atualizadas. Isso gera um aumento da eficiência administrativa, otimiza o uso de recursos públicos e promove maior agilidade na entrega de serviços governamentais.</p>
-                <p>Além disso, o fortalecimento da transparência e do controle social, por meio da disponibilização de dados organizados e acessíveis, amplia a capacidade de auditoria, fortalece a confiança entre governo e sociedade e contribui para uma gestão pública mais aberta, responsável e confiável.</p>
-            </div>
-        </div>
-    </section>
-    -->
-    
     <!-- Equipe Section -->
     <section class="team-section">
         <div class="container">
             <div class="team-content">
-                <h2>Equipe</h2>
-                <p>O GovHub é desenvolvido por um time multidisciplinar de professores, pesquisadores, cientistas políticos, alunos e ex-alunos da UnB. Contamos também com a parceria estratégica do Ipea e de empresas privadas.</p>
-
+                <div class="row">
+                    <div class="col-12 col-lg-8">
+                        <h2>Equipe</h2>
+                        <p>O GovHub é desenvolvido por um time multidisciplinar de professores, pesquisadores, cientistas políticos, alunos e ex-alunos da UnB. Contamos também com a parceria estratégica do Ipea e de empresas privadas.</p>
+                    </div>
+                </div>
                 <div class="team-groups">
                     <div class="team-group">
                         <h3>UnB</h3>
@@ -420,13 +423,13 @@
                         </ul>
                         <div class="footer-social">
                             <a href="https://github.com/GovHub-br" target="_blank" aria-label="GitHub">
-                                <i class="fa-brands fa-github" alt="GitHub"></i>
+                                <img src="./images/icons/github.svg" alt="GitHub" class="social-icon-img">
                             </a>
                             <a href="https://www.linkedin.com/company/lappis-rocks/" target="_blank" aria-label="LinkedIn">
-                                <i class="fa-brands fa-linkedin-in" alt="LinkedIn"></i>
+                                <img src="./images/icons/linkedin.svg" alt="LinkedIn" class="social-icon-img">
                             </a>
                             <a href="https://www.instagram.com/lab.livre/" target="_blank" aria-label="Instagram">
-                                <i class="fa-brands fa-instagram" alt="Instagram"></i>
+                                <img src="./images/icons/instagram.svg" alt="Instagram" class="social-icon-img">
                             </a>
                         </div>
                     </div>

@@ -27,7 +27,7 @@ body {
 /* Content Section */
 .content-section {
     background-color: #F7F7F7;
-    padding: 6.25rem 1rem 2.5rem 3rem;
+    padding: 6rem 0;
 }
 
 .content-section h2 {
@@ -113,7 +113,7 @@ body {
 /* Features Section */
 .features-section {
     background-color: #FFFFFF;
-    padding: 6.25rem 1rem 2.5rem 3rem;
+    padding: 6rem 0;
 }
 
 .features-title-column {
@@ -284,7 +284,7 @@ body {
 /* Technologies Section */
 .technologies-section {
     background-color: #F7F7F7;
-    padding: 6.25rem 1rem 2.5rem 3rem;
+    padding: 6rem 0;
 }
 
 .technologies-column h2,
@@ -346,7 +346,7 @@ body {
 /* How to Use Section */
 .how-to-use-section {
     background-color: #FFFFFF;
-    padding: 6.25rem 1rem 2.5rem 3rem;
+    padding: 6rem 0;
 }
 
 .how-to-use-content h2 {
@@ -423,7 +423,7 @@ body {
 /* Construction Section */
 .construction-section {
     background-color: #F7F7F7;
-    padding: 6.25rem 1rem 2.5rem 3rem;
+    padding: 6rem 0;
 }
 
 /* Construction content - estilos aplicados nos elementos filhos */
