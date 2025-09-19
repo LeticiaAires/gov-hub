@@ -6,8 +6,7 @@
 .hero-section {
     background: linear-gradient(90deg, #7A34F3 0%, #FF6B35 100%);
     color: white;
-    padding: 120px 2rem 180px;
-    text-align: center;
+    padding: 120px 0 180px;
     position: relative;
 }
 
@@ -15,17 +14,7 @@
     font-size: 3rem;
     margin-bottom: 1rem;
     font-weight: 300;
-    margin-right: 53rem;
-}
-
-.hero-section h2 {
-    color: white;
-    font-size: 1.8rem;
-    font-weight: 600;
-    margin: 0;
-    margin-top: 1rem;
-    margin-right: 51rem;
-    
+    text-align: left;
 }
 
 /* Animated Circles */
@@ -118,12 +107,10 @@
 @media (max-width: 1200px) {
     .hero-section h1 {
         font-size: 2.8rem;
-        margin-right: 40rem;
     }
     
     .hero-section h2 {
         font-size: 1.6rem;
-        margin-right: 38rem;
     }
     
     .circle-1 {
@@ -190,12 +177,10 @@
 @media (max-width: 1024px) {
     .hero-section h1 {
         font-size: 2.5rem;
-        margin-right: 30rem;
     }
     
     .hero-section h2 {
         font-size: 1.5rem;
-        margin-right: 30rem;
     }
     
     .circle-1 {
@@ -261,17 +246,19 @@
 
 @media (max-width: 768px) {
     .hero-section {
-        padding: 100px 1rem 120px;
+        padding: 100px 0 120px;
+    }
+    
+    .hero-section .container {
+        padding: 0 1rem;
     }
     
     .hero-section h1 {
         font-size: 2rem;
-        margin-right: 15rem;
     }
     
     .hero-section h2 {
         font-size: 1.3rem;
-        margin-right: 15rem;
     }
     
     .circle-1 {
@@ -337,17 +324,19 @@
 
 @media (max-width: 480px) {
     .hero-section {
-        padding: 80px 1rem 100px;
+        padding: 80px 0 100px;
+    }
+    
+    .hero-section .container {
+        padding: 0 1rem;
     }
     
     .hero-section h1 {
         font-size: 1.8rem;
-        margin-right: 8rem;
     }
     
     .hero-section h2 {
         font-size: 1.1rem;
-        margin-right: 8rem;
     }
     
     .circle-1 {
@@ -413,17 +402,19 @@
 
 @media (max-width: 360px) {
     .hero-section {
-        padding: 60px 0.5rem 80px;
+        padding: 60px 0 80px;
+    }
+    
+    .hero-section .container {
+        padding: 0 0.5rem;
     }
     
     .hero-section h1 {
         font-size: 1.5rem;
-        margin-right: 5rem;
     }
     
     .hero-section h2 {
         font-size: 1rem;
-        margin-right: 5rem;
     }
     
     .circle-1 {

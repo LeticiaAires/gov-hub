@@ -44,7 +44,6 @@ header {
 /* Navbar principal */
 .custom-navbar {
     background: #7A34F3 !important;
-    padding: 0 !important;
     height: 60px !important;
     position: relative !important;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
@@ -53,7 +52,6 @@ header {
 /* Container da navbar com Bootstrap Grid System */
 .custom-navbar .container {
     margin: 0 auto;
-    padding: 0 1rem;
 }
 
 .custom-navbar .row {
@@ -69,7 +67,7 @@ header {
     height: 60px !important;
     min-height: 50px !important;
     min-width: 120px !important;
-    padding: 0 0.5rem 0 0.25rem !important;
+    padding: 0 0.5rem 0 0 !important;
     overflow: visible !important;
 }
 
@@ -96,7 +94,7 @@ a.logo {
     height: 60px;
     min-height: 50px;
     min-width: 120px;
-    padding: 0 0.5rem 0 0.25rem;
+    padding: 0 0.5rem 0 0;
     overflow: visible;
     text-decoration: none;
 }
@@ -107,9 +105,6 @@ a.logo {
     width: auto;
     object-fit: contain;
 }
-
-
-
 
 /* Navigation Links */
 .navbar-center {
@@ -292,11 +287,7 @@ a.logo {
 /* Responsive Design - Bootstrap Grid System */
 
 /* Large screens (1200px+) - Default styles already defined */
-@media (min-width: 1200px) {
-    .custom-navbar .container {
-        padding: 0 1.5rem;
-    }
-    
+@media (min-width: 1200px) {    
     .nav-link {
         font-size: 0.9rem;
         padding: 0.5rem 0.8rem;

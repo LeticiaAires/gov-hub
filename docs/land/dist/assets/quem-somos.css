@@ -31,7 +31,7 @@ body {
 .overview-section {
     width: 100%;
     background-color: #FFFFFF;
-    padding: 6rem 2rem 8rem;
+    padding: 6rem 0;
 }
 
 .overview-content {
@@ -65,7 +65,7 @@ body {
 .impact-section {
     width: 100%;
     background-color: #FFFFFF;
-    padding: 6rem 2rem 8rem;
+    padding: 6rem 0;
 }
 
 .impact-content {
@@ -129,12 +129,7 @@ body {
 .team-section {
     width: 100%;
     background-color: #F7F7F7;
-    padding: 6rem 2rem 8rem;
-}
-
-.team-content {
-    max-width: 1280px;
-    margin: 0 auto;
+    padding: 6rem 0;
 }
 
 .team-content h2 {
@@ -146,10 +141,9 @@ body {
 }
 
 .team-content p {
-    font-size: 1rem;
+    font-size: 16px;
     color: #444;
     margin-bottom: 2rem;
-    max-width: 720px;
 }
 
 .team-groups {
