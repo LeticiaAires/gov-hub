@@ -115,8 +115,18 @@
                     </div>
                 </div>
 
+                <!-- Mobile Menu Overlay -->
+                <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
+                
                 <!-- Mobile Menu -->
                 <div class="mobile-menu" id="mobile-menu">
+                    <!-- Botão de fechar -->
+                    <button class="mobile-menu-close" id="mobile-menu-close" type="button" aria-label="Fechar menu">
+                        <svg fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                        </svg>
+                    </button>
+                    
                     <ul>
                         <li><a href="./index.html" class="active">HOME</a></li>
                         <li><a href="./sobre.html">SOBRE</a></li>
@@ -148,89 +158,109 @@
         <!-- Background com gradiente e blur -->
         <div class="interactive-bg"></div>
         
-        <!-- Área da imagem (lado esquerdo) -->
-        <div class="image-area">
-            <!-- Imagem padrão -->
-            <div id="image-1" class="image-container image-fade-in">
-                <img src="./images/contratos_homev2.png" alt="Exemplo da tela contratos" class="main-image">
-            </div>
-            
-            <!-- Outras imagens -->
-            <div id="image-2" class="image-container image-fade-out">
-                <img src="./images/teds_homev2.png" alt="Exemplo da tela TEDS" class="main-image">
-            </div>
-            
-            <div id="image-3" class="image-container image-fade-out">
-                <img src="./images/pessoal_homev2.png" alt="Exemplo da tela pessoal" class="main-image">
-            </div>
-            
-            <div id="image-4" class="image-container image-fade-out">
-                <img src="./images/orcamento_homev2.png" alt="Exemplo de orçamento" class="main-image">
-            </div>
-            
-            <div id="image-5" class="image-container image-fade-out">
-                <video src="./images/assistente_de_IA.mp4" alt="Assistente de IA" class="main-image" autoplay muted loop>
-                </video>
-            </div>
-        </div>
-        
-        <!-- Container glass com imagens (lado direito) -->
-        <div class="glass-container">
-            <h2 class="glass-title">Sistemas diferentes,<br>uma só leitura</h2>
-            
-            <div class="features-grid">
-                <!-- Primeira linha - 3 cards -->
-                <div class="features-row-1">
-                    <!-- Item 1 - Contratos -->
-                    <div class="feature-card" onmouseenter="showImage(1)">
-                        <div class="feature-image">
-                            <img src="./images/icons/contratos.svg" alt="Contratos" class="feature-png">
+        <div class="container">
+            <div class="row align-items-center g-0">
+                <!-- Coluna da imagem (lado esquerdo) -->
+                <div class="col-12 col-lg-7">
+                    <!-- Área da imagem -->
+                    <div class="image-area">
+                        <!-- Imagem padrão -->
+                        <div id="image-1" class="image-container image-fade-in">
+                            <img src="./images/contratos_homev2.png" alt="Exemplo da tela contratos" class="main-image">
                         </div>
-                        <div class="feature-content">
-                            <h3 class="feature-title">Contratos</h3>
+                        
+                        <!-- Outras imagens -->
+                        <div id="image-2" class="image-container image-fade-out">
+                            <img src="./images/teds_homev2.png" alt="Exemplo da tela TEDS" class="main-image">
                         </div>
-                    </div>
-                    
-                    <!-- Item 2 - TEDS -->
-                    <div class="feature-card" onmouseenter="showImage(2)">
-                        <div class="feature-image">
-                            <img src="./images/icons/teds.svg" alt="TEDS" class="feature-png">
+                        
+                        <div id="image-3" class="image-container image-fade-out">
+                            <img src="./images/pessoal_homev2.png" alt="Exemplo da tela pessoal" class="main-image">
                         </div>
-                        <div class="feature-content">
-                            <h3 class="feature-title">TEDS</h3>
+                        
+                        <div id="image-4" class="image-container image-fade-out">
+                            <img src="./images/orcamento_homev2.png" alt="Exemplo de orçamento" class="main-image">
                         </div>
-                    </div>
-                    
-                    <!-- Item 3 - Pessoal -->
-                    <div class="feature-card" onmouseenter="showImage(3)">
-                        <div class="feature-image">
-                            <img src="./images/icons/pessoal.svg" alt="Pessoal" class="feature-png">
-                        </div>
-                        <div class="feature-content">
-                            <h3 class="feature-title">Pessoal</h3>
+                        
+                        <div id="image-5" class="image-container image-fade-out">
+                            <video src="./images/assistente_de_IA.mp4" alt="Assistente de IA" class="main-image" autoplay muted loop>
+                            </video>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Segunda linha - 2 cards centralizados -->
-                <div class="features-row-2">
-                    <!-- Item 4 - Orçamento -->
-                    <div class="feature-card" onmouseenter="showImage(4)">
-                        <div class="feature-image">
-                            <img src="./images/icons/orcamento.svg" alt="Orçamento" class="feature-png">
-                        </div>
-                        <div class="feature-content">
-                            <h3 class="feature-title">Orçamento</h3>
-                        </div>
-                    </div>
-                    
-                    <!-- Item 5 - IA -->
-                    <div class="feature-card" onmouseenter="showImage(5)">
-                        <div class="feature-image">
-                            <img src="./images/icons/ia.svg" alt="Inteligência Artificial" class="feature-png">
-                        </div>
-                        <div class="feature-content">
-                            <h3 class="feature-title">Inteligência Artificial</h3>
+                <!-- Coluna do glass container (lado direito) -->
+                <div class="col-12 col-lg-5">
+                    <!-- Container glass com imagens -->
+                    <div class="glass-container">
+                        <h2 class="glass-title">Sistemas diferentes,<br>uma só leitura</h2>
+                        
+                        <div class="features-grid">
+                            <!-- Primeira linha - 3 cards -->
+                            <div class="row g-2 features-row-1">
+                                <!-- Item 1 - Contratos -->
+                                <div class="col-4">
+                                    <div class="feature-card" onmouseenter="showImage(1)">
+                                        <div class="feature-image">
+                                            <img src="./images/icons/contratos.svg" alt="Contratos" class="feature-png">
+                                        </div>
+                                        <div class="feature-content">
+                                            <h3 class="feature-title">Contratos</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Item 2 - TEDS -->
+                                <div class="col-4">
+                                    <div class="feature-card" onmouseenter="showImage(2)">
+                                        <div class="feature-image">
+                                            <img src="./images/icons/teds.svg" alt="TEDS" class="feature-png">
+                                        </div>
+                                        <div class="feature-content">
+                                            <h3 class="feature-title">TEDS</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Item 3 - Pessoal -->
+                                <div class="col-4">
+                                    <div class="feature-card" onmouseenter="showImage(3)">
+                                        <div class="feature-image">
+                                            <img src="./images/icons/pessoal.svg" alt="Pessoal" class="feature-png">
+                                        </div>
+                                        <div class="feature-content">
+                                            <h3 class="feature-title">Pessoal</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Segunda linha - 2 cards centralizados -->
+                            <div class="row g-2 features-row-2 justify-content-center">
+                                <!-- Item 4 - Orçamento -->
+                                <div class="col-4">
+                                    <div class="feature-card" onmouseenter="showImage(4)">
+                                        <div class="feature-image">
+                                            <img src="./images/icons/orcamento.svg" alt="Orçamento" class="feature-png">
+                                        </div>
+                                        <div class="feature-content">
+                                            <h3 class="feature-title">Orçamento</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Item 5 - IA -->
+                                <div class="col-4">
+                                    <div class="feature-card" onmouseenter="showImage(5)">
+                                        <div class="feature-image">
+                                            <img src="./images/icons/ia.svg" alt="Inteligência Artificial" class="feature-png">
+                                        </div>
+                                        <div class="feature-content">
+                                            <h3 class="feature-title">I.A.</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
