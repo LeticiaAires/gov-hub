@@ -95,7 +95,7 @@ header.fixed {
 
 .glass-title {
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: 600;
     color: black;
     text-align: center;
     line-height: 1.4;
@@ -183,8 +183,8 @@ header.fixed {
 }
 
 .feature-title {
-    font-size: 0.85rem;
-    font-weight: 600;
+    font-size: 1rem;
+    font-weight: 400;
     color: #7A34F3;
     margin: 0;
     font-family: 'Inter', sans-serif;
