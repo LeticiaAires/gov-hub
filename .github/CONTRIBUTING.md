@@ -2,11 +2,11 @@
 
 Antes de começar, obrigado por considerar contribuir com o **Gov Hub BR**. acreditamos que a colaboração é essencial para construir soluções públicas mais eficientes, transparentes e sustentáveis.
 
-o gov hub br é um projeto open-source com o propósito de transformar dados públicos em ativos estratégicos para a administração pública e a sociedade. toda contribuição, seja código, documentação, ideias ou feedback, é bem-vinda.
+o [Gov Hub](https://github.com/GovHub-br/gov-hub) br é um projeto open-source com o propósito de transformar dados públicos em ativos estratégicos para a administração pública e a sociedade. toda contribuição, seja código, documentação, ideias ou feedback, é bem-vinda.
 
 ## Como contribuir
 
-1 **faça um fork do repositório**
+1 **Faça um fork do repositório**
 
 Clique em "fork" no canto superior direito da página do projeto e clone o repositório no seu ambiente local:
 
@@ -21,7 +21,7 @@ recomendamos criar uma branch com um nome descritivo, como ajuste-na-doc ou feat
 git checkout -b minha-contribuicao
 ```
 
-2 . **faça suas alterações**
+2 . **Faça suas alterações**
 
 contribuições podem incluir:
 
@@ -35,7 +35,7 @@ contribuições podem incluir:
 
 teste e valide sua contribuição
 
-3. **sobre o pull request**
+3. **Sobre o pull request**
 
 Antes de enviar, certifique-se de que sua alteração está funcionando corretamente, sem quebrar funcionalidades existentes, e que segue os padrões definidos pelo projeto.
 
