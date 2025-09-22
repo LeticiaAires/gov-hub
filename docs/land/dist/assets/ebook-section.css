@@ -73,7 +73,7 @@
 }
 
 .ebook-button {
-    background: #7c3aed;
+    background: #9249CA;
     color: white;
     border: none;
     padding: 1rem 2rem;
@@ -92,7 +92,7 @@
 }
 
 .ebook-button:hover {
-    background: #6d28d9;
+    background: #7c3aad;
     transform: translateY(-2px);
     box-shadow: 0 15px 35px rgba(124, 58, 237, 0.4);
 }

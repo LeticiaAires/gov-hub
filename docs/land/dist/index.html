@@ -290,7 +290,7 @@
                 </div>
                 
                 <!-- Right Column - Texto Explicativo -->
-                <div class="col-12 col-lg-6 govhub-text">
+                <div class="col-12 col-lg-6">
                     <h4 class="govhub-title">O que é o Gov Hub?</h4>
                     <p class="govhub-description">O GovHub é uma plataforma de software livre desenvolvida para transformar dados brutos em informações estratégicas, apoiando gestores públicos a tomar decisões baseadas em dados.</p>
                     
@@ -546,80 +546,93 @@
     </div>
   </section>
   <!-- End block - Seção Publicações em Destaque -->
+   
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             
-            <!-- Four Column Layout -->
+            <!-- Row 1 - Initiative and Support Text with invisible columns -->
             <div class="row footer-middle g-4">
-                <!-- Column 1 - Lab Livre + Navigation -->
                 <div class="col-12 col-md-3 footer-column">
                     <div class="footer-initiative-text">
                         <p>Gov hub é uma iniciativa</p>
                     </div>
+                </div>
+                <div class="col-12 col-md-3">
+                    <!-- Coluna invisível para alinhamento -->
+                </div>
+                <div class="col-12 col-md-3">
+                    <!-- Coluna invisível para alinhamento -->
+                </div>
+                <div class="col-12 col-md-3 footer-column">
+                    <div class="footer-support-text">
+                        <p>Apoio</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 2 - Logos -->
+            <div class="row footer-middle g-4">
+                <div class="col-12 col-md-3 footer-column">
                     <div class="footer-logo-section">
                         <div class="footer-logo-lablivre">
                             <img src="./images/lablivre_footer.png" alt="Lab Livre Logo">
                         </div>
                     </div>
-                    <div class="footer-nav">
-                        <ul>
-                            <li><a href="./index.html">Home</a></li>
-                            <li><a href="./sobre.html">Sobre</a></li>
-                            <li><a href="./publicacoes.html">Publicações</a></li>
-                            <li><a href="./quem-somos.html">Quem somos</a></li>
-                            <li><a href="../../comunidade/guia-contribuicao/">Documentação</a></li>
-                            <li><a href="./ebook.html">E-book</a></li>
-                        </ul>
-                    </div>
                 </div>
-
-                <!-- Column 2 - UnB + How to use -->
                 <div class="col-12 col-md-3 footer-column">
-                    <div class="footer-spacer">
-                        <p>&nbsp;</p>
-                    </div>
                     <div class="footer-logo-section">
-                        <div class="footer-logo-lablivre mobile-only">
-                            <img src="./images/lablivre_footer.png" alt="Lab Livre Logo">
-                        </div>
                         <div class="footer-logo-unb">
                             <img src="./images/unb_footer.png" alt="UnB Logo">
                         </div>
                     </div>
-                    <div class="footer-how-to-use">
-                        <h4>Como usar</h4>
-                        <ul>
-                            <li><a href="../../setup/">Gov hub no meu órgão</a></li>
-                            <li><a href="../../getting-started/">Tutoriais</a></li>
-                            <li><a href="../../docs/">Funcionalidades</a></li>
-                            <li><a href="../../home/">Documentação</a></li>
-                        </ul>
-                    </div>
                 </div>
-
-                <!-- Column 3 - Capibaribe -->
                 <div class="col-12 col-md-3 footer-column">
-                    <div class="footer-spacer">
-                        <p>&nbsp;</p>
-                    </div>
                     <div class="footer-logo-section">
                         <div class="footer-logo-capibaribe">
                             <img src="./images/capibaribe.png" alt="Capibaribe Logo">
                         </div>
                     </div>
                 </div>
-
-                <!-- Column 4 - IPEA + Contact -->
                 <div class="col-12 col-md-3 footer-column">
-                    <div class="footer-support-text">
-                        <p>Apoio</p>
-                    </div>
                     <div class="footer-logo-section">
                         <div class="footer-logo-ipea">
                             <img src="./images/ipea_footer.png" alt="IPEA Logo">
                         </div>
                     </div>
+                </div>
+            </div>
+
+            <!-- Row 3 - Navigation and Contact -->
+            <div class="row footer-middle g-4">
+                <div class="col-12 col-md-3 footer-column">
+                    <div class="footer-nav">
+                        <ul>
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="./sobre.html">Sobre</a></li>
+                            <li><a href="./publicacoes.html">Publicações</a></li>
+                            <li><a href="./quem-somos.html">Quem somos</a></li>
+                            <li><a href="./ebook.html">E-book</a></li>
+                            <li><a href="../../comunidade/guia-contribuicao/">Documentação</a></li>
+                            <li><a href="https://govhub.ipea.gov.br/dashboard/list/">Demo</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3 footer-column">
+                    <div class="footer-how-to-use">
+                        <h4>Como usar</h4>
+                        <ul>
+                            <li><a href="../../sobre-projeto/replicacao/">Gov hub no meu órgão</a></li>
+                            <li><a href="../../documentacao/tutoriais/infraestrutura/cicd">Tutoriais</a></li>
+                            <li><a href="../../sobre-projeto/overview">Funcionalidades</a></li>
+                            <li><a href="../../documentacao/instalacao">Documentação</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3 footer-column">
+                    <!-- Coluna invisível para alinhamento -->
+                </div>
+                <div class="col-12 col-md-3 footer-column">
                     <div class="footer-contact">
                         <h4>Contato</h4>
                         <ul>
@@ -640,18 +653,55 @@
                 </div>
             </div>
             
-            <!-- Mobile Contact Section -->
-            <div class="footer-contact-mobile">
-                <h4>Contato</h4>
-                <ul>
-                    <li><a href="mailto:lablivreunb@gmail.com">lablivreunb@gmail.com</a></li>
-                </ul>
-            </div>
-
-            <!-- Bottom Section - Copyright -->
-            <div class="row">
-                <div class="col-12 footer-bottom">
-                    <p>© 2025 GovHub - Uma iniciativa do Lab Livre - UnB. Licenciado sob Creative Commons.</p>
+            <!-- Mobile Footer Structure using Bootstrap Grid (hidden on desktop) -->
+            <div class="footer-mobile">
+                <!-- 1. Initiative Text -->
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <p class="footer-mobile-initiative">Gov hub é uma iniciativa</p>
+                    </div>
+                </div>
+                
+                <!-- 2. Logos: Lab Livre, UnB e Capibaribe -->
+                <div class="row">
+                    <div class="col-4 text-center">
+                        <img src="./images/lablivre_footer.png" alt="Lab Livre Logo" class="footer-mobile-logo">
+                    </div>
+                    <div class="col-4 text-center">
+                        <img src="./images/unb_footer.png" alt="UnB Logo" class="footer-mobile-logo">
+                    </div>
+                    <div class="col-4 text-center">
+                        <img src="./images/capibaribe.png" alt="Capibaribe Logo" class="footer-mobile-logo footer-mobile-logo-capibaribe">
+                    </div>
+                </div>
+                
+                <!-- 3. Support Text -->
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <p class="footer-mobile-support">Apoio</p>
+                    </div>
+                </div>
+                
+                <!-- 4. Logo IPEA -->
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <img src="./images/ipea_footer.png" alt="IPEA Logo" class="footer-mobile-logo">
+                    </div>
+                </div>
+                
+                <!-- 5. Contact -->
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h4 class="footer-mobile-contact-title">Contato</h4>
+                        <p><a href="mailto:caguiar@unb.br" class="footer-mobile-contact-link">caguiar@unb.br</a></p>
+                    </div>
+                </div>
+                
+                <!-- 6. Copyright -->
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <p class="footer-mobile-copyright">© 2025 GovHub - Uma iniciativa do Lab Livre - UnB. Licenciado sob Creative Commons.</p>
+                    </div>
                 </div>
             </div>
         </div>

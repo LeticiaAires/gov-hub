@@ -86,31 +86,6 @@ header {
     transition: var(--transition-normal);
 }
 
-/* Transição gradativa da logo entre 1400px e 1250px */
-@media (max-width: 1400px) {
-    .logo-img {
-        max-height: 38px;
-    }
-}
-
-@media (max-width: 1350px) {
-    .logo-img {
-        max-height: 34px;
-    }
-}
-
-@media (max-width: 1300px) {
-    .logo-img {
-        max-height: 30px;
-    }
-}
-
-@media (max-width: 1250px) {
-    .logo-img {
-        max-height: 28px;
-    }
-}
-
 /* Logo como link (outras páginas) */
 a.logo {
     display: flex;
@@ -137,13 +112,14 @@ a.logo {
     display: flex !important;
     gap: 0.5rem !important;
     align-items: center !important;
+    padding: 0 1rem !important;
 }
 
 .nav-link {
     color: #ffffff !important;
     text-decoration: none !important;
-    font-weight: 600 !important;
-    font-size: 0.875rem !important;
+    font-weight: 700 !important;
+    font-size: 0.75rem !important;
     letter-spacing: 0.5px !important;
     transition: all 0.3s ease !important;
     padding: 0.5rem 1rem !important;
@@ -439,10 +415,6 @@ a.logo {
         margin: 0 auto;
         padding: 0 0.08rem;
     }
-
-    .logo-img {
-        max-height: 32px;
-    }
     
     .nav-link {
         font-size: 0.75rem;
@@ -479,7 +451,7 @@ a.logo {
 }
 
 /* Small screens (768px - 991px) */
-@media (max-width: 991.98px) {
+@media (max-width: 992px) {
     .nav-link {
         font-size: 0.8rem;
         padding: 0.35rem 0.5rem;
@@ -501,11 +473,6 @@ a.logo {
         min-width: 80px;
         padding: 0 0.2rem 0 0.1rem;
     }
-    
-    .logo-img {
-        max-height: 35px;
-    }
-    
     /* Reorganizar a estrutura da navbar no mobile */
     .custom-navbar .row {
         justify-content: space-between;

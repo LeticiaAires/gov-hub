@@ -2,14 +2,9 @@
 
 .system-info-section {
     background-color: #ffffff;
-    padding: 2rem 0;
+    padding: 6.25rem 0;
 }
 
-.system-info-container {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 1rem;
-}
 
 .system-info-content {
     display: grid;
@@ -18,32 +13,23 @@
     align-items: center;
 }
 
-/* Container do texto */
-.system-info-text {
-    color: #000000;
-    font-size: 1.125rem;
-    line-height: 1.75;
-    font-family: 'Inter', sans-serif;
-}
-
 /* Título principal */
 .system-info-title {
     margin-bottom: 1rem;
-    font-size: 1.875rem;
-    font-weight: 800;
+    font-size: 2.25rem;
+    font-weight: 600;
     line-height: 1.2;
-    color: #7c3aed;
-    letter-spacing: -0.025em;
+    color: #7A34F3;
     font-family: 'Inter', sans-serif;
 }
 
 /* Descrição principal */
 .system-info-description {
     margin-bottom: 2rem;
-    font-weight: 300;
-    font-size: 1.125rem;
-    line-height: 1.5;
-    color: #000000;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 24px;
+    color: #202020;
     font-family: 'Inter', sans-serif;
 }
 
@@ -65,67 +51,20 @@
     transform: translateY(-2rem);
 }
 
-/* Responsividade */
-@media (min-width: 1024px) {
-    .system-info-section {
-        padding: 6rem 0;
-    }
-    
-    .system-info-container {
-        padding: 0 1.5rem;
-    }
-    
-    .system-info-content {
-        grid-template-columns: 1fr 1fr;
-        gap: 2rem;
-    }
-    
-    .system-info-title {
-        font-size: 1.875rem;
-    }
-    
-    .system-info-description {
-        font-size: 1.25rem;
-    }
-    
-    .system-info-subdescription {
-        font-size: 1.25rem;
-    }
-}
-
 @media (min-width: 1280px) {
     .system-info-content {
         gap: 4rem;
     }
 }
 
-@media (max-width: 1023px) {
-    .system-info-section {
-        padding: 4rem 0;
-    }
-    
-    .system-info-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    
+@media (max-width: 992px) {
+
     .system-info-image-container {
         order: -1;
-    }
-    
-    .system-info-title {
-        font-size: 1.75rem;
-    }
-    
-    .system-info-description {
-        font-size: 1.125rem;
     }
 }
 
 @media (max-width: 768px) {
-    .system-info-section {
-        padding: 3rem 1rem;
-    }
     
     .system-info-container {
         padding: 0 1rem;

@@ -63,18 +63,22 @@ body {
 }
 
 .gh-card h3 {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
+    font-weight: 600;
     margin: 0;
 }
 
 .gh-card p {
+    font-size: 0.875rem;
+    font-weight: 400;
     margin: 0.35rem 0;
     line-height: 1.5;
 }
 
 .gh-card .gh-link {
     margin-top: 0.5rem;
-    font-weight: 600;
+    font-size: 0.875rem;
+    font-weight: 400;
 }
 
 .gh-card .gh-arrow {
@@ -96,7 +100,10 @@ body {
     display: grid;
     place-items: center;
 }
-.gh-card .gh-badge img { width: 56px; height: 56px; }
+.gh-card .gh-badge img { 
+    width: 64px;
+    height: 64px; 
+}
 
 /* Card grande (linha inteira) */
 .gh-card-wide {
@@ -113,6 +120,8 @@ body {
     list-style: none;
     position: relative;
     padding-left: 1.4rem; /* espaço pequeno entre o check e o texto */
+    font-size: 0.875rem;
+    font-weight: 400;
 }
 
 .checks li::before {

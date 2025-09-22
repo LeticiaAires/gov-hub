@@ -17,13 +17,6 @@ body {
     --bs-gutter-y: 20px;
 }
 
-.hero-section p {
-    font-size: 1.2rem;
-    max-width: 800px;
-    margin: 0 auto;
-    opacity: 0.9;
-}
-
 /* Content Section */
 .content-section {
     background-color: #F7F7F7;
@@ -42,7 +35,6 @@ body {
     margin-bottom: 1.5rem;
     text-align: justify;
 }
-
 
 /* Charts Column */
 .charts-column {
@@ -96,15 +88,16 @@ body {
 }
 
 .content-block h2 {
-    color: #000000;
-    font-size: 2rem;
-    font-weight: 700;
+    color: #202020;
+    font-size: 2.25rem;
+    font-weight: 600;
     margin-bottom: 1rem;
     text-align: left;
 }
 
 .content-block p {
-    font-size: 1.1rem;
+    font-size: 1rem;
+    font-weight: 400;
     line-height: 1.7;
     color: #000000;
     text-align: left;
@@ -123,8 +116,8 @@ body {
 
 .features-title {
     color: #7A34F3;
-    font-size: 2.5rem;
-    font-weight: 700;
+    font-size: 2.25rem;
+    font-weight: 600;
     margin: 0;
     text-align: left;
     text-shadow: 0 0 20px rgba(122, 52, 243, 0.3);
@@ -144,142 +137,21 @@ body {
 }
 
 .feature-item h3 {
-    color: #000000;
-    font-size: 1.2rem;
+    color: #202020;
+    font-size: 1rem;
     font-weight: 700;
     margin: 0;
     text-align: left;
 }
 
 .feature-item p {
-    color: #333;
+    color: #202020;
     font-size: 1rem;
+    font-weight: 400;
     line-height: 1.6;
     margin: 0;
     text-align: left;
 }
-
-/* Features Grid */
-.features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 3rem;
-}
-
-.feature-card {
-    background: #f8f9fa;
-    padding: 2rem;
-    border-radius: 12px;
-    border-left: 4px solid #6366f1;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.feature-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(99, 102, 241, 0.15);
-}
-
-.feature-card h3 {
-    color: #6366f1;
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-}
-
-.feature-card p {
-    color: #666;
-    line-height: 1.6;
-}
-
-/* Team Section */
-.team-section {
-    background: #f8f9fa;
-    padding: 3rem 1rem 2rem 3rem;
-}
-
-.team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.team-member {
-    background: white;
-    padding: 2rem;
-    border-radius: 12px;
-    text-align: center;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.team-member:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
-}
-
-.team-member img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 1rem;
-    object-fit: cover;
-}
-
-.team-member h3 {
-    color: #6366f1;
-    margin-bottom: 1rem;
-    font-size: 1.3rem;
-}
-
-.team-member p {
-    color: #666;
-    font-size: 0.95rem;
-    line-height: 1.5;
-}
-
-/* CTA Section */
-.cta-section {
-    background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
-    color: white;
-    text-align: center;
-    padding: 3rem 1rem 2rem 3rem;
-}
-
-.cta-section h2 {
-    color: white;
-    margin-bottom: 1rem;
-    font-size: 2.5rem;
-}
-
-.cta-section p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.cta-button {
-    display: inline-block;
-    background: white;
-    color: #f97316;
-    padding: 1rem 2rem;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: 700;
-    margin-top: 1rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
-
-.cta-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-}
-
-
 
 /* Technologies Section */
 .technologies-section {
@@ -289,17 +161,18 @@ body {
 
 .technologies-column h2,
 .requirements-column h2 {
-    color: #000000;
-    font-size: 2rem;
-    font-weight: 700;
+    color: #202020;
+    font-size: 2.25rem;
+    font-weight: 600;
     margin-bottom: 2rem;
     text-align: left;
 }
 
 .technologies-column p {
-    font-size: 1.1rem;
+    font-size: 1rem;
+    font-weight: 400;
     line-height: 1.7;
-    color: #333;
+    color: #202020;
     text-align: justify;
     margin: 0;
 }
@@ -317,9 +190,9 @@ body {
 }
 
 .requirement-category {
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: #000000;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #202020;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
@@ -331,10 +204,11 @@ body {
 }
 
 .tech-name {
-    font-size: 1rem;
-    font-weight: 600;
+    font-size: 0.875rem;
+    font-weight: 500;
     color: #7A34F3;
     text-transform: uppercase;
+    text-decoration: none;
 }
 
 .arrow {
@@ -351,25 +225,26 @@ body {
 
 .how-to-use-content h2 {
     color: #7A34F3;
-    font-size: 2.5rem;
-    font-weight: 700;
+    font-size: 2.25rem;
+    font-weight: 600;
     margin-bottom: 1.5rem;
     text-align: left;
 }
 
 .how-to-use-content p {
-    font-size: 1.1rem;
+    font-size: 1rem;
+    font-weight: 400;
     line-height: 1.7;
-    color: #333;
+    color: #202020;
     text-align: left;
     margin-bottom: 2rem;
     max-width: 800px;
 }
 
 .how-to-use-content h3 {
-    color: #333;
-    font-size: 1.3rem;
-    font-weight: 600;
+    color: #202020;
+    font-size: 1rem;
+    font-weight: 400;
     margin-bottom: 1rem;
     margin-top: 2rem;
 }
@@ -382,9 +257,10 @@ body {
 }
 
 .how-to-use-list li {
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 1.6;
-    color: #333;
+    color: #202020;
+    font-weight: 400;
     margin-bottom: 0.5rem;
     padding-left: 2rem;
     position: relative;
@@ -407,8 +283,8 @@ body {
 
 .how-to-use-link {
     color: #7A34F3;
-    font-size: 0.9rem;
-    font-weight: 600;
+    font-size: 0.875rem;
+    font-weight: 500;
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -417,21 +293,16 @@ body {
     color: #5a2bc7;
 }
 
-/* Requirements Section */
-/* (removido) */
-
 /* Construction Section */
 .construction-section {
     background-color: #F7F7F7;
     padding: 6rem 0;
 }
 
-/* Construction content - estilos aplicados nos elementos filhos */
-
 .construction-content h2 {
-    color: #000000;
-    font-size: 2.5rem;
-    font-weight: 700;
+    color: #202020;
+    font-size: 2.25rem;
+    font-weight: 600;
     margin-bottom: 1.5rem;
     margin-top: 3rem;
     text-align: left;
@@ -442,104 +313,12 @@ body {
 }
 
 .construction-content p {
-    font-size: 1.1rem;
+    font-size: 1rem;
+    font-weight: 400;
     line-height: 1.7;
-    color: #333;
+    color: #202020;
     text-align: left;
     margin-bottom: 2rem;
-}
-
-.construction-content h3 {
-    color: #333;
-    font-size: 1.3rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    margin-top: 2rem;
-}
-
-.details-list {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 2rem 0;
-}
-
-.details-list li {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #333;
-    margin-bottom: 0.5rem;
-    padding-left: 1.5rem;
-    position: relative;
-}
-
-.details-list li:before {
-    content: "•";
-    color: #7A34F3;
-    font-weight: bold;
-    position: absolute;
-    left: 0;
-}
-
-.download-link {
-    display: inline-block;
-    color: #7A34F3;
-    font-size: 1.1rem;
-    font-weight: 600;
-    text-decoration: none;
-    margin-top: 1rem;
-    transition: color 0.3s ease;
-}
-
-.download-link:hover {
-    color: #5a2bc7;
-}
-
-/* Data Management Section */
-.data-management-section {
-    background-color: #F7F7F7;
-    padding: 3rem 1rem 2rem 3rem;
-}
-
-/* Data management content - estilos aplicados nos elementos filhos */
-
-.data-management-content h2 {
-    color: #7A34F3;
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    margin-top: 7.5rem;
-    text-align: left;
-}
-
-.data-management-content h3 {
-    color: #000000;
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 2rem;
-    margin-top: 0;
-    text-align: left;
-}
-
-.data-management-content p {
-    font-size: 1.1rem;
-    line-height: 1.7;
-    color: #333;
-    text-align: justify;
-    margin-bottom: 2rem;
-}
-
-.download-link-blue {
-    display: inline-block;
-    color: #7A34F3;
-    font-size: 1.1rem;
-    font-weight: 600;
-    text-decoration: none;
-    margin-top: 1rem;
-    transition: color 0.3s ease;
-}
-
-.download-link-blue:hover {
-    color: #5a2bc7;
 }
 
 /* Responsive Design */
@@ -559,15 +338,6 @@ body {
     .construction-content h2 {
         font-size: 2rem;
     }
-    
-    .data-management-content h2 {
-        font-size: 2rem;
-    }
-    
-    .features-grid {
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 1.5rem;
-    }
 }
 
 @media (max-width: 768px) {
@@ -579,9 +349,7 @@ body {
         font-size: 2rem;
     }
     
-    .hero-section p {
-        font-size: 1.1rem;
-    }
+    /* hero-section p removido */
     
     .content-section {
         padding: 6.25rem 1rem 2.5rem 1rem;
@@ -607,29 +375,12 @@ body {
         font-size: 1.8rem;
     }
     
-    .data-management-section {
-        padding: 6.25rem 1rem 2.5rem 1rem;
+    .technologies-section {
+        padding: 6.25rem 1rem 2rem 1rem;
     }
     
-    .data-management-content h2 {
-        font-size: 1.8rem;
-    }
-    
-    .team-section {
-        padding: 2.5rem 1rem 2rem 1rem;
-    }
-    
-    .team-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 1.5rem;
-    }
-    
-    .cta-section {
-        padding: 2.5rem 1rem 2rem 1rem;
-    }
-    
-    .cta-section h2 {
-        font-size: 2rem;
+    .how-to-use-section {
+        padding: 6.25rem 1rem 2rem 1rem;
     }
 }
 
@@ -637,18 +388,23 @@ body {
     .hero-section {
         padding: 80px 1rem 50px;
     }
+    
     .content-section {
         padding: 6.25rem 1rem 2rem 1rem;
     }
+    
     .features-section {
         padding: 6.25rem 1rem 2rem 1rem;
     }
+    
     .technologies-section {
         padding: 6.25rem 1rem 2rem 1rem;
     }
+    
     .how-to-use-section {
         padding: 6.25rem 1rem 2rem 1rem;
     }
+    
     .construction-section {
         padding: 6.25rem 1rem 2rem 1rem;
     }
@@ -668,96 +424,4 @@ body {
     .content-block h2 {
         font-size: 1.6rem;
     }
-    
-    .features-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-    
-    .feature-card {
-        padding: 1.5rem;
-    }
-    
-    .team-grid {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-    
-    .team-member {
-        padding: 1.5rem;
-    }
-    
-    .cta-section {
-        padding: 2rem 0;
-    }
-    
-    .cta-section h2 {
-        font-size: 1.8rem;
-    }
-    
-    .cta-button {
-        padding: 0.8rem 1.5rem;
-        font-size: 0.9rem;
-    }
 }
-
-/* Licença de Uso Section - Agora dentro do footer */
-.licenca-section {
-    background-color: #7A34F3;
-    padding: 0;
-    margin: 0;
-}
-
-/* Licença container - usando container Bootstrap padrão */
-
-.licenca-title {
-    color: white;
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.licenca-text {
-    color: white;
-    font-size: 1.1rem;
-    line-height: 1.7;
-    margin-bottom: 4rem;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-/* Responsive Design for Licença Section */
-@media (max-width: 768px) {
-    .licenca-section {
-        padding: 3rem 0;
-    }
-    
-    .licenca-container {
-        margin-left: 0;
-    }
-    
-    .licenca-title {
-        font-size: 2rem;
-    }
-    
-    .licenca-text {
-        font-size: 1rem;
-    }
-}@media (max-width: 480px) {
-    .licenca-section {
-        padding: 2rem 0;
-    }
-    
-    .licenca-container {
-        margin-left: 0;
-    }
-    
-    .licenca-title {
-        font-size: 1.8rem;
-    }
-    
-    .licenca-text {
-        font-size: 0.95rem;
-    }
-}
-

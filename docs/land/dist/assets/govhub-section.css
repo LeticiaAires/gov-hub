@@ -2,7 +2,7 @@
 
 .govhub-section {
     background-color: #ffffff;
-    padding: 2rem 0;
+    padding: 6.25rem 0;
 }
 
 /* Espaçamento global para todas as seções - 20px */
@@ -91,22 +91,13 @@
     z-index: 1;
 }
 
-
-/* Container do texto */
-.govhub-text {
-    color: #000000;
-    font-size: 1.125rem;
-    line-height: 1.75;
-    font-family: 'Inter', sans-serif;
-}
-
 /* Título principal */
 .govhub-title {
     margin-bottom: 1rem;
-    font-size: 36px;
+    font-size: 2.25rem;
     font-weight: 600;
     line-height: 1.2;
-    color: #7c3aed;
+    color: #7A34F3;
     letter-spacing: -0.025em;
     font-family: 'Inter', sans-serif;
 }
@@ -115,9 +106,9 @@
 .govhub-description {
     margin-bottom: 0.5rem;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 1.5;
-    color: #000000;
+    font-size: 1rem;
+    line-height: 24px;
+    color: #202020;
     font-family: 'Inter', sans-serif;
 }
 
@@ -131,8 +122,8 @@
     display: inline-flex;
     align-items: center;
     font-size: 14px;
-    font-weight: 500;
-    color: #7c3aed;
+    font-weight: 400;
+    color: #7A34F3;
     text-decoration: none;
     margin-top: 2rem;
     margin-bottom: 2rem;
@@ -178,54 +169,13 @@
 }
 
 .govhub-feature-text {
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 400;
     line-height: 1.4;
     font-family: 'Inter', sans-serif;
 }
 
-/* Responsividade */
-@media (min-width: 1024px) {
-    .govhub-section {
-        padding: 6rem 0;
-    }
-    
-    .govhub-title {
-        font-size: 36px;
-    }
-    
-    .govhub-description {
-        font-size: 16px;
-    }
-    
-    .govhub-subdescription {
-        font-size: 1.25rem;
-    }
-}
-
-@media (max-width: 1023px) {
-    .govhub-section {
-        padding: 4rem 0;
-    }
-    
-    .govhub-image-container {
-        order: -1;
-    }
-    
-    .govhub-title {
-        font-size: 2rem;
-    }
-    
-    .govhub-description {
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .govhub-section {
-        padding: 3rem 1rem;
-    }
-    
+@media (max-width: 768px) {    
     .govhub-title {
         font-size: 1.75rem;
     }
