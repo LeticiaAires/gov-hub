@@ -153,7 +153,7 @@
                         </div>
                         
                         <div class="content-block">
-                            <h2>Porque existe?</h2>
+                            <h2>Por que existe?</h2>
                             <p>Para implementar a interoperabilidade no setor público, unindo dados fragmentados e garantindo informações confiáveis para decisões e transparência.</p>
                         </div>
                     </div>
@@ -225,7 +225,7 @@
                             <div class="requirement-item">
                                 <span class="requirement-category">ORQUESTRAÇÃO DE PIPELINES DE DADOS</span>
                                 <div class="requirement-tech">
-                                    <span class="tech-name">APACHE AIRFLOW</span>
+                                    <a href="../../documentacao/tutoriais/infraestrutura/airflow" class="tech-name">APACHE AIRFLOW</a>
                                     <span class="arrow">→</span>
                                 </div>
                             </div>
@@ -233,7 +233,7 @@
                             <div class="requirement-item">
                                 <span class="requirement-category">TRANSFORMAÇÃO E MODELAGEM DE DADOS</span>
                                 <div class="requirement-tech">
-                                    <span class="tech-name">DATA BUILD TOOL</span>
+                                    <a href="../../documentacao/tutoriais/dbt/modelos" class="tech-name">DATA BUILD TOOL</a>
                                     <span class="arrow">→</span>
                                 </div>
                             </div>
@@ -241,7 +241,7 @@
                             <div class="requirement-item">
                                 <span class="requirement-category">VISUALIZAÇÃO E EXPLORAÇÃO DE DADOS</span>
                                 <div class="requirement-tech">
-                                    <span class="tech-name">APACHE SUPERSET</span>
+                                    <a href="../../documentacao/tutoriais/superset/conexoes" class="tech-name">APACHE SUPERSET</a>
                                     <span class="arrow">→</span>
                                 </div>
                             </div>
@@ -249,7 +249,7 @@
                             <div class="requirement-item">
                                 <span class="requirement-category">BANCO DE DADOS RELACIONAL</span>
                                 <div class="requirement-tech">
-                                    <span class="tech-name">POSTGRESQL</span>
+                                    <a href="../../documentacao/tutoriais/infraestrutura/postgresql" class="tech-name">POSTGRESQL</a>
                                     <span class="arrow">→</span>
                                 </div>
                             </div>
@@ -257,7 +257,7 @@
                             <div class="requirement-item">
                                 <span class="requirement-category">CONTAINERIZAÇÃO E IMPLANTAÇÃO DE APLICAÇÕES</span>
                                 <div class="requirement-tech">
-                                    <span class="tech-name">DOCKER</span>
+                                    <a href="../../documentacao/tutoriais/infraestrutura/docker" class="tech-name">DOCKER</a>
                                     <span class="arrow">→</span>
                                 </div>
                             </div>
@@ -265,7 +265,7 @@
                             <div class="requirement-item">
                                 <span class="requirement-category">RETRIEVAL AUGMENTED GENERATION (EM BREVE)</span>
                                 <div class="requirement-tech">
-                                    <span class="tech-name">HAYSTACK</span>
+                                    <a href="#" class="tech-name">HAYSTACK</a>
                                     <span class="arrow">→</span>
                                 </div>
                             </div>
@@ -273,7 +273,7 @@
                             <div class="requirement-item">
                                 <span class="requirement-category">BANCO DE DADOS VETORIAL (EM BREVE)</span>
                                 <div class="requirement-tech">
-                                    <span class="tech-name">QDRANT</span>
+                                    <a href="#" class="tech-name">QDRANT</a>
                                     <span class="arrow">→</span>
                                 </div>
                             </div>
@@ -300,7 +300,7 @@
                 </ul>
                 
                 <div class="how-to-use-links">
-                    <a href="https://gov-hub.io/documentacao/instalacao/" class="how-to-use-link">ACESSE AQUI A DOCUMENTAÇÃO COMPLETA PARA IMPLANTAÇÃO E USO →</a>
+                    <a href="../../documentacao/instalacao" class="how-to-use-link">ACESSE AQUI A DOCUMENTAÇÃO COMPLETA PARA IMPLANTAÇÃO E USO →</a>
                     <a href="mailto:caguiar@unb.br" class="how-to-use-link">SOLICITE APOIO DE UM PARCEIRO →</a>
                 </div>
             </div>
@@ -324,21 +324,63 @@
     
     <!-- Footer -->
     <footer class="footer">
-        
         <div class="container">
             
-            <!-- Four Column Layout -->
+            <!-- Row 1 - Initiative and Support Text with invisible columns -->
             <div class="row footer-middle g-4">
-                <!-- Column 1 - Lab Livre + Navigation -->
                 <div class="col-12 col-md-3 footer-column">
                     <div class="footer-initiative-text">
                         <p>Gov hub é uma iniciativa</p>
                     </div>
+                </div>
+                <div class="col-12 col-md-3">
+                    <!-- Coluna invisível para alinhamento -->
+                </div>
+                <div class="col-12 col-md-3">
+                    <!-- Coluna invisível para alinhamento -->
+                </div>
+                <div class="col-12 col-md-3 footer-column">
+                    <div class="footer-support-text">
+                        <p>Apoio</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 2 - Logos -->
+            <div class="row footer-middle g-4">
+                <div class="col-12 col-md-3 footer-column">
                     <div class="footer-logo-section">
                         <div class="footer-logo-lablivre">
                             <img src="./images/lablivre_footer.png" alt="Lab Livre Logo">
                         </div>
                     </div>
+                </div>
+                <div class="col-12 col-md-3 footer-column">
+                    <div class="footer-logo-section">
+                        <div class="footer-logo-unb">
+                            <img src="./images/unb_footer.png" alt="UnB Logo">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3 footer-column">
+                    <div class="footer-logo-section">
+                        <div class="footer-logo-capibaribe">
+                            <img src="./images/capibaribe.png" alt="Capibaribe Logo">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-3 footer-column">
+                    <div class="footer-logo-section">
+                        <div class="footer-logo-ipea">
+                            <img src="./images/ipea_footer.png" alt="IPEA Logo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 3 - Navigation and Contact -->
+            <div class="row footer-middle g-4">
+                <div class="col-12 col-md-3 footer-column">
                     <div class="footer-nav">
                         <ul>
                             <li><a href="./index.html">Home</a></li>
@@ -350,53 +392,21 @@
                         </ul>
                     </div>
                 </div>
-
-                <!-- Column 2 - UnB + How to use -->
                 <div class="col-12 col-md-3 footer-column">
-                    <div class="footer-spacer">
-                        <p>&nbsp;</p>
-                    </div>
-                    <div class="footer-logo-section">
-                        <div class="footer-logo-lablivre mobile-only">
-                            <img src="./images/lablivre_footer.png" alt="Lab Livre Logo">
-                        </div>
-                        <div class="footer-logo-unb">
-                            <img src="./images/unb_footer.png" alt="UnB Logo">
-                        </div>
-                    </div>
                     <div class="footer-how-to-use">
                         <h4>Como usar</h4>
                         <ul>
-                            <li><a href="../../setup/">Gov hub no meu órgão</a></li>
-                            <li><a href="../../getting-started/">Tutoriais</a></li>
-                            <li><a href="../../docs/">Funcionalidades</a></li>
-                            <li><a href="../../home/">Documentação</a></li>
+                            <li><a href="../../sobre-projeto/replicacao/">Gov hub no meu órgão</a></li>
+                            <li><a href="../../documentacao/tutoriais/infraestrutura/cicd">Tutoriais</a></li>
+                            <li><a href="../../sobre-projeto/overview">Funcionalidades</a></li>
+                            <li><a href="../../documentacao/instalacao">Documentação</a></li>
                         </ul>
                     </div>
                 </div>
-
-                <!-- Column 3 - Capibaribe -->
                 <div class="col-12 col-md-3 footer-column">
-                    <div class="footer-spacer">
-                        <p>&nbsp;</p>
-                    </div>
-                    <div class="footer-logo-section">
-                        <div class="footer-logo-capibaribe">
-                            <img src="./images/capibaribe.png" alt="Capibaribe Logo">
-                        </div>
-                    </div>
+                    <!-- Coluna invisível para alinhamento -->
                 </div>
-
-                <!-- Column 4 - IPEA + Contact -->
                 <div class="col-12 col-md-3 footer-column">
-                    <div class="footer-support-text">
-                        <p>Apoio</p>
-                    </div>
-                    <div class="footer-logo-section">
-                        <div class="footer-logo-ipea">
-                            <img src="./images/ipea_footer.png" alt="IPEA Logo">
-                        </div>
-                    </div>
                     <div class="footer-contact">
                         <h4>Contato</h4>
                         <ul>
@@ -426,9 +436,61 @@
             </div>
 
             <!-- Bottom Section - Copyright -->
-            <div class="row g-4">
+            <div class="row">
                 <div class="col-12 footer-bottom">
                     <p>© 2025 GovHub - Uma iniciativa do Lab Livre - UnB. Licenciado sob Creative Commons.</p>
+                </div>
+            </div>
+            
+            <!-- Mobile Footer Structure using Bootstrap Grid (hidden on desktop) -->
+            <div class="footer-mobile">
+                <!-- 1. Initiative Text -->
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <p class="footer-mobile-initiative">Gov hub é uma iniciativa</p>
+                    </div>
+                </div>
+                
+                <!-- 2. Logos: Lab Livre, UnB e Capibaribe -->
+                <div class="row">
+                    <div class="col-4 text-center">
+                        <img src="./images/lablivre_footer.png" alt="Lab Livre Logo" class="footer-mobile-logo">
+                    </div>
+                    <div class="col-4 text-center">
+                        <img src="./images/unb_footer.png" alt="UnB Logo" class="footer-mobile-logo">
+                    </div>
+                    <div class="col-4 text-center">
+                        <img src="./images/capibaribe.png" alt="Capibaribe Logo" class="footer-mobile-logo footer-mobile-logo-capibaribe">
+                    </div>
+                </div>
+                
+                <!-- 3. Support Text -->
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <p class="footer-mobile-support">Apoio</p>
+                    </div>
+                </div>
+                
+                <!-- 4. Logo IPEA -->
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <img src="./images/ipea_footer.png" alt="IPEA Logo" class="footer-mobile-logo">
+                    </div>
+                </div>
+                
+                <!-- 5. Contact -->
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h4 class="footer-mobile-contact-title">Contato</h4>
+                        <p><a href="mailto:lablivreunb@gmail.com" class="footer-mobile-contact-link">lablivreunb@gmail.com</a></p>
+                    </div>
+                </div>
+                
+                <!-- 6. Copyright -->
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <p class="footer-mobile-copyright">© 2025 GovHub - Uma iniciativa do Lab Livre - UnB. Licenciado sob Creative Commons.</p>
+                    </div>
                 </div>
             </div>
         </div>

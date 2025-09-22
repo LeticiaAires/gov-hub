@@ -17,13 +17,6 @@ body {
     --bs-gutter-y: 20px;
 }
 
-.hero-section p {
-    font-size: 1.2rem;
-    max-width: 800px;
-    margin: 0 auto;
-    opacity: 0.9;
-}
-
 /* Content Section */
 .content-section {
     background-color: #F7F7F7;
@@ -215,6 +208,7 @@ body {
     font-weight: 500;
     color: #7A34F3;
     text-transform: uppercase;
+    text-decoration: none;
 }
 
 .arrow {
@@ -355,9 +349,7 @@ body {
         font-size: 2rem;
     }
     
-    .hero-section p {
-        font-size: 1.1rem;
-    }
+    /* hero-section p removido */
     
     .content-section {
         padding: 6.25rem 1rem 2.5rem 1rem;

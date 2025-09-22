@@ -10,9 +10,6 @@
 }
 
 /* Header Section - Initiative and Support text */
-.footer-top {
-    margin-bottom: 1.5rem;
-}
 
 .footer-initiative-text,
 .footer-support-text {
@@ -22,21 +19,11 @@
 
 .footer-initiative-text p, .footer-support-text p {
     margin: 0;
-    font-size: 16px;
-    font-weight: bold;
+    font-size: 1rem;
+    font-weight: 700;
     line-height: 1.3;
 }
 
-/* Espaçamento invisível para alinhamento */
-.footer-spacer {
-    display: flex;
-    visibility: hidden;
-}
-
-.footer-spacer p {
-    margin: 0;
-    line-height: 1.3;
-}
 
 /* Three Column Layout */
 .footer-column {
@@ -115,7 +102,7 @@
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
+    gap: 0.25rem;
 }
 
 .footer-how-to-use h4,
@@ -131,7 +118,7 @@
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
+    line-height: 1.5rem;
 }
 
 .footer-contact ul {
@@ -146,7 +133,7 @@
 .footer a {
     color: #ffffff;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
     line-height: 1.3;
     opacity: 0.85;
@@ -156,7 +143,7 @@
 /* Links de navegação em negrito */
 .footer-nav a {
     font-weight: 700;
-    opacity: 0.95;
+    opacity: 0.9;
 }
 
 .footer a:hover { 
@@ -201,8 +188,8 @@
 
 .footer-bottom p {
     margin: 0;
-    font-weight: bold;
-    font-size: 16px;
+    font-size: 1rem;
+    font-weight: 700;
 }
 
 /* Responsive Design - Alinhado com Bootstrap Grid System */
@@ -220,21 +207,14 @@
         align-items: flex-start;
     }
     
-    .footer-column:first-child .footer-logo-section {
-        display: flex; /* Mostrar logo Lab Livre na primeira coluna no desktop */
-    }
-    
-    .footer-column:nth-child(2) .footer-logo-section::before {
-        display: none; /* Esconder pseudo-elemento no desktop */
-    }
-    
-    /* Desktop: Esconder logo Lab Livre da segunda coluna */
-    .footer-column:nth-child(2) .footer-logo-lablivre.mobile-only {
-        display: none;
-    }
     
     /* Desktop: Esconder área de contatos mobile */
     .footer-contact-mobile {
+        display: none;
+    }
+    
+    /* Desktop: Esconder footer mobile */
+    .footer-mobile {
         display: none;
     }
     
@@ -250,231 +230,83 @@
         padding: 2.5rem 0 2rem 0;
     }
     
-    .footer-top {
-        text-align: center;
+    /* Esconder footer desktop no mobile */
+    .footer-middle,
+    .footer-contact-mobile,
+    .footer-bottom {
+        display: none !important;
     }
     
-    .footer-initiative-text,
-    .footer-support-text {
-        justify-content: center;
+    /* Mostrar footer mobile */
+    .footer-mobile {
+        display: block;
     }
     
-    .footer-column {
-        align-items: center;
-        text-align: center;
-        gap: 1.5rem;
+    /* Espaçamento entre rows */
+    .footer-mobile .row {
+        margin-bottom: 1.5rem;
     }
     
-    .footer-logo-section {
-        justify-content: center;
+    .footer-mobile .row:last-child {
+        margin-bottom: 0;
     }
     
-    .footer-nav ul,
-    .footer-how-to-use ul,
-    .footer-contact ul {
-        align-items: center;
-        text-align: center;
-    }
-    
-    .footer-social {
-        justify-content: center;
-    }
-    
-    /* Esconder seções desnecessárias no mobile */
-    .footer-nav,
-    .footer-how-to-use,
-    .footer-contact {
-        display: none;
-    }
-    
-    /* Layout simplificado - Sequência vertical: iniciativa -> logos (lab livre + unb) -> apoio -> logo ipea */
-    
-    .footer-initiative-text {
-        text-align: center;
-    }
-    
-    .footer-support-text {
-        text-align: center;
-        margin-bottom: 1rem;
-    }
-    
-    /* Diminuir fonte da iniciativa */
-    .footer-initiative-text p {
-        font-size: 14px;
-        font-weight: 600;
-        margin: 0;
-    }
-    
-    .footer-support-text p {
-        font-size: 14px;
-        font-weight: 600;
-        margin: 0;
-    }
-    
-    .footer-middle {
-        margin-bottom: 2rem;
-    }
-    
-    /* MOBILE: Reorganizar layout usando CSS Grid */
-    .footer-middle {
-        display: grid;
-        grid-template-areas: 
-            "initiative"
-            "logos"
-            "support"
-            "ipea"
-            "contact";
-        gap: 1.5rem;
-    }
-    
-    /* Primeira coluna: apenas o texto da iniciativa */
-    .footer-column:first-child {
-        grid-area: initiative;
-        align-items: center;
-        text-align: center;
-    }
-    
-    /* Segunda coluna: apenas as logos do Lab Livre e UnB */
-    .footer-column:nth-child(2) {
-        grid-area: logos;
-        align-items: center;
-        text-align: center;
-    }
-    
-    /* Terceira coluna: texto de apoio e logo IPEA */
-    .footer-column:last-child {
-        grid-area: support;
-        align-items: center;
-        text-align: center;
-    }
-    
-    
-    /* MOBILE: Criar nova área de contatos separada */
-    .footer-contact-mobile {
-        grid-area: contact;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    
-    .footer-contact-mobile h4 {
+    /* 1. Initiative Text */
+    .footer-mobile-initiative {
         font-size: 1rem;
         font-weight: 700;
-        margin: 0 0 1rem 0;
+        margin: 0;
         color: #fff;
     }
     
-    .footer-contact-mobile ul {
-        list-style: none;
-        padding: 0;
-        margin: 0 0 1rem 0;
-        display: flex;
-        flex-direction: column;
-        gap: 0.75rem;
+    /* 2. Logos: Lab Livre, UnB e Capibaribe */
+    .footer-mobile-logo {
+        height: 30px;
+        width: auto;
+        margin: 0 auto; /* Centralizar logo IPEA */
     }
     
-    .footer-contact-mobile a {
+    .footer-mobile-logo-capibaribe {
+        filter: brightness(0) invert(1); /* Capibaribe em branco */
+    }
+    
+    /* 3. Support Text */
+    .footer-mobile-support {
+        font-size: 1rem;
+        font-weight: 700;
+        margin: 0;
+        color: #fff;
+    }
+    
+    /* 5. Contact */
+    .footer-mobile-contact-title {
+        font-size: 1rem;
+        font-weight: 700;
+        margin: 0 0 0.5rem 0;
+        color: #fff;
+    }
+    
+    .footer-mobile-contact-link {
         color: #ffffff;
         text-decoration: none;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 1.3;
+        font-size: 1rem;
         opacity: 0.85;
         transition: opacity 0.2s ease;
     }
     
-    .footer-contact-mobile a:hover { 
-        opacity: 1; 
+    .footer-mobile-contact-link:hover {
+        opacity: 1;
     }
     
-    /* Esconder o spacer na segunda coluna */
-    .footer-column:nth-child(2) .footer-spacer {
-        display: none;
-    }
-    
-    /* Layout das logos: Lab Livre e UnB lado a lado */
-    .footer-column:nth-child(2) .footer-logo-section {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 2rem;
-        justify-content: center;
-    }
-    
-    /* Logo IPEA centralizada */
-    .footer-column:last-child .footer-logo-section {
-        display: flex;
-        justify-content: center;
-    }
-    
-    /* MOBILE: Esconder logo Lab Livre da primeira coluna */
-    .footer-column:first-child .footer-logo-section {
-        display: none;
-    }
-    
-    /* MOBILE: Mostrar logo Lab Livre na segunda coluna */
-    .footer-column:nth-child(2) .footer-logo-lablivre.mobile-only {
-        display: flex;
-        align-items: center;
-    }
-    
-    .footer-column:nth-child(2) .footer-logo-lablivre.mobile-only img {
-        height: 30px;
-        width: auto;
-    }
-    
-    .footer-logo-lablivre img,
-    .footer-logo-unb img,
-    .footer-logo-ipea img {
-        height: 30px;
-        width: auto;
-    }
-    
-    .footer-logo-capibaribe img {
-        height: 30px;
-        width: auto;
-        filter: brightness(0) invert(1); /* Converte para branco */
-    }
-    
-    .footer-bottom {
-        text-align: center;
-        margin-top: 1rem;
-    }
-    
-    .footer-bottom p {
-        font-size: 0.9rem;
-        line-height: 1.4;
+    /* 6. Copyright */
+    .footer-mobile-copyright {
+        font-size: 1rem;
+        font-weight: 700;
+        line-height: 1.5;
+        margin: 0;
+        color: #ffffff;
     }
 }
 
-/* Mobile Small - Bootstrap breakpoint sm (576px) */
-@media (max-width: 575.98px) {
-    .footer {
-        padding: 2rem 1rem 1.5rem 1rem;
-    }
-    
-    .footer-logo-lablivre img,
-    .footer-logo-unb img,
-    .footer-logo-ipea img {
-        height: 25px;
-    }
-    
-    .footer-logo-capibaribe img {
-        height: 25px;
-        filter: brightness(0) invert(1); /* Converte para branco */
-    }
-    
-    /* Ajustar fonte para telas menores */
-    .footer-initiative-text p,
-    .footer-support-text p {
-        font-size: 13px;
-    }
-    
-    .footer-bottom p {
-        font-size: 0.8rem;
-        line-height: 1.3;
-    }
-}
 
 
