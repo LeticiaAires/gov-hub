@@ -258,7 +258,7 @@ header.fixed {
     }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991.98px) {
     .glass-container {
         transform: none;
     }
