@@ -195,7 +195,7 @@
 /* Responsive Design - Alinhado com Bootstrap Grid System */
 
 /* Desktop - Manter layout original */
-@media (min-width: 768px) {
+@media (min-width: 992px) {
     .footer-middle {
         display: block; /* Reset do grid para desktop */
     }
@@ -225,7 +225,7 @@
 }
 
 /* Tablet e Mobile - Bootstrap breakpoint md (768px) */
-@media (max-width: 767.98px) {
+@media (max-width: 991.98px) {
     .footer {
         padding: 2.5rem 0 2rem 0;
     }

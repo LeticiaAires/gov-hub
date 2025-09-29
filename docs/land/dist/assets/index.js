@@ -58,5 +58,23 @@ function initHome() {
 // Inicializar quando o script for carregado
 initHome();
 
-// Exportar função para uso global (se necessário)
+// Função para controlar as imagens da hero mobile
+function showMobileImage(imageNumber) {
+    // Esconder todas as imagens mobile
+    const mobileImages = document.querySelectorAll('.mobile-image-container');
+    mobileImages.forEach(img => {
+        img.classList.remove('mobile-image-fade-in');
+        img.classList.add('mobile-image-fade-out');
+    });
+    
+    // Mostrar a imagem selecionada
+    const selectedImage = document.getElementById(`mobile-image-${imageNumber}`);
+    if (selectedImage) {
+        selectedImage.classList.remove('mobile-image-fade-out');
+        selectedImage.classList.add('mobile-image-fade-in');
+    }
+}
+
+// Exportar funções para uso global
 window.preloadHomeImages = preloadHomeImages;
+window.showMobileImage = showMobileImage;

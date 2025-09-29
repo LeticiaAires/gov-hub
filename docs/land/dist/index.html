@@ -117,7 +117,7 @@
 
                 <!-- Mobile Menu Overlay -->
                 <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
-                
+
                 <!-- Mobile Menu -->
                 <div class="mobile-menu" id="mobile-menu">
                     <!-- Botão de fechar -->
@@ -153,8 +153,8 @@
 
 
 
-    <!-- Start block - Seção Interativa com Glass Effect -->
-    <section class="interactive-section">
+    <!-- Hero Desktop - Seção Interativa com Glass Effect -->
+    <section class="interactive-section hero-desktop">
         <!-- Background com gradiente e blur -->
         <div class="interactive-bg"></div>
         
@@ -163,105 +163,200 @@
                 <!-- Coluna da imagem (lado esquerdo) -->
                 <div class="col-12 col-lg-7">
                     <!-- Área da imagem -->
-                    <div class="image-area">
-                        <!-- Imagem padrão -->
-                        <div id="image-1" class="image-container image-fade-in">
-                            <img src="./images/contratos_homev2.png" alt="Exemplo da tela contratos" class="main-image">
-                        </div>
-                        
-                        <!-- Outras imagens -->
-                        <div id="image-2" class="image-container image-fade-out">
-                            <img src="./images/teds_homev2.png" alt="Exemplo da tela TEDS" class="main-image">
-                        </div>
-                        
-                        <div id="image-3" class="image-container image-fade-out">
-                            <img src="./images/pessoal_homev2.png" alt="Exemplo da tela pessoal" class="main-image">
-                        </div>
-                        
-                        <div id="image-4" class="image-container image-fade-out">
-                            <img src="./images/orcamento_homev2.png" alt="Exemplo de orçamento" class="main-image">
-                        </div>
-                        
-                        <div id="image-5" class="image-container image-fade-out">
+        <div class="image-area">
+            <!-- Imagem padrão -->
+            <div id="image-1" class="image-container image-fade-in">
+                <img src="./images/contratos_homev2.png" alt="Exemplo da tela contratos" class="main-image">
+            </div>
+            
+            <!-- Outras imagens -->
+            <div id="image-2" class="image-container image-fade-out">
+                <img src="./images/teds_homev2.png" alt="Exemplo da tela TEDS" class="main-image">
+            </div>
+            
+            <div id="image-3" class="image-container image-fade-out">
+                <img src="./images/pessoal_homev2.png" alt="Exemplo da tela pessoal" class="main-image">
+            </div>
+            
+            <div id="image-4" class="image-container image-fade-out">
+                <img src="./images/orcamento_homev2.png" alt="Exemplo de orçamento" class="main-image">
+            </div>
+            
+            <div id="image-5" class="image-container image-fade-out">
                             <video src="./images/assistente_de_IA.mp4" alt="Assistente de IA" class="main-image" autoplay muted loop>
-                            </video>
+                </video>
+                        </div>
+            </div>
+        </div>
+        
+                <!-- Coluna do glass container (lado direito) -->
+                <div class="col-12 col-lg-5">
+                    <!-- Container glass com imagens -->
+        <div class="glass-container">
+            <h2 class="glass-title">Sistemas diferentes,<br>uma só leitura</h2>
+            
+            <div class="features-grid">
+                <!-- Primeira linha - 3 cards -->
+                            <div class="row g-2 features-row-1">
+                    <!-- Item 1 - Contratos -->
+                                <div class="col-4">
+                    <div class="feature-card" onmouseenter="showImage(1)">
+                        <div class="feature-image">
+                            <img src="./images/icons/contratos.svg" alt="Contratos" class="feature-png">
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title">Contratos</h3>
+                                        </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 2 - TEDS -->
+                                <div class="col-4">
+                    <div class="feature-card" onmouseenter="showImage(2)">
+                        <div class="feature-image">
+                            <img src="./images/icons/teds.svg" alt="TEDS" class="feature-png">
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title">TEDS</h3>
+                                        </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 3 - Pessoal -->
+                                <div class="col-4">
+                    <div class="feature-card" onmouseenter="showImage(3)">
+                        <div class="feature-image">
+                            <img src="./images/icons/pessoal.svg" alt="Pessoal" class="feature-png">
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title">Pessoal</h3>
+                                        </div>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Coluna do glass container (lado direito) -->
-                <div class="col-12 col-lg-5">
-                    <!-- Container glass com imagens -->
-                    <div class="glass-container">
-                        <h2 class="glass-title">Sistemas diferentes,<br>uma só leitura</h2>
-                        
-                        <div class="features-grid">
-                            <!-- Primeira linha - 3 cards -->
-                            <div class="row g-2 features-row-1">
-                                <!-- Item 1 - Contratos -->
-                                <div class="col-4">
-                                    <div class="feature-card" onmouseenter="showImage(1)">
-                                        <div class="feature-image">
-                                            <img src="./images/icons/contratos.svg" alt="Contratos" class="feature-png">
-                                        </div>
-                                        <div class="feature-content">
-                                            <h3 class="feature-title">Contratos</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <!-- Item 2 - TEDS -->
-                                <div class="col-4">
-                                    <div class="feature-card" onmouseenter="showImage(2)">
-                                        <div class="feature-image">
-                                            <img src="./images/icons/teds.svg" alt="TEDS" class="feature-png">
-                                        </div>
-                                        <div class="feature-content">
-                                            <h3 class="feature-title">TEDS</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <!-- Item 3 - Pessoal -->
-                                <div class="col-4">
-                                    <div class="feature-card" onmouseenter="showImage(3)">
-                                        <div class="feature-image">
-                                            <img src="./images/icons/pessoal.svg" alt="Pessoal" class="feature-png">
-                                        </div>
-                                        <div class="feature-content">
-                                            <h3 class="feature-title">Pessoal</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Segunda linha - 2 cards centralizados -->
+                <!-- Segunda linha - 2 cards centralizados -->
                             <div class="row g-2 features-row-2 justify-content-center">
-                                <!-- Item 4 - Orçamento -->
+                    <!-- Item 4 - Orçamento -->
                                 <div class="col-4">
-                                    <div class="feature-card" onmouseenter="showImage(4)">
-                                        <div class="feature-image">
-                                            <img src="./images/icons/orcamento.svg" alt="Orçamento" class="feature-png">
+                    <div class="feature-card" onmouseenter="showImage(4)">
+                        <div class="feature-image">
+                            <img src="./images/icons/orcamento.svg" alt="Orçamento" class="feature-png">
+                        </div>
+                        <div class="feature-content">
+                            <h3 class="feature-title">Orçamento</h3>
                                         </div>
-                                        <div class="feature-content">
-                                            <h3 class="feature-title">Orçamento</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                                <!-- Item 5 - IA -->
+                        </div>
+                    </div>
+                    
+                    <!-- Item 5 - IA -->
                                 <div class="col-4">
-                                    <div class="feature-card" onmouseenter="showImage(5)">
-                                        <div class="feature-image">
-                                            <img src="./images/icons/ia.svg" alt="Inteligência Artificial" class="feature-png">
-                                        </div>
-                                        <div class="feature-content">
+                    <div class="feature-card" onmouseenter="showImage(5)">
+                        <div class="feature-image">
+                            <img src="./images/icons/ia.svg" alt="Inteligência Artificial" class="feature-png">
+                        </div>
+                        <div class="feature-content">
                                             <h3 class="feature-title">I.A.</h3>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Mobile - Nova estrutura para mobile -->
+    <section class="hero-mobile">
+        <div class="container-fluid h-100">
+            <div class="row h-100 g-0">
+                <!-- Coluna das imagens de fundo -->
+                <div class="col-12 hero-mobile-bg">
+                    <div class="mobile-image-wrapper">
+                        <!-- Imagem padrão -->
+                        <div id="mobile-image-1" class="mobile-image-container mobile-image-fade-in">
+                            <img src="./images/contratos_homev2.png" alt="Exemplo da tela contratos" class="mobile-main-image">
+                        </div>
+                    
+                        <!-- Outras imagens -->
+                        <div id="mobile-image-2" class="mobile-image-container mobile-image-fade-out">
+                            <img src="./images/teds_homev2.png" alt="Exemplo da tela TEDS" class="mobile-main-image">
+                        </div>
+
+                        <div id="mobile-image-3" class="mobile-image-container mobile-image-fade-out">
+                            <img src="./images/pessoal_homev2.png" alt="Exemplo da tela pessoal" class="mobile-main-image">
+                        </div>
+
+                        <div id="mobile-image-4" class="mobile-image-container mobile-image-fade-out">
+                            <img src="./images/orcamento_homev2.png" alt="Exemplo de orçamento" class="mobile-main-image">
+                        </div>
+
+                        <div id="mobile-image-5" class="mobile-image-container mobile-image-fade-out">
+                            <video src="./images/assistente_de_IA.mp4" alt="Assistente de IA" class="mobile-main-image" autoplay muted loop>
+                            </video>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Coluna do conteúdo glass -->
+                <div class="col-12 hero-mobile-content-col">
+                    <div class="hero-mobile-content">
+                                    <h2 class="hero-mobile-title">Sistemas diferentes, uma só leitura</h2>
+                                    
+                                    <!-- Cards usando flexbox -->
+                                    <div class="hero-mobile-cards">
+                                        <!-- Item 1 - Contratos -->
+                                        <div class="hero-mobile-card" onmouseenter="showMobileImage(1)">
+                                            <div class="hero-mobile-card-image">
+                                                <img src="./images/icons/contratos.svg" alt="Contratos" class="hero-mobile-card-icon">
+                                            </div>
+                                            <div class="hero-mobile-card-content">
+                                                <h3 class="hero-mobile-card-title">Contratos</h3>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Item 2 - TEDS -->
+                                        <div class="hero-mobile-card" onmouseenter="showMobileImage(2)">
+                                            <div class="hero-mobile-card-image">
+                                                <img src="./images/icons/teds.svg" alt="TEDS" class="hero-mobile-card-icon">
+                                            </div>
+                                            <div class="hero-mobile-card-content">
+                                                <h3 class="hero-mobile-card-title">TEDS</h3>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Item 3 - Pessoal -->
+                                        <div class="hero-mobile-card" onmouseenter="showMobileImage(3)">
+                                            <div class="hero-mobile-card-image">
+                                                <img src="./images/icons/pessoal.svg" alt="Pessoal" class="hero-mobile-card-icon">
+                                            </div>
+                                            <div class="hero-mobile-card-content">
+                                                <h3 class="hero-mobile-card-title">Pessoal</h3>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Item 4 - Orçamento -->
+                                        <div class="hero-mobile-card" onmouseenter="showMobileImage(4)">
+                                            <div class="hero-mobile-card-image">
+                                                <img src="./images/icons/orcamento.svg" alt="Orçamento" class="hero-mobile-card-icon">
+                                            </div>
+                                            <div class="hero-mobile-card-content">
+                                                <h3 class="hero-mobile-card-title">Orçamento</h3>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Item 5 - IA -->
+                                        <div class="hero-mobile-card" onmouseenter="showMobileImage(5)">
+                                            <div class="hero-mobile-card-image">
+                                                <img src="./images/icons/ia.svg" alt="Inteligência Artificial" class="hero-mobile-card-icon">
+                                            </div>
+                                            <div class="hero-mobile-card-content">
+                                                <h3 class="hero-mobile-card-title">I.A.</h3>
+                                            </div>
+                                        </div>
+                                    </div>
                     </div>
                 </div>
             </div>
@@ -405,8 +500,8 @@
           </div>
           <div class="partners-logo-section">
             <a href="https://www.linkedin.com/company/lappis-rocks/posts/?feedView=all" target="_blank" class="partner-link">
-              <img src="./images/lablivre.png" alt="Lab Livre Logo" class="partner-logo">
-            </a>
+          <img src="./images/lablivre.png" alt="Lab Livre Logo" class="partner-logo">
+        </a>
           </div>
         </div>
 
@@ -417,8 +512,8 @@
           </div>
           <div class="partners-logo-section">
             <a href="https://www.unb.br/" target="_blank" class="partner-link">
-              <img src="./images/unb.png" alt="UnB Logo" class="partner-logo">
-            </a>
+          <img src="./images/unb.png" alt="UnB Logo" class="partner-logo">
+        </a>
           </div>
         </div>
 
@@ -441,7 +536,7 @@
           <div class="partners-logo-section">
             <a href="https://www.ipea.gov.br/portal/" target="_blank" class="partner-link">
               <img src="./images/ipea.png" alt="IPEA Logo" class="partner-logo">
-            </a>
+        </a>
           </div>
         </div>
       </div>
@@ -621,7 +716,7 @@
                 </div>
                 <div class="col-12 col-md-3 footer-column">
                     <!-- Coluna invisível para alinhamento -->
-                </div>
+                    </div>
                 <div class="col-12 col-md-3 footer-column">
                     <div class="footer-contact">
                         <h4>Contato</h4>
@@ -685,10 +780,10 @@
                         <h4 class="footer-mobile-contact-title">Contato</h4>
                         <p><a href="mailto:caguiar@unb.br" class="footer-mobile-contact-link">caguiar@unb.br</a></p>
                     </div>
-                </div>
-                
+            </div>
+
                 <!-- 6. Copyright -->
-                <div class="row">
+            <div class="row">
                     <div class="col-12 text-center">
                         <p class="footer-mobile-copyright">© 2025 GovHub - Uma iniciativa do Lab Livre - UnB. Licenciado sob Creative Commons.</p>
                     </div>
