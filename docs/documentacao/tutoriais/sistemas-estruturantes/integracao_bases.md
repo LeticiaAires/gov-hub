@@ -326,3 +326,85 @@ CREATE SCHEMA IF NOT EXISTS <schema>;
 
 Isso elimina a necessidade de criar tabelas manualmente na maioria dos casos.
 
+
+---
+
+# 4) Variáveis do Airflow (parametrização)
+
+* `Variable.get("airflow_orgao")`: seleciona um “contexto” (ex.: `ipea`).
+* `airflow_variables`: YAML com configurações por órgão:
+
+  ```yaml
+  ipea:
+    codigos_ug: [113601, ...]
+    orgao_pncp:
+      cnpj: "33892175000100"
+      modalidades: [6]
+  ```
+- Carregue com `yaml.safe_load` e depois faça `get`:
+
+  ```python
+  orgaos_config = yaml.safe_load(Variable.get("airflow_variables", "{}"))
+  cfg = orgaos_config.get(orgao_alvo, {})
+  cnpj = cfg.get("orgao_pncp", {}).get("cnpj")
+  modalidades = cfg.get("orgao_pncp", {}).get("modalidades", [])
+  ```
+
+> Por que `yaml.safe_load` e não `dict(...)`? Porque a variável vem como **string YAML**. yaml.`safe_load` converte para **objetos Python** (dict/list/str/…).
+
+---
+
+# 5) Entregáveis mínimos no PR
+
+1. **Cliente** em `plugins/cliente_<nova_base>.py`
+
+    * Métodos bem nomeados, docstring curta, logs.
+    * Uso de `request_safe` (se necessário).
+
+2. **DAG** em `dags/<nova_base>_dag.py`
+
+    * Leitura de variáveis do Airflow.
+    * Inserção no Postgres com `cliente_postgres`.
+    * Boa instrumentação de logs.
+
+3. **Schema/Tabelas**
+
+    * SQL/DBT para criar tabelas (ou anotação clara de dependência).
+
+4. **Documentação curta** (README do provedor)
+
+    * Base URL, autenticação, endpoints usados, exemplos cURL.
+    * Campos-chave usados como `conflict_fields`.
+
+---
+
+# 6) Exemplo de “ciclo de vida” resumido (como no PNCP)
+
+1. **Cliente PNCP** criado em `plugins/cliente_pncp.py`
+
+    * `get_contratacoes_publicacao` (uma página)
+    * `get_contratacoes_publicacao_paginado` (agregando)
+    * `get_*_semestral` (quebra temporal + paginação)
+
+2. **Helper** `helpers/safe_request.py` para lidar com `204`/conteúdo não-JSON.
+3. **DAG** `dags/pncp_dag.py` usando:
+
+    * `Variable.get` + `yaml.safe_load` para ler `cnpj` e `modalidades`.
+    * Cliente PNCP para coletar dados.
+    * `ClientPostgresDB.insert_data()` para persistir (com `dt_ingest`).
+
+
+---
+
+# 7) Dicas finais
+
+* **Não** duplique lógica que já existe em helpers (retry, request seguro, inserção).
+* Mantenha o **cliente** pequeno, legível e com logs úteis (params, status, contagens).
+* Ao lidar com **credenciais**, use variáveis do Airflow, nunca hardcode.
+* Se precisar encadear DAGs (ex.: “ingestão” → “dbt”), use:
+
+    * `TriggerDagRunOperator`, ou
+    * `ExternalTaskSensor`, ou
+    * **Datasets** (recomendado para baixo acoplamento).
+
+
