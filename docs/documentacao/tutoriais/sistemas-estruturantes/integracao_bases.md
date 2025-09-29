@@ -237,3 +237,92 @@ Por isso, é boa prática logar:
 * Tokens de acesso (quando não forem credenciais sensíveis).
 
 Assim conseguimos alterar o comportamento da DAG **sem precisar mexer no código**, apenas ajustando variáveis no painel do Airflow.
+
+---
+
+# 3) Reaproveitando ao máximo
+
+Ao integrar uma nova base no GovHub, **não é necessário reinventar a roda**. Já existem clientes e helpers que podem (e devem) ser reutilizados. Isso garante padronização, menos bugs e menos código duplicado.
+
+---
+
+## Clientes e helpers
+
+* **`cliente_base.py`**
+  Esse arquivo é a fundação para qualquer cliente de API. Ele já implementa:
+
+    * Conexão com `httpx`.
+    * Timeout padrão (10 segundos).
+    * Retentativas automáticas (até 3, com backoff).
+
+  **Quando usar?**
+  Se a sua API **sempre retorna JSON válido** e segue um padrão consistente, você pode simplesmente herdar de `ClienteBase` e chamar o método `self.request`. Isso já resolve 90% dos casos.
+
+* **`helpers/safe_request.py`**
+  Esse helper foi criado para APIs menos previsíveis. Ele trata situações como:
+
+    * A API responde com **204 (sem conteúdo)**.
+    * O **Content-Type** não é `application/json` (às vezes vem HTML ou CSV).
+    * O corpo da resposta está vazio ou contém JSON inválido.
+
+  **Quando usar?**
+  Se a API não é confiável e pode quebrar o fluxo ao tentar `json()`.
+  Nesse caso, o `request_safe` não lança exceções: em vez disso, retorna um `str` ou `None`, permitindo que sua DAG continue rodando sem travar.
+
+---
+
+## Postgres
+
+Outra parte que já está pronta para você reaproveitar é a persistência dos dados.
+
+* **`cliente_postgres.py`** + **`postgres_helpers.py`**
+  Juntos, eles facilitam toda a interação com o banco:
+
+    * **Conexão**: use `get_postgres_conn()` para obter a string de conexão.
+    * **Inserção**: use `insert_data()` para inserir registros em tabelas, com suporte a:
+
+        * **Upsert** (evita duplicação de dados).
+        * Definição de chave primária (`primary_key`).
+        * Conflitos (`conflict_fields`).
+
+---
+
+
+## Criação de schemas e tabelas (dinâmica com o `ClientPostgresDB`)
+
+Quando usamos o método `insert_data()` do `ClientPostgresDB`, não precisamos nos preocupar em criar tabelas manualmente antes.
+Isso acontece porque a lógica da classe já inclui duas etapas internas:
+
+--> **Garantir o schema**
+
+   O método `create_table_if_not_exists` roda automaticamente:
+
+```sql
+CREATE SCHEMA IF NOT EXISTS <schema>;
+```
+
+   Ou seja, se você passar `schema="compras_gov"`, ele vai criar esse schema caso ele ainda não exista.
+
+1. **Criar a tabela conforme os dados**
+
+    * Ele pega o **primeiro item do dataset** (`data[0]`) como amostra.
+    * Usa o método `_flatten_data()` para achatar estruturas aninhadas (listas, dicionários dentro do JSON).
+    * Para cada chave encontrada, cria uma coluna do tipo **TEXT** (ou outro mapeado, se especificado).
+    * Se você indicar `primary_key=["id"]`, ele adiciona a constraint `PRIMARY KEY (id)`.
+    * Por fim, dispara um `CREATE TABLE IF NOT EXISTS` garantindo que a tabela exista.
+
+2. **Inserção com upsert**
+
+    * Ele gera um `INSERT INTO … VALUES …`.
+    * Se você passar `conflict_fields=["id"]`, ele constrói automaticamente um:
+
+     ```sql
+     ON CONFLICT (id) DO UPDATE SET ...
+     ```
+
+     Isso evita duplicações: se já existir uma linha com o mesmo `id`, os dados serão atualizados.
+
+➡️ Resumindo: só de chamar `insert_data()`, você já garante que o **schema existe**, que a **tabela está criada** e que os dados serão inseridos/atualizados corretamente.
+
+Isso elimina a necessidade de criar tabelas manualmente na maioria dos casos.
+
