@@ -10,7 +10,7 @@ Antes de começar, certifique-se de ter os seguintes softwares instalados:
 
 - **Docker e Docker Compose**: Para gerenciamento de contêineres.
 - **Make**: Ferramenta de automação de build.
-- **Python 3.x**: Para execução de scripts e desenvolvimento.
+- **Python 3.11**: Para execução de scripts e desenvolvimento.
 - **Git**: Controle de versão.
 
 Caso precise de ajuda para instalar esses componentes, consulte a documentação oficial de cada ferramenta:
@@ -28,7 +28,7 @@ Caso precise de ajuda para instalar esses componentes, consulte a documentação
 Para obter o código-fonte do projeto, clone o repositório Git:
 
 ```bash
-git clone git@gitlab.com:lappis-unb/gest-odadosipea/app-lappis-ipea.git
+git clone https://github.com/GovHub-br/data-application-gov-hub.git
 cd app-lappis-ipea
 ```
 
