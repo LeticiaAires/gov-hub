@@ -84,6 +84,7 @@ function updateChartTotal(chartId, totalValue) {
     }
 }
 
+
 // Função para criar os gráficos de dashboard
 function createDashboardCharts() {
     // Gráfico 1 - Aposentadorias, Reserva Remunerada e Reformas
@@ -588,16 +589,70 @@ function createDashboardCharts() {
     }
 }
 
+// Função para criar o gráfico de contratos
+function createContractsChart() {
+    const ctx = document.getElementById('contractsChart');
+    if (!ctx) return;
+
+    const chartData = {
+        labels: [
+            'Serviços',
+            'Compras',
+            'Informática',
+            'Mão de obra',
+            'Serviços de Engenharia',
+            'Cessão'
+        ],
+        datasets: [{
+            data: [59.54, 24.81, 8.78, 3.82, 2.67, 0.38],
+            backgroundColor: [
+                '#AB2D2D',
+                '#FB8585',
+                '#31652B',
+                '#67A95E',
+                '#326879',
+                '#8B4513'
+            ],
+            borderWidth: 0,
+            cutout: '60%'
+        }]
+    };
+
+    const config = {
+        type: 'doughnut',
+        data: chartData,
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { display: false },
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            return context.label + ': ' + context.parsed + '%';
+                        }
+                    }
+                }
+            },
+            elements: { arc: { borderWidth: 0 } }
+        }
+    };
+
+    new Chart(ctx, config);
+}
+
 // Função para inicializar funcionalidades específicas da página de dashboards
 function initDashboards() {
     // Criar o gráfico quando o DOM estiver carregado
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', () => {
             createBudgetChart();
+            createContractsChart();
             createDashboardCharts();
         });
     } else {
         createBudgetChart();
+        createContractsChart();
         createDashboardCharts();
     }
     
@@ -609,6 +664,7 @@ initDashboards();
 
 // Exportar funções para uso global
 window.createBudgetChart = createBudgetChart;
+window.createContractsChart = createContractsChart;
 window.createDashboardCharts = createDashboardCharts;
 window.initDashboards = initDashboards;
 

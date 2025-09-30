@@ -423,9 +423,52 @@
     }
 }
 
-    /* ==============================
-       EXPENSES SECTION - GASTOS
-       ============================== */
+/* ==============================
+   CONTRACTS SECTION - CONTRATOS
+   ============================== */
+
+.contracts-section {
+    background: #ffffff;
+    padding: 5rem 0; /* mais espaço no topo e base */
+}
+
+.contracts-section-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 2.25rem;
+    font-weight: 600;
+    color: #202020;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 992px) {
+    .contracts-section {
+        padding: 3.5rem 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .contracts-section {
+        padding: 3rem 0;
+    }
+}
+
+/* Escopo específico para o card/elementos da seção de contratos */
+.contracts-section .chart-card {
+    min-height: 340px;
+}
+
+.contracts-section .chart-container {
+    height: 260px;
+}
+
+.contracts-section .chart-legend {
+    height: auto;
+    overflow: visible;
+}
+
+/* ==============================
+   EXPENSES SECTION - GASTOS
+   ============================== */
     
     .expenses-section {
         background: #F7F7F7;
