@@ -67,7 +67,6 @@ header {
     height: 60px !important;
     min-height: 50px !important;
     min-width: 120px !important;
-    padding: 0 0.5rem 0 2rem !important;
     overflow: visible !important;
 }
 
@@ -95,7 +94,6 @@ a.logo {
     height: 60px;
     min-height: 50px;
     min-width: 120px;
-    padding: 0 0.5rem 0 0;
     overflow: visible;
     text-decoration: none;
 }
