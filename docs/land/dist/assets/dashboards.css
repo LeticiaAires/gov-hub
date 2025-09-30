@@ -241,14 +241,14 @@
     background: #ffffff;
     border-radius: 12px;
     padding: 1rem;
-    box-shadow: 0 4px 6px 1px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
     min-height: 400px;
 }
 
 .chart-card:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
     border-color: #7A34F3;
 }
 
@@ -289,8 +289,8 @@
     display: block;
     font-family: 'Inter', sans-serif;
     font-size: 2.5rem;
-    font-weight: 700;
-    color: #2d3748;
+    font-weight: 600;
+    color: #202020;
     line-height: 1;
     margin-bottom: 0.2rem;
 }
@@ -299,8 +299,8 @@
     display: block;
     font-family: 'Inter', sans-serif;
     font-size: 1rem;
-    font-weight: 600;
-    color: #4a5568;
+    font-weight: 700;
+    color: #202020;
     line-height: 1;
 }
 
@@ -321,7 +321,7 @@
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    margin-right: 1rem;
+    margin-right: 0.5rem;
     flex-shrink: 0;
 }
 
@@ -420,5 +420,178 @@
     
     .legend-text {
         font-size: 0.75rem;
+    }
+}
+
+    /* ==============================
+       EXPENSES SECTION - GASTOS
+       ============================== */
+    
+    .expenses-section {
+        background: #F7F7F7;
+        padding: 4rem 0;
+        min-height: 60vh;
+    }
+    
+    .expenses-section-title {
+        font-family: 'Inter', sans-serif;
+        font-size: 2.25rem;
+        font-weight: 600; 
+        color: #202020;
+        margin-bottom: 1rem;
+        text-align: left;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 992px) {
+        .expenses-section {
+            padding: 3rem 0;
+        }
+        
+        .expenses-section-title {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .expenses-section {
+            padding: 2rem 0;
+        }
+        
+        .expenses-section-title {
+            font-size: 1.8rem;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .expenses-section {
+            padding: 1.5rem 0;
+        }
+        
+     .expenses-section-title {
+         font-size: 1.5rem;
+     }
+ }
+
+/* ==============================
+   EXPENSES SUBSECTION - DASHBOARDS
+   ============================== */
+
+.expenses-subsection-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #202020;
+    margin: 2rem 0 0.5rem 0;
+    text-align: left;
+}
+
+.expenses-subsection-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #202020;
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.expenses-legend {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.expenses-legend .legend-item {
+    display: flex;
+    align-items: center;
+}
+
+.expenses-legend .legend-color {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.expenses-legend .legend-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: #202020;
+    line-height: 1.4;
+}
+
+.dashboard-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    text-align: center;
+    height: 100%;
+    margin-bottom: 1.5rem;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.dashboard-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #7A34F3;
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+    text-align: left;
+}
+
+.dashboard-chart-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    margin: 0 auto;
+}
+
+.dashboard-chart-container canvas {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+/* Espaçamento entre linhas de dashboard cards */
+.row.g-4.mb-4 {
+    margin-bottom: 2rem !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .expenses-legend {
+        gap: 1rem;
+        justify-content: center;
+    }
+    
+    .expenses-subsection-title {
+        text-align: center;
+        font-size: 1.3rem;
+    }
+    
+    .expenses-subsection-subtitle {
+        text-align: center;
+        font-size: 0.9rem;
+    }
+    
+    .dashboard-card {
+        margin-bottom: 1rem;
+    }
+    
+    .row.g-4.mb-4 {
+        margin-bottom: 1.5rem !important;
     }
 }

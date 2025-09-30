@@ -21,6 +21,8 @@
     <!-- JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/dashboards.js"></script>
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -162,8 +164,275 @@
         </div>
     </section>
 
-    <!-- Chart.js CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Expenses Section -->
+    <section class="expenses-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h4 class="expenses-section-title">Quanto foi gasto até o momento?</h4>
+                </div>
+            </div>
+            
+            <!-- Expenses Cards Row -->
+            <div class="row g-3">
+                <!-- Card 1 - Orçamento Alocado (Empenhado) -->
+                <div class="col-12 col-md-3">
+                    <div class="budget-card budget-card-small">
+                        <div class="budget-card-header">
+                            <h3 class="budget-card-title">ORÇAMENTO ALOCADO (EMPENHADO)</h3>
+                        </div>
+                        <div class="budget-card-content">
+                            <span class="budget-value" id="allocated-budget">386M</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 2 - Orçamento Alocado Não Utilizado -->
+                <div class="col-12 col-md-4">
+                    <div class="budget-card budget-card-medium">
+                        <div class="budget-card-header">
+                            <h3 class="budget-card-title">ORÇAMENTO ALOCADO NÃO UTILIZADO (À LIQUIDAR)</h3>
+                        </div>
+                        <div class="budget-card-content">
+                            <span class="budget-value" id="unused-budget">245M</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 3 - Despesas Programadas -->
+                <div class="col-12 col-md-3">
+                    <div class="budget-card budget-card-medium">
+                        <div class="budget-card-header">
+                            <h3 class="budget-card-title">DESPESAS PROGRAMADAS (À PAGAR)</h3>
+                        </div>
+                        <div class="budget-card-content">
+                            <span class="budget-value" id="programmed-expenses">2.33M</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 4 - Despesas Pagas -->
+                <div class="col-12 col-md-2">
+                    <div class="budget-card budget-card-small">
+                        <div class="budget-card-header">
+                            <h3 class="budget-card-title">DESPESAS PAGAS</h3>
+                        </div>
+                        <div class="budget-card-content">
+                            <span class="budget-value" id="paid-expenses">139M</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Subsection: Como o dinheiro está sendo gasto? -->
+            <div class="row">
+                <div class="col-12">
+                    <h5 class="expenses-subsection-title">Como o dinheiro está sendo gasto?</h5>
+                    <h6 class="expenses-subsection-subtitle">Orçamento e gasto por elemento de despesa</h6>
+                </div>
+            </div>
+            
+            <!-- Legend -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="expenses-legend">
+                        <div class="legend-item">
+                            <div class="legend-color" style="background-color: #422278;"></div>
+                            <div class="legend-text">Orçamento alocado (empenhado)</div>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background-color: #8b5cf6;"></div>
+                            <div class="legend-text">Despesas pagas</div>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background-color: #a855f7;"></div>
+                            <div class="legend-text">Despesas programadas (a pagar)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Dashboard Cards -->
+            <div class="row g-4 mb-4">
+                <!-- Card 1 - Aposentadorias, Reserva Remunerada e Reformas -->
+                <div class="col-12 col-lg-4">
+                    <div class="dashboard-card">
+                        <h6 class="dashboard-title">Aposentadorias, Reserva Remunerada e Reformas</h6>
+                        <div class="dashboard-chart-container">
+                            <canvas id="retirementChart" width="200" height="200"></canvas>
+                            <div class="chart-center-text">
+                                <span class="chart-total-number">202M</span>
+                                <span class="chart-total-label">Dotação</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 2 - Vencimento e Vantagens Fixas - Pessoa civil -->
+                <div class="col-12 col-lg-4">
+                    <div class="dashboard-card">
+                        <h6 class="dashboard-title">Vencimento e Vantagens Fixas - Pessoa civil</h6>
+                        <div class="dashboard-chart-container">
+                            <canvas id="salaryChart" width="200" height="200"></canvas>
+                            <div class="chart-center-text">
+                                <span class="chart-total-number">260M</span>
+                                <span class="chart-total-label">Dotação</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 3 - A detalhar -->
+                <div class="col-12 col-lg-4">
+                    <div class="dashboard-card">
+                        <h6 class="dashboard-title">[A detalhar]</h6>
+                        <div class="dashboard-chart-container">
+                            <canvas id="detailChart" width="200" height="200"></canvas>
+                            <div class="chart-center-text">
+                                <span class="chart-total-number">62M</span>
+                                <span class="chart-total-label">Dotação</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Segunda Linha de Dashboard Cards -->
+            <div class="row g-4 mb-4">
+                <!-- Card 4 - Aposentadorias, Reserva Remunerada e Reformas -->
+                <div class="col-12 col-lg-4">
+                    <div class="dashboard-card">
+                        <h6 class="dashboard-title">Aposentadorias, Reserva Remunerada e Reformas</h6>
+                        <div class="dashboard-chart-container">
+                            <canvas id="adminChart" width="200" height="200"></canvas>
+                            <div class="chart-center-text">
+                                <span class="chart-total-number">73M</span>
+                                <span class="chart-total-label">Dotação</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 5 - Vencimento e Vantagens Fixas - Pessoa civil -->
+                <div class="col-12 col-lg-4">
+                    <div class="dashboard-card">
+                        <h6 class="dashboard-title">Vencimento e Vantagens Fixas - Pessoa civil</h6>
+                        <div class="dashboard-chart-container">
+                            <canvas id="contributionChart" width="200" height="200"></canvas>
+                            <div class="chart-center-text">
+                                <span class="chart-total-number">45M</span>
+                                <span class="chart-total-label">Dotação</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 6 - Concessão de Bolsas para Pesquisa -->
+                <div class="col-12 col-lg-4">
+                    <div class="dashboard-card">
+                        <h6 class="dashboard-title">Concessão de Bolsas para Pesquisa</h6>
+                        <div class="dashboard-chart-container">
+                            <canvas id="scholarshipChart" width="200" height="200"></canvas>
+                            <div class="chart-center-text">
+                                <span class="chart-total-number">9M</span>
+                                <span class="chart-total-label">Dotação</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Terceira Linha de Dashboard Cards -->
+            <div class="row g-4 mb-4">
+                <!-- Card 7 - Aposentadorias, Reserva Remunerada e Reformas -->
+                <div class="col-12 col-lg-4">
+                    <div class="dashboard-card">
+                        <h6 class="dashboard-title">Aposentadorias, Reserva Remunerada e Reformas</h6>
+                        <div class="dashboard-chart-container">
+                            <canvas id="benefitsChart" width="200" height="200"></canvas>
+                            <div class="chart-center-text">
+                                <span class="chart-total-number">4M</span>
+                                <span class="chart-total-label">Dotação</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 8 - Aposentadorias, Reserva Remunerada e Reformas -->
+                <div class="col-12 col-lg-4">
+                    <div class="dashboard-card">
+                        <h6 class="dashboard-title">Aposentadorias, Reserva Remunerada e Reformas</h6>
+                        <div class="dashboard-chart-container">
+                            <canvas id="bricsChart" width="200" height="200"></canvas>
+                            <div class="chart-center-text">
+                                <span class="chart-total-number">2M</span>
+                                <span class="chart-total-label">Dotação</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 9 - Vencimento e Vantagens Fixas - Pessoa civil -->
+                <div class="col-12 col-lg-4">
+                    <div class="dashboard-card">
+                        <h6 class="dashboard-title">Vencimento e Vantagens Fixas - Pessoa civil</h6>
+                        <div class="dashboard-chart-container">
+                            <canvas id="medicalChart" width="200" height="200"></canvas>
+                            <div class="chart-center-text">
+                                <span class="chart-total-number">2M</span>
+                                <span class="chart-total-label">Dotação</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Quarta Linha de Dashboard Cards -->
+            <div class="row g-4 mb-4">
+                <!-- Card 10 - Vencimento e Vantagens Fixas - Pessoa civil -->
+                <div class="col-12 col-lg-4">
+                    <div class="dashboard-card">
+                        <h6 class="dashboard-title">Vencimento e Vantagens Fixas - Pessoa civil</h6>
+                        <div class="dashboard-chart-container">
+                            <canvas id="investmentChart" width="200" height="200"></canvas>
+                            <div class="chart-center-text">
+                                <span class="chart-total-number">15M</span>
+                                <span class="chart-total-label">Dotação</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 11 - [A detalhar] -->
+                <div class="col-12 col-lg-4">
+                    <div class="dashboard-card">
+                        <h6 class="dashboard-title">[A detalhar]</h6>
+                        <div class="dashboard-chart-container">
+                            <canvas id="technologyChart" width="200" height="200"></canvas>
+                            <div class="chart-center-text">
+                                <span class="chart-total-number">8M</span>
+                                <span class="chart-total-label">Dotação</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 12 - [A detalhar] -->
+                <div class="col-12 col-lg-4">
+                    <div class="dashboard-card">
+                        <h6 class="dashboard-title">[A detalhar]</h6>
+                        <div class="dashboard-chart-container">
+                            <canvas id="trainingChart" width="200" height="200"></canvas>
+                            <div class="chart-center-text">
+                                <span class="chart-total-number">5M</span>
+                                <span class="chart-total-label">Dotação</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     
 </body>
 </html>
