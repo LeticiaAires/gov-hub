@@ -159,21 +159,21 @@ function createDashboardCharts() {
                 datasets: [
                     {
                         data: [salaryData[0].filled, salaryData[0].empty],
-                        backgroundColor: ['#AA79FE', '#F7F7F7'],
+                        backgroundColor: ['#AA79FE', '#FFF2FE'],
                         borderWidth: 1,
                         borderColor: '#F7F7F7',
                         cutout: '60%'
                     },
                     {
                         data: [salaryData[1].filled, salaryData[1].empty],
-                        backgroundColor: ['#7A34F3', '#F7F7F7'],
+                        backgroundColor: ['#7A34F3', '#FFF2FE'],
                         borderWidth: 1,
                         borderColor: '#F7F7F7',
                         cutout: '60%'
                     },
                     {
                         data: [salaryData[2].filled, salaryData[2].empty],
-                        backgroundColor: ['#422278', '#F7F7F7'],
+                        backgroundColor: ['#422278', '#FFF2FE'],
                         borderWidth: 1,
                         borderColor: '#F7F7F7',
                         cutout: '60%'
@@ -261,14 +261,14 @@ function createDashboardCharts() {
                 datasets: [
                     {
                         data: [adminData[0].filled, adminData[0].empty],
-                        backgroundColor: ['#AFD1AA', '#F7F7F7'],
+                        backgroundColor: ['#AFD1AA', '#B2D1DA'],
                         borderWidth: 1,
                         borderColor: '#F7F7F7',
                         cutout: '50%'
                     },
                     {
                         data: [adminData[1].filled, adminData[1].empty],
-                        backgroundColor: ['#31652B', '#F7F7F7'],
+                        backgroundColor: ['#31652B', '#B2D1DA'],
                         borderWidth: 1,
                         borderColor: '#F7F7F7',
                         cutout: '60%'
@@ -299,14 +299,14 @@ function createDashboardCharts() {
                 datasets: [
                     {
                         data: [contributionData[0].filled, contributionData[0].empty],
-                        backgroundColor: ['#AFD1AA', '#F7F7F7'],
+                        backgroundColor: ['#AFD1AA', '#B2D1DA'],
                         borderWidth: 1,
                         borderColor: '#F7F7F7',
                         cutout: '50%'
                     },
                     {
                         data: [contributionData[1].filled, contributionData[1].empty],
-                        backgroundColor: ['#31652B', '#F7F7F7'],
+                        backgroundColor: ['#31652B', '#B2D1DA'],
                         borderWidth: 1,
                         borderColor: '#F7F7F7',
                         cutout: '60%'
@@ -337,14 +337,14 @@ function createDashboardCharts() {
                 datasets: [
                     {
                         data: [scholarshipData[0].filled, scholarshipData[0].empty],
-                        backgroundColor: ['#AFD1AA', '#F7F7F7'],
+                        backgroundColor: ['#AFD1AA', '#B2D1DA'],
                         borderWidth: 1,
                         borderColor: '#F7F7F7',
                         cutout: '50%'
                     },
                     {
                         data: [scholarshipData[1].filled, scholarshipData[1].empty],
-                        backgroundColor: ['#31652B', '#F7F7F7'],
+                        backgroundColor: ['#31652B', '#B2D1DA'],
                         borderWidth: 1,
                         borderColor: '#F7F7F7',
                         cutout: '60%'
@@ -375,14 +375,14 @@ function createDashboardCharts() {
                 datasets: [
                     {
                         data: [benefitsData[0].filled, benefitsData[0].empty],
-                        backgroundColor: ['#AFD1AA', '#F7F7F7'],
+                        backgroundColor: ['#AFD1AA', '#B2D1DA'],
                         borderWidth: 1,
                         borderColor: '#F7F7F7',
                         cutout: '50%'
                     },
                     {
                         data: [benefitsData[1].filled, benefitsData[1].empty],
-                        backgroundColor: ['#31652B', '#F7F7F7'],
+                        backgroundColor: ['#31652B', '#B2D1DA'],
                         borderWidth: 1,
                         borderColor: '#F7F7F7',
                         cutout: '60%'
@@ -413,14 +413,14 @@ function createDashboardCharts() {
                 datasets: [
                     {
                         data: [bricsData[0].filled, bricsData[0].empty],
-                        backgroundColor: ['#AFD1AA', '#F7F7F7'],
+                        backgroundColor: ['#AFD1AA', '#B2D1DA'],
                         borderWidth: 1,
                         borderColor: '#F7F7F7',
                         cutout: '50%'
                     },
                     {
                         data: [bricsData[1].filled, bricsData[1].empty],
-                        backgroundColor: ['#31652B', '#F7F7F7'],
+                        backgroundColor: ['#31652B', '#B2D1DA'],
                         borderWidth: 1,
                         borderColor: '#F7F7F7',
                         cutout: '60%'
@@ -451,14 +451,14 @@ function createDashboardCharts() {
                 datasets: [
                     {
                         data: [medicalData[0].filled, medicalData[0].empty],
-                        backgroundColor: ['#AFD1AA', '#F7F7F7'],
+                        backgroundColor: ['#AFD1AA', '#B2D1DA'],
                         borderWidth: 1,
                         borderColor: '#F7F7F7',
                         cutout: '50%'
                     },
                     {
                         data: [medicalData[1].filled, medicalData[1].empty],
-                        backgroundColor: ['#31652B', '#F7F7F7'],
+                        backgroundColor: ['#31652B', '#B2D1DA'],
                         borderWidth: 1,
                         borderColor: '#F7F7F7',
                         cutout: '60%'
@@ -489,14 +489,14 @@ function createDashboardCharts() {
                 datasets: [
                     {
                         data: [investmentData[0].filled, investmentData[0].empty],
-                        backgroundColor: ['#AFD1AA', '#F7F7F7'],
+                        backgroundColor: ['#AFD1AA', '#B2D1DA'],
                         borderWidth: 1,
                         borderColor: '#F7F7F7',
                         cutout: '50%'
                     },
                     {
                         data: [investmentData[1].filled, investmentData[1].empty],
-                        backgroundColor: ['#31652B', '#F7F7F7'],
+                        backgroundColor: ['#31652B', '#B2D1DA'],
                         borderWidth: 1,
                         borderColor: '#F7F7F7',
                         cutout: '60%'
@@ -527,14 +527,14 @@ function createDashboardCharts() {
                 datasets: [
                     {
                         data: [technologyData[0].filled, technologyData[0].empty],
-                        backgroundColor: ['#AFD1AA', '#F7F7F7'],
+                        backgroundColor: ['#AFD1AA', '#B2D1DA'],
                         borderWidth: 1,
                         borderColor: '#F7F7F7',
                         cutout: '50%'
                     },
                     {
                         data: [technologyData[1].filled, technologyData[1].empty],
-                        backgroundColor: ['#31652B', '#F7F7F7'],
+                        backgroundColor: ['#31652B', '#B2D1DA'],
                         borderWidth: 1,
                         borderColor: '#F7F7F7',
                         cutout: '60%'
@@ -565,14 +565,14 @@ function createDashboardCharts() {
                 datasets: [
                     {
                         data: [trainingData[0].filled, trainingData[0].empty],
-                        backgroundColor: ['#AFD1AA', '#F7F7F7'],
+                        backgroundColor: ['#AFD1AA', '#B2D1DA'],
                         borderWidth: 1,
                         borderColor: '#F7F7F7',
                         cutout: '50%'
                     },
                     {
                         data: [trainingData[1].filled, trainingData[1].empty],
-                        backgroundColor: ['#31652B', '#F7F7F7'],
+                        backgroundColor: ['#31652B', '#B2D1DA'],
                         borderWidth: 1,
                         borderColor: '#F7F7F7',
                         cutout: '60%'
