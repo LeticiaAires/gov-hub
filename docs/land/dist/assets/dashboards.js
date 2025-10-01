@@ -45,13 +45,7 @@ function createBudgetChart() {
                 legend: {
                     display: false // Esconder legenda padrão (usamos a customizada)
                 },
-                tooltip: {
-                    callbacks: {
-                        label: function(context) {
-                            return context.label + ': ' + context.parsed + 'M';
-                        }
-                    }
-                }
+                tooltip: getTooltipConfig('Distribuição de Orçamento')
             },
             elements: {
                 arc: {
@@ -82,6 +76,42 @@ function updateChartTotal(chartId, totalValue) {
     if (totalElement) {
         totalElement.textContent = totalValue + 'M';
     }
+}
+
+// Função para criar configuração padrão de tooltip
+function getTooltipConfig(title) {
+    return {
+        backgroundColor: '#422278',
+        titleColor: '#FFFFFF',
+        bodyColor: '#FFFFFF',
+        padding: 16,
+        cornerRadius: 8,
+        displayColors: true,
+        borderColor: '#7A34F3',
+        borderWidth: 1,
+        titleFont: {
+            size: 14,
+            weight: '600',
+            family: 'Inter'
+        },
+        bodyFont: {
+            size: 13,
+            weight: '400',
+            family: 'Inter'
+        },
+        callbacks: {
+            title: function(context) {
+                return title;
+            },
+            label: function(context) {
+                const value = context.parsed;
+                if (typeof value === 'number') {
+                    return 'Valor: ' + value.toLocaleString('pt-BR') + 'M';
+                }
+                return 'Valor: ' + value;
+            }
+        }
+    };
 }
 
 
@@ -131,7 +161,8 @@ function createDashboardCharts() {
                 responsive: true,
                 maintainAspectRatio: false,
                 plugins: {
-                    legend: { display: false }
+                    legend: { display: false },
+                    tooltip: getTooltipConfig('Aposentadorias e Reformas')
                 }
             }
         });
@@ -184,7 +215,8 @@ function createDashboardCharts() {
                 responsive: true,
                 maintainAspectRatio: false,
                 plugins: {
-                    legend: { display: false }
+                    legend: { display: false },
+                    tooltip: getTooltipConfig('Vencimentos e Vantagens')
                 }
             }
         });
@@ -237,7 +269,8 @@ function createDashboardCharts() {
                 responsive: true,
                 maintainAspectRatio: false,
                 plugins: {
-                    legend: { display: false }
+                    legend: { display: false },
+                    tooltip: getTooltipConfig('A Detalhar')
                 }
             }
         });
@@ -247,27 +280,27 @@ function createDashboardCharts() {
     }
 
     // Gráfico 4 - Aposentadorias, Reserva Remunerada e Reformas
-    const adminCtx = document.getElementById('adminChart');
-    if (adminCtx) {
-        const adminData = [
+    const retirementChart2Ctx = document.getElementById('retirementChart2');
+    if (retirementChart2Ctx) {
+        const retirementChart2Data = [
             { filled: 101, empty: 56 }, // Anel externo
             { filled: 101, empty: 56 },   // Anel médio
         ];
-        const adminTotal = adminData.reduce((sum, ring) => sum + ring.filled, 0);
+        const retirementChart2Total = retirementChart2Data.reduce((sum, ring) => sum + ring.filled, 0);
         
-        new Chart(adminCtx, {
+        new Chart(retirementChart2Ctx, {
             type: 'doughnut',
             data: {
                 datasets: [
                     {
-                        data: [adminData[0].filled, adminData[0].empty],
+                        data: [retirementChart2Data[0].filled, retirementChart2Data[0].empty],
                         backgroundColor: ['#AFD1AA', '#B2D1DA'],
                         borderWidth: 1,
                         borderColor: '#F7F7F7',
                         cutout: '50%'
                     },
                     {
-                        data: [adminData[1].filled, adminData[1].empty],
+                        data: [retirementChart2Data[1].filled, retirementChart2Data[1].empty],
                         backgroundColor: ['#31652B', '#B2D1DA'],
                         borderWidth: 1,
                         borderColor: '#F7F7F7',
@@ -278,34 +311,37 @@ function createDashboardCharts() {
             options: {
                 responsive: true,
                 maintainAspectRatio: false,
-                plugins: { legend: { display: false } }
+                plugins: { 
+                    legend: { display: false },
+                    tooltip: getTooltipConfig('Aposentadorias e Reformas')
+                }
             }
         });
-        updateChartTotal('adminChart', adminTotal);
+        updateChartTotal('retirementChart2', retirementChart2Total);
     }
 
     // Gráfico 5 - Vencimento e Vantagens Fixas - Pessoa civil
-    const contributionCtx = document.getElementById('contributionChart');
-    if (contributionCtx) {
-        const contributionData = [
+    const salaryChart2Ctx = document.getElementById('salaryChart2');
+    if (salaryChart2Ctx) {
+        const salaryChart2Data = [
             { filled: 101, empty: 56 }, // Anel externo
             { filled: 101, empty: 56 },   // Anel médio
         ];
-        const contributionTotal = contributionData.reduce((sum, ring) => sum + ring.filled, 0);
+        const salaryChart2Total = salaryChart2Data.reduce((sum, ring) => sum + ring.filled, 0);
         
-        new Chart(contributionCtx, {
+        new Chart(salaryChart2Ctx, {
             type: 'doughnut',
             data: {
                 datasets: [
                     {
-                        data: [contributionData[0].filled, contributionData[0].empty],
+                        data: [salaryChart2Data[0].filled, salaryChart2Data[0].empty],
                         backgroundColor: ['#AFD1AA', '#B2D1DA'],
                         borderWidth: 1,
                         borderColor: '#F7F7F7',
                         cutout: '50%'
                     },
                     {
-                        data: [contributionData[1].filled, contributionData[1].empty],
+                        data: [salaryChart2Data[1].filled, salaryChart2Data[1].empty],
                         backgroundColor: ['#31652B', '#B2D1DA'],
                         borderWidth: 1,
                         borderColor: '#F7F7F7',
@@ -316,10 +352,13 @@ function createDashboardCharts() {
             options: {
                 responsive: true,
                 maintainAspectRatio: false,
-                plugins: { legend: { display: false } }
+                plugins: { 
+                    legend: { display: false },
+                    tooltip: getTooltipConfig('Vencimentos e Vantagens')
+                }
             }
         });
-        updateChartTotal('contributionChart', contributionTotal);
+        updateChartTotal('salaryChart2', salaryChart2Total);
     }
 
     // Gráfico 6 - Concessão de Bolsas para Pesquisa
@@ -354,34 +393,37 @@ function createDashboardCharts() {
             options: {
                 responsive: true,
                 maintainAspectRatio: false,
-                plugins: { legend: { display: false } }
+                plugins: { 
+                    legend: { display: false },
+                    tooltip: getTooltipConfig('Concessão de Bolsas')
+                }
             }
         });
         updateChartTotal('scholarshipChart', scholarshipTotal);
     }
 
     // Gráfico 7 - Aposentadorias, Reserva Remunerada e Reformas
-    const benefitsCtx = document.getElementById('benefitsChart');
-    if (benefitsCtx) {
-        const benefitsData = [
+    const retirementChart3Ctx = document.getElementById('retirementChart3');
+    if (retirementChart3Ctx) {
+        const retirementChart3Data = [
             { filled: 101, empty: 56 }, // Anel externo
             { filled: 101, empty: 56 },   // Anel médio
         ];
-        const benefitsTotal = benefitsData.reduce((sum, ring) => sum + ring.filled, 0);
+        const retirementChart3Total = retirementChart3Data.reduce((sum, ring) => sum + ring.filled, 0);
         
-        new Chart(benefitsCtx, {
+        new Chart(retirementChart3Ctx, {
             type: 'doughnut',
             data: {
                 datasets: [
                     {
-                        data: [benefitsData[0].filled, benefitsData[0].empty],
+                        data: [retirementChart3Data[0].filled, retirementChart3Data[0].empty],
                         backgroundColor: ['#AFD1AA', '#B2D1DA'],
                         borderWidth: 1,
                         borderColor: '#F7F7F7',
                         cutout: '50%'
                     },
                     {
-                        data: [benefitsData[1].filled, benefitsData[1].empty],
+                        data: [retirementChart3Data[1].filled, retirementChart3Data[1].empty],
                         backgroundColor: ['#31652B', '#B2D1DA'],
                         borderWidth: 1,
                         borderColor: '#F7F7F7',
@@ -392,34 +434,37 @@ function createDashboardCharts() {
             options: {
                 responsive: true,
                 maintainAspectRatio: false,
-                plugins: { legend: { display: false } }
+                plugins: { 
+                    legend: { display: false },
+                    tooltip: getTooltipConfig('Aposentadorias e Reformas')
+                }
             }
         });
-        updateChartTotal('benefitsChart', benefitsTotal);
+        updateChartTotal('retirementChart3', retirementChart3Total);
     }
 
     // Gráfico 8 - Aposentadorias, Reserva Remunerada e Reformas
-    const bricsCtx = document.getElementById('bricsChart');
-    if (bricsCtx) {
-        const bricsData = [
+    const retirementChart4Ctx = document.getElementById('retirementChart4');
+    if (retirementChart4Ctx) {
+        const retirementChart4Data = [
             { filled: 101, empty: 56 }, // Anel externo
             { filled: 101, empty: 56 },   // Anel médio
         ];
-        const bricsTotal = bricsData.reduce((sum, ring) => sum + ring.filled, 0);
+        const retirementChart4Total = retirementChart4Data.reduce((sum, ring) => sum + ring.filled, 0);
         
-        new Chart(bricsCtx, {
+        new Chart(retirementChart4Ctx, {
             type: 'doughnut',
             data: {
                 datasets: [
                     {
-                        data: [bricsData[0].filled, bricsData[0].empty],
+                        data: [retirementChart4Data[0].filled, retirementChart4Data[0].empty],
                         backgroundColor: ['#AFD1AA', '#B2D1DA'],
                         borderWidth: 1,
                         borderColor: '#F7F7F7',
                         cutout: '50%'
                     },
                     {
-                        data: [bricsData[1].filled, bricsData[1].empty],
+                        data: [retirementChart4Data[1].filled, retirementChart4Data[1].empty],
                         backgroundColor: ['#31652B', '#B2D1DA'],
                         borderWidth: 1,
                         borderColor: '#F7F7F7',
@@ -430,34 +475,37 @@ function createDashboardCharts() {
             options: {
                 responsive: true,
                 maintainAspectRatio: false,
-                plugins: { legend: { display: false } }
+                plugins: { 
+                    legend: { display: false },
+                    tooltip: getTooltipConfig('Aposentadorias e Reformas')
+                }
             }
         });
-        updateChartTotal('bricsChart', bricsTotal);
+        updateChartTotal('retirementChart4', retirementChart4Total);
     }
 
     // Gráfico 9 - Vencimento e Vantagens Fixas - Pessoa civil
-    const medicalCtx = document.getElementById('medicalChart');
-    if (medicalCtx) {
-        const medicalData = [
+    const salaryChart3Ctx = document.getElementById('salaryChart3');
+    if (salaryChart3Ctx) {
+        const salaryChart3Data = [
             { filled: 101, empty: 56 }, // Anel externo
             { filled: 101, empty: 56 },   // Anel médio
         ];
-        const medicalTotal = medicalData.reduce((sum, ring) => sum + ring.filled, 0);
+        const salaryChart3Total = salaryChart3Data.reduce((sum, ring) => sum + ring.filled, 0);
         
-        new Chart(medicalCtx, {
+        new Chart(salaryChart3Ctx, {
             type: 'doughnut',
             data: {
                 datasets: [
                     {
-                        data: [medicalData[0].filled, medicalData[0].empty],
+                        data: [salaryChart3Data[0].filled, salaryChart3Data[0].empty],
                         backgroundColor: ['#AFD1AA', '#B2D1DA'],
                         borderWidth: 1,
                         borderColor: '#F7F7F7',
                         cutout: '50%'
                     },
                     {
-                        data: [medicalData[1].filled, medicalData[1].empty],
+                        data: [salaryChart3Data[1].filled, salaryChart3Data[1].empty],
                         backgroundColor: ['#31652B', '#B2D1DA'],
                         borderWidth: 1,
                         borderColor: '#F7F7F7',
@@ -468,34 +516,37 @@ function createDashboardCharts() {
             options: {
                 responsive: true,
                 maintainAspectRatio: false,
-                plugins: { legend: { display: false } }
+                plugins: { 
+                    legend: { display: false },
+                    tooltip: getTooltipConfig('Vencimentos e Vantagens')
+                }
             }
         });
-        updateChartTotal('medicalChart', medicalTotal);
+        updateChartTotal('salaryChart3', salaryChart3Total);
     }
 
     // Gráfico 10 - Vencimento e Vantagens Fixas - Pessoa civil
-    const investmentCtx = document.getElementById('investmentChart');
-    if (investmentCtx) {
-        const investmentData = [
+    const salaryChart4Ctx = document.getElementById('salaryChart4');
+    if (salaryChart4Ctx) {
+        const salaryChart4Data = [
             { filled: 101, empty: 56 }, // Anel externo
             { filled: 101, empty: 56 },   // Anel médio
         ];
-        const investmentTotal = investmentData.reduce((sum, ring) => sum + ring.filled, 0);
+        const salaryChart4Total = salaryChart4Data.reduce((sum, ring) => sum + ring.filled, 0);
         
-        new Chart(investmentCtx, {
+        new Chart(salaryChart4Ctx, {
             type: 'doughnut',
             data: {
                 datasets: [
                     {
-                        data: [investmentData[0].filled, investmentData[0].empty],
+                        data: [salaryChart4Data[0].filled, salaryChart4Data[0].empty],
                         backgroundColor: ['#AFD1AA', '#B2D1DA'],
                         borderWidth: 1,
                         borderColor: '#F7F7F7',
                         cutout: '50%'
                     },
                     {
-                        data: [investmentData[1].filled, investmentData[1].empty],
+                        data: [salaryChart4Data[1].filled, salaryChart4Data[1].empty],
                         backgroundColor: ['#31652B', '#B2D1DA'],
                         borderWidth: 1,
                         borderColor: '#F7F7F7',
@@ -506,34 +557,37 @@ function createDashboardCharts() {
             options: {
                 responsive: true,
                 maintainAspectRatio: false,
-                plugins: { legend: { display: false } }
+                plugins: { 
+                    legend: { display: false },
+                    tooltip: getTooltipConfig('Vencimentos e Vantagens')
+                }
             }
         });
-        updateChartTotal('investmentChart', investmentTotal);
+        updateChartTotal('salaryChart4', salaryChart4Total);
     }
 
     // Gráfico 11 - [A detalhar]
-    const technologyCtx = document.getElementById('technologyChart');
-    if (technologyCtx) {
-        const technologyData = [
+    const detailChart2Ctx = document.getElementById('detailChart2');
+    if (detailChart2Ctx) {
+        const detailChart2Data = [
             { filled: 101, empty: 56 }, // Anel externo
             { filled: 101, empty: 56 },   // Anel médio
         ];
-        const technologyTotal = technologyData.reduce((sum, ring) => sum + ring.filled, 0);
+        const detailChart2Total = detailChart2Data.reduce((sum, ring) => sum + ring.filled, 0);
         
-        new Chart(technologyCtx, {
+        new Chart(detailChart2Ctx, {
             type: 'doughnut',
             data: {
                 datasets: [
                     {
-                        data: [technologyData[0].filled, technologyData[0].empty],
+                        data: [detailChart2Data[0].filled, detailChart2Data[0].empty],
                         backgroundColor: ['#AFD1AA', '#B2D1DA'],
                         borderWidth: 1,
                         borderColor: '#F7F7F7',
                         cutout: '50%'
                     },
                     {
-                        data: [technologyData[1].filled, technologyData[1].empty],
+                        data: [detailChart2Data[1].filled, detailChart2Data[1].empty],
                         backgroundColor: ['#31652B', '#B2D1DA'],
                         borderWidth: 1,
                         borderColor: '#F7F7F7',
@@ -544,34 +598,37 @@ function createDashboardCharts() {
             options: {
                 responsive: true,
                 maintainAspectRatio: false,
-                plugins: { legend: { display: false } }
+                plugins: { 
+                    legend: { display: false },
+                    tooltip: getTooltipConfig('A Detalhar')
+                }
             }
         });
-        updateChartTotal('technologyChart', technologyTotal);
+        updateChartTotal('detailChart2', detailChart2Total);
     }
 
     // Gráfico 12 - [A detalhar]
-    const trainingCtx = document.getElementById('trainingChart');
-    if (trainingCtx) {
-        const trainingData = [
+    const detailChart3Ctx = document.getElementById('detailChart3');
+    if (detailChart3Ctx) {
+        const detailChart3Data = [
             { filled: 101, empty: 56 }, // Anel externo
             { filled: 101, empty: 56 },   // Anel médio
         ];
-        const trainingTotal = trainingData.reduce((sum, ring) => sum + ring.filled, 0);
+        const detailChart3Total = detailChart3Data.reduce((sum, ring) => sum + ring.filled, 0);
         
-        new Chart(trainingCtx, {
+        new Chart(detailChart3Ctx, {
             type: 'doughnut',
             data: {
                 datasets: [
                     {
-                        data: [trainingData[0].filled, trainingData[0].empty],
+                        data: [detailChart3Data[0].filled, detailChart3Data[0].empty],
                         backgroundColor: ['#AFD1AA', '#B2D1DA'],
                         borderWidth: 1,
                         borderColor: '#F7F7F7',
                         cutout: '50%'
                     },
                     {
-                        data: [trainingData[1].filled, trainingData[1].empty],
+                        data: [detailChart3Data[1].filled, detailChart3Data[1].empty],
                         backgroundColor: ['#31652B', '#B2D1DA'],
                         borderWidth: 1,
                         borderColor: '#F7F7F7',
@@ -582,10 +639,13 @@ function createDashboardCharts() {
             options: {
                 responsive: true,
                 maintainAspectRatio: false,
-                plugins: { legend: { display: false } }
+                plugins: { 
+                    legend: { display: false },
+                    tooltip: getTooltipConfig('A Detalhar')
+                }
             }
         });
-        updateChartTotal('trainingChart', trainingTotal);
+        updateChartTotal('detailChart3', detailChart3Total);
     }
 }
 
@@ -627,9 +687,30 @@ function createContractsChart() {
             plugins: {
                 legend: { display: false },
                 tooltip: {
+                    backgroundColor: '#422278',
+                    titleColor: '#FFFFFF',
+                    bodyColor: '#FFFFFF',
+                    padding: 16,
+                    cornerRadius: 8,
+                    displayColors: true,
+                    borderColor: '#7A34F3',
+                    borderWidth: 1,
+                    titleFont: {
+                        size: 14,
+                        weight: '600',
+                        family: 'Inter'
+                    },
+                    bodyFont: {
+                        size: 13,
+                        weight: '400',
+                        family: 'Inter'
+                    },
                     callbacks: {
+                        title: function(context) {
+                            return 'Contratos por Categoria';
+                        },
                         label: function(context) {
-                            return context.label + ': ' + context.parsed + '%';
+                            return context.label + ': ' + context.parsed.toLocaleString('pt-BR') + '%';
                         }
                     }
                 }
