@@ -469,6 +469,119 @@
 }
 
 /* ==============================
+   TEDS SECTION
+   ============================== */
+
+.teds-section {
+    background: #ffffff;
+    padding: 4rem 0;
+}
+
+.teds-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #202020;
+    margin-bottom: 1rem;
+}
+
+.teds-kpis .budget-card {
+    height: auto;
+}
+
+.teds-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #202020;
+    margin: 1rem 0;
+}
+
+.teds-table-wrapper {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.08);
+    overflow: hidden;
+}
+
+.teds-table {
+    width: 100%;
+    margin: 0;
+}
+
+.teds-table thead th {
+    background: #7A34F3;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 600;
+    padding: 0.75rem 1rem;
+    border: none;
+}
+
+.teds-table tbody td {
+    background: #ffffff;
+    color: #202020;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    padding: 0.9rem 1rem;
+    vertical-align: middle;
+}
+
+.teds-table tbody tr + tr td {
+    border-top: 1px solid #eef2f7;
+}
+
+.teds-program {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    align-items: flex-start;
+}
+
+.teds-program-code {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #202020;
+}
+
+.teds-program-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #202020;
+}
+
+.teds-progress {
+    width: 100%;
+    height: 8px;
+    background: #EEE9FF;
+    border-radius: 9999px;
+    overflow: hidden;
+}
+
+.teds-progress-bar {
+    height: 100%;
+    background: #7A34F3;
+    border-radius: 9999px;
+}
+
+.teds-legend {
+    margin-bottom: 1rem;
+}
+
+.teds-table-wrapper { 
+    margin-top: 0.25rem; 
+}
+
+@media (max-width: 768px) {
+    .teds-title { text-align: center; }
+    .teds-subheader { row-gap: 0.5rem; }
+    .bar-chart-legend { justify-content: center; }
+}
+
+/* ==============================
    EXPENSES SECTION - GASTOS
    ============================== */
     
