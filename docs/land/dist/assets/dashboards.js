@@ -7,55 +7,97 @@ function createBudgetChart() {
     const ctx = document.getElementById('budgetChart');
     if (!ctx) return;
 
-    const chartData = {
-        labels: [
-            'Ativos civis da união',
-            'Aposentadorias e pensões civis da união',
-            'Administração da unidade',
-            'Contribuição da união de suas autarquias e fundações para o',
-            'Concessão de bolsas para pesquisa economica',
-            'Benefícios obrigatorios aos servidores civis, empregados, mi',
-            'Exercício da presidência dos Brics pelo brasil',
-            'Assistencia medica e odontologica aos servidores civis, empr...'
-        ],
-        datasets: [{
-            data: [262, 253, 73.2, 44.6, 8.87, 3.74, 2.38, 2.28],
-            backgroundColor: [
-                '#AB2D2D', // Vermelho escuro
-                '#E24747', // Vermelho claro
-                '#FB8585', // Rosa claro
-                '#31652B', // Verde escuro
-                '#67A95E', // Verde claro
-                '#AFD1AA', // Verde pastel
-                '#422278', // Roxo escuro
-                '#326879'  // Azul escuro
-            ],
-            borderWidth: 0,
-            cutout: '60%' // Para criar o efeito de rosca
-        }]
-    };
+    const palette = ['#AB2D2D', '#E24747', '#FB8585', '#31652B', '#67A95E', '#AFD1AA', '#422278', '#326879', '#8B4513', '#F59E0B', '#22c55e'];
 
-    const config = {
-        type: 'doughnut',
-        data: chartData,
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            plugins: {
-                legend: {
-                    display: false // Esconder legenda padrão (usamos a customizada)
-                },
-                tooltip: getTooltipConfig('Distribuição de Orçamento')
-            },
-            elements: {
-                arc: {
-                    borderWidth: 0
-                }
-            }
+    function formatMillions(value) {
+        const m = value / 1_000_000;
+        return m.toFixed(1).replace('.', ',') + 'M';
+    }
+
+    function updateBudgetLegend(labels, values) {
+        const chartCard = ctx.closest('.chart-card');
+        if (!chartCard) return;
+        const legend = chartCard.querySelector('.chart-legend');
+        if (!legend) return;
+
+        const legendItems = Array.from(legend.querySelectorAll('.legend-item'));
+        const count = Math.min(legendItems.length, labels.length, values.length);
+
+        for (let i = 0; i < count; i++) {
+            const item = legendItems[i];
+            const textEl = item.querySelector('.legend-text');
+            if (!textEl) continue;
+            const formatted = formatMillions(values[i]);
+            const fullLabel = labels[i] || '';
+            const limit = 45;
+            const truncated = fullLabel.length > limit ? `${fullLabel.slice(0, limit)}…` : fullLabel;
+            textEl.innerHTML = `<span class="legend-number">${formatted}</span> ${truncated}`;
+            textEl.classList.add('has-tooltip');
+            textEl.setAttribute('data-full', fullLabel);
         }
-    };
+    }
 
-    new Chart(ctx, config);
+    function renderChart(labels, values) {
+        const backgroundColor = palette.slice(0, labels.length);
+        const chartData = {
+            labels: labels,
+            datasets: [{
+                data: values.map(v => v / 1_000_000),
+                backgroundColor: backgroundColor,
+                borderWidth: 0,
+                cutout: '60%'
+            }]
+        };
+
+        const config = {
+            type: 'doughnut',
+            data: chartData,
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: getTooltipConfig('Distribuição de Orçamento')
+                },
+                elements: { arc: { borderWidth: 0 } }
+            }
+        };
+
+        new Chart(ctx, config);
+
+        const totalMillions = values.reduce((sum, v) => sum + (v / 1_000_000), 0);
+        updateChartTotal('budgetChart', Math.round(totalMillions));
+
+        updateBudgetLegend(labels, values);
+    }
+
+    const dataUrl = '../public/data/orcamento_por_acao.json';
+    const urlWithBust = `${dataUrl}?v=${Date.now()}`;
+
+    fetch(urlWithBust, { cache: 'no-store' })
+        .then(resp => {
+            if (!resp.ok) throw new Error('fetch not ok');
+            return resp.json();
+        })
+        .then(json => {
+            const labels = json.map(item => item.descricao);
+            const values = json.map(item => Number(item.valor) || 0);
+            renderChart(labels, values);
+        })
+        .catch(() => {
+            const labels = [
+                'Ativos civis da união',
+                'Aposentadorias e pensões civis da união',
+                'Administração da unidade',
+                'Contribuição da união de suas autarquias e fundações para o',
+                'Concessão de bolsas para pesquisa economica',
+                'Benefícios obrigatorios aos servidores civis, empregados, mi',
+                'Exercício da presidência dos Brics pelo brasil',
+                'Assistencia medica e odontologica aos servidores civis, empr...'
+            ];
+            const values = [262_000_000, 253_000_000, 73_200_000, 44_600_000, 8_870_000, 3_740_000, 2_380_000, 2_280_000];
+            renderChart(labels, values);
+        });
 }
 
 // Função para inicializar funcionalidades específicas da página de dashboards
