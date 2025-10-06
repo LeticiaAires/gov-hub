@@ -478,4 +478,323 @@ header.fixed {
     }
 }
 
-/* Media query para 360px removido - desnecessário */
+/* ========================================
+   HERO MOBILE - Nova estrutura para mobile
+   ======================================== */
+
+/* Esconder hero desktop no mobile */
+@media (max-width: 991.98px) {
+    .hero-desktop {
+        display: none !important;
+    }
+}
+
+/* Mostrar hero mobile apenas no mobile */
+@media (min-width: 992px) {
+    .hero-mobile {
+        display: none !important;
+    }
+}
+
+/* Hero Mobile */
+.hero-mobile {
+    position: relative;
+    min-height: 80vh;
+    overflow: hidden;
+    background: transparent;
+}
+
+/* Background das imagens mobile */
+.hero-mobile-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('../images/section-bg.png') center center/cover no-repeat;
+    opacity: 0.9;
+}
+
+/* Wrapper das imagens mobile */
+.mobile-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 1rem;
+}
+
+/* Container das imagens mobile */
+.mobile-image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-image-container.mobile-image-fade-in {
+    opacity: 1;
+}
+
+.mobile-image-container.mobile-image-fade-out {
+    opacity: 0;
+}
+
+/* Imagem principal mobile */
+.mobile-main-image {
+    max-width: 95%;
+    max-height: 95%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+    background: rgba(255, 255, 255, 0.98);
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Coluna do conteúdo mobile */
+.hero-mobile-content-col {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    z-index: 15;
+}
+
+/* Conteúdo mobile na parte inferior */
+.hero-mobile-content {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    padding: 1rem 1rem;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: 0;
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Título mobile */
+.hero-mobile-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2d3748;
+    text-align: center;
+    margin-bottom: 0.8rem;
+    line-height: 1.2;
+}
+
+/* Container dos cards mobile */
+.hero-mobile-cards {
+    padding: 0.5rem;
+    gap: 3rem;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    justify-content: flex-start;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.hero-mobile-cards::-webkit-scrollbar {
+    display: none;
+}
+
+/* Card individual mobile */
+.hero-mobile-card {
+    width: 85px;
+    height: 95px;
+    min-width: 85px;
+    flex-shrink: 0;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    padding: 0.7rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hero-mobile-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-color: #7A34F3;
+}
+
+/* Imagem do card mobile */
+.hero-mobile-card-image {
+    width: 35px;
+    height: 35px;
+    margin-bottom: 0.3rem;
+}
+
+.hero-mobile-card-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Conteúdo do card mobile */
+.hero-mobile-card-content {
+    text-align: center;
+}
+
+.hero-mobile-card-title {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #7A34F3;
+    margin: 0;
+    line-height: 1.1;
+}
+
+/* Media queries para diferentes tamanhos de tela mobile */
+@media (max-width: 768px) {
+    .hero-mobile {
+        min-height: 75vh;
+    }
+
+    .hero-mobile-bg {
+        bottom: 90px;
+    }
+
+    .mobile-image-wrapper {
+        padding: 1rem 1rem;
+    }
+
+    .mobile-main-image {
+        max-width: 90%;
+        max-height: 90%;
+        background: rgba(255, 255, 255, 0.98);
+        padding: 0.8rem;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .hero-mobile-title {
+        font-size: 1.5rem;
+    }
+
+    .hero-mobile-card {
+        width: 75px;
+        min-width: 75px;
+        height: 90px;
+    }
+
+    .hero-mobile-cards {
+        gap: 2rem;
+    }
+
+    .hero-mobile-card-image {
+        width: 30px;
+        height: 30px;
+    }
+
+    .hero-mobile-card-title {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .hero-mobile {
+        min-height: 70vh;
+    }
+
+    .hero-mobile-bg {
+        bottom: 70px;
+    }
+
+    .mobile-image-wrapper {
+        padding: 0.5rem 0.5rem;
+    }
+
+    .mobile-image-container {
+        width: 95%;
+        height: 95%;
+    }
+
+    .mobile-main-image {
+        max-width: 92%;
+        max-height: 92%;
+        background: rgba(255, 255, 255, 0.98);
+        padding: 0.4rem;
+    }
+
+    .hero-mobile-content {
+        padding: 0.8rem 1rem;
+        border-radius: 0;
+    }
+
+    .hero-mobile-title {
+        font-size: 1.3rem;
+        margin-bottom: 0.6rem;
+    }
+    
+    .hero-mobile-card {
+        width: 65px;
+        min-width: 65px;
+        height: 80px;
+        padding: 0.5rem 0.3rem;
+    }
+    
+    .hero-mobile-cards {
+        gap: 0.6rem;
+    }
+    
+    .hero-mobile-card-image {
+        width: 27px;
+        height: 27px;
+        margin-bottom: 0.2rem;
+    }
+    
+    .hero-mobile-card-title {
+        font-size: 0.6rem;
+    }
+}
+
+/* Telas muito pequenas */
+@media (max-width: 360px) {
+    .hero-mobile {
+        min-height: 65vh;
+    }
+
+    .hero-mobile-bg {
+        bottom: 60px;
+    }
+
+    .mobile-image-wrapper {
+        padding: 0.3rem 0.3rem;
+    }
+
+    .mobile-image-container {
+        width: 98%;
+        height: 98%;
+    }
+
+    .mobile-main-image {
+        max-width: 96%;
+        max-height: 96%;
+        background: rgba(255, 255, 255, 0.98);
+        padding: 0.3rem;
+    }
+}

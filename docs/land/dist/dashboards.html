@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboards - GovHub</title>
+
+    <!-- Meta SEO -->
+    <meta name="description" content="Explore dashboards interativos e visualizações de dados públicos com o GovHub. Transforme informações em insights estratégicos para a gestão pública.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="GovHub">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/dashboards.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- ApexCharts CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="./assets/dashboards.js"></script>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Hero Section - Visão Geral do IPEA -->
+    <section class="ipea-hero">
+            <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="ipea-hero-title">Visão Geral do IPEA</h1>
+                    </div>
+                        </div>
+                    </div>
+    </section>
+
+    
+
+    <!-- Budget Section -->
+    <section class="budget-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="budget-section-title">Qual o Orçamento do IPEA?</h2>
+                        </div>
+                    </div>
+
+            <!-- Budget Cards Row -->
+            <div class="row g-3">
+                <div class="col-12 col-lg-8">
+                    <div class="row g-3">
+                        <!-- Card 1 - Orçamento Total (Menor) -->
+                        <div class="col-12 col-md-3">
+                            <div class="budget-card budget-card-small">
+                                <div class="budget-card-header">
+                                    <h3 class="budget-card-title">ORÇAMENTO TOTAL</h3>
+                                </div>
+                                <div class="budget-card-content">
+                                    <span class="budget-value" id="total-budget">466M</span>
+                                </div>
+                    </div>
+                </div>
+
+                        <!-- Card 2 - Orçamento TEDS (Médio) -->
+                        <div class="col-12 col-md-4">
+                            <div class="budget-card budget-card-medium">
+                                <div class="budget-card-header">
+                                    <h3 class="budget-card-title">ORÇAMENTO RECEBIDO DE TEDS</h3>
+                                </div>
+                                <div class="budget-card-content">
+                                    <span class="budget-value" id="teds-budget">6.21M</span>
+                    </div>
+                </div>
+            </div>
+                        
+                        <!-- Card 3 - Orçamento do Órgão (Maior) -->
+                        <div class="col-12 col-md-5">
+                            <div class="budget-card budget-card-large">
+                                <div class="budget-card-header">
+                                    <h3 class="budget-card-title">ORÇAMENTO DO ORGÃO (DOTAÇÃO ATUALIZADA)</h3>
+                                </div>
+                                <div class="budget-card-content">
+                                    <span class="budget-value" id="agency-budget">466M</span>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                
+            <!-- Chart Section Title -->
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="chart-section-title">Distribuição de orçamento por ação</h2>
+                                </div>
+                            </div>
+                            
+            <!-- Chart Card -->
+            <div class="row">
+                <div class="col-12 col-lg-9">
+                    <div class="chart-card">
+                        <div class="chart-title">Distribuição de orçamento por ação</div>
+                        <div class="row">
+                            <!-- Gráfico de Rosca -->
+                            <div class="col-lg-4">
+                                <div class="chart-container">
+                                    <div class="chart-wrapper">
+                                        <canvas id="budgetChart" width="300" height="300"></canvas>
+                                        <div class="chart-center-text">
+                                            <span class="chart-total-number">249</span>
+                                            <span class="chart-total-label">Total</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Legenda -->
+                            <div class="col-lg-8">
+                                <div class="chart-legend">
+                                    <div class="legend-item">
+                                        <div class="legend-color" style="background-color: #AB2D2D;"></div>
+                                        <div class="legend-text"><span class="legend-number">262M</span> Ativos civis da união</div>
+                                    </div>
+                                    <div class="legend-item">
+                                        <div class="legend-color" style="background-color: #E24747;"></div>
+                                        <div class="legend-text"><span class="legend-number">253M</span> Aposentadorias e pensões civis da união</div>
+                                    </div>
+                                    <div class="legend-item">
+                                        <div class="legend-color" style="background-color: #FB8585;"></div>
+                                        <div class="legend-text"><span class="legend-number">73.2M</span> Administração da unidade</div>
+                                    </div>
+                                    <div class="legend-item">
+                                        <div class="legend-color" style="background-color: #31652B;"></div>
+                                        <div class="legend-text"><span class="legend-number">44.6M</span> Contribuição da união de suas autarquias e fundações para o</div>
+                                    </div>
+                                    <div class="legend-item">
+                                        <div class="legend-color" style="background-color: #67A95E;"></div>
+                                        <div class="legend-text"><span class="legend-number">8.87M</span> Concessão de bolsas para pesquisa economica</div>
+                                    </div>
+                                    <div class="legend-item">
+                                        <div class="legend-color" style="background-color: #AFD1AA;"></div>
+                                        <div class="legend-text"><span class="legend-number">3.74M</span> Benefícios obrigatorios aos servidores civis, empregados, mi</div>
+                                    </div>
+                                    <div class="legend-item">
+                                        <div class="legend-color" style="background-color: #422278;"></div>
+                                        <div class="legend-text"><span class="legend-number">2.38M</span> Exercício da presidência dos Brics pelo brasil</div>
+                                    </div>
+                                    <div class="legend-item">
+                                        <div class="legend-color" style="background-color: #326879;"></div>
+                                        <div class="legend-text"><span class="legend-number">2.28M</span> Assistencia medica e odontologica aos servidores civis, empr...</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expenses Section -->
+    <section class="expenses-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h4 class="expenses-section-title">Quanto foi gasto até o momento?</h4>
+                </div>
+            </div>
+            
+            <!-- Expenses Cards Row -->
+            <div class="row g-3">
+                <!-- Card 1 - Orçamento Alocado (Empenhado) -->
+                <div class="col-12 col-md-3">
+                    <div class="budget-card budget-card-small">
+                        <div class="budget-card-header">
+                            <h3 class="budget-card-title">ORÇAMENTO ALOCADO (EMPENHADO)</h3>
+                        </div>
+                        <div class="budget-card-content">
+                            <span class="budget-value" id="allocated-budget">386M</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 2 - Orçamento Alocado Não Utilizado -->
+                <div class="col-12 col-md-4">
+                    <div class="budget-card budget-card-medium">
+                        <div class="budget-card-header">
+                            <h3 class="budget-card-title">ORÇAMENTO ALOCADO NÃO UTILIZADO (À LIQUIDAR)</h3>
+                        </div>
+                        <div class="budget-card-content">
+                            <span class="budget-value" id="unused-budget">245M</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 3 - Despesas Programadas -->
+                <div class="col-12 col-md-3">
+                    <div class="budget-card budget-card-medium">
+                        <div class="budget-card-header">
+                            <h3 class="budget-card-title">DESPESAS PROGRAMADAS (À PAGAR)</h3>
+                        </div>
+                        <div class="budget-card-content">
+                            <span class="budget-value" id="programmed-expenses">2.33M</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 4 - Despesas Pagas -->
+                <div class="col-12 col-md-2">
+                    <div class="budget-card budget-card-small">
+                        <div class="budget-card-header">
+                            <h3 class="budget-card-title">DESPESAS PAGAS</h3>
+                        </div>
+                        <div class="budget-card-content">
+                            <span class="budget-value" id="paid-expenses">139M</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Subsection: Como o dinheiro está sendo gasto? -->
+            <div class="row">
+                <div class="col-12">
+                    <h5 class="expenses-subsection-title">Como o dinheiro está sendo gasto?</h5>
+                    <h6 class="expenses-subsection-subtitle">Orçamento e gasto por elemento de despesa</h6>
+                </div>
+            </div>
+            
+            <!-- Legend -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="expenses-legend">
+                        <div class="legend-item">
+                            <div class="legend-color" style="background-color: #422278;"></div>
+                            <div class="legend-text">Orçamento alocado (empenhado)</div>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background-color: #8b5cf6;"></div>
+                            <div class="legend-text">Despesas pagas</div>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background-color: #a855f7;"></div>
+                            <div class="legend-text">Despesas programadas (a pagar)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Dashboard Cards -->
+            <div class="row g-4 mb-4">
+                <!-- Card 1 - Aposentadorias, Reserva Remunerada e Reformas -->
+                <div class="col-12 col-lg-4">
+                    <div class="dashboard-card">
+                        <h6 class="dashboard-title">Aposentadorias, Reserva Remunerada e Reformas</h6>
+                        <div class="dashboard-chart-container">
+                            <canvas id="retirementChart" width="200" height="200"></canvas>
+                            <div class="chart-center-text">
+                                <span class="chart-total-number">202M</span>
+                                <span class="chart-total-label">Dotação</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 2 - Vencimento e Vantagens Fixas - Pessoa civil -->
+                <div class="col-12 col-lg-4">
+                    <div class="dashboard-card">
+                        <h6 class="dashboard-title">Vencimento e Vantagens Fixas - Pessoa civil</h6>
+                        <div class="dashboard-chart-container">
+                            <canvas id="salaryChart" width="200" height="200"></canvas>
+                            <div class="chart-center-text">
+                                <span class="chart-total-number">260M</span>
+                                <span class="chart-total-label">Dotação</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 3 - A detalhar -->
+                <div class="col-12 col-lg-4">
+                    <div class="dashboard-card">
+                        <h6 class="dashboard-title">[A detalhar]</h6>
+                        <div class="dashboard-chart-container">
+                            <canvas id="detailChart" width="200" height="200"></canvas>
+                            <div class="chart-center-text">
+                                <span class="chart-total-number">62M</span>
+                                <span class="chart-total-label">Dotação</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Segunda Linha de Dashboard Cards -->
+            <div class="row g-4 mb-4">
+                <!-- Card 4 - Aposentadorias, Reserva Remunerada e Reformas -->
+                <div class="col-12 col-lg-4">
+                    <div class="dashboard-card">
+                        <h6 class="dashboard-title">Aposentadorias, Reserva Remunerada e Reformas</h6>
+                        <div class="dashboard-chart-container">
+                            <canvas id="retirementChart2" width="200" height="200"></canvas>
+                            <div class="chart-center-text">
+                                <span class="chart-total-number">73M</span>
+                                <span class="chart-total-label">Dotação</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 5 - Vencimento e Vantagens Fixas - Pessoa civil -->
+                <div class="col-12 col-lg-4">
+                    <div class="dashboard-card">
+                        <h6 class="dashboard-title">Vencimento e Vantagens Fixas - Pessoa civil</h6>
+                        <div class="dashboard-chart-container">
+                            <canvas id="salaryChart2" width="200" height="200"></canvas>
+                            <div class="chart-center-text">
+                                <span class="chart-total-number">45M</span>
+                                <span class="chart-total-label">Dotação</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 6 - Concessão de Bolsas para Pesquisa -->
+                <div class="col-12 col-lg-4">
+                    <div class="dashboard-card">
+                        <h6 class="dashboard-title">Concessão de Bolsas para Pesquisa</h6>
+                        <div class="dashboard-chart-container">
+                            <canvas id="scholarshipChart" width="200" height="200"></canvas>
+                            <div class="chart-center-text">
+                                <span class="chart-total-number">9M</span>
+                                <span class="chart-total-label">Dotação</span>
+                    </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Terceira Linha de Dashboard Cards -->
+            <div class="row g-4 mb-4">
+                <!-- Card 7 - Aposentadorias, Reserva Remunerada e Reformas -->
+                <div class="col-12 col-lg-4">
+                    <div class="dashboard-card">
+                        <h6 class="dashboard-title">Aposentadorias, Reserva Remunerada e Reformas</h6>
+                        <div class="dashboard-chart-container">
+                            <canvas id="retirementChart3" width="200" height="200"></canvas>
+                            <div class="chart-center-text">
+                                <span class="chart-total-number">4M</span>
+                                <span class="chart-total-label">Dotação</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 8 - Aposentadorias, Reserva Remunerada e Reformas -->
+                <div class="col-12 col-lg-4">
+                    <div class="dashboard-card">
+                        <h6 class="dashboard-title">Aposentadorias, Reserva Remunerada e Reformas</h6>
+                        <div class="dashboard-chart-container">
+                            <canvas id="retirementChart4" width="200" height="200"></canvas>
+                            <div class="chart-center-text">
+                                <span class="chart-total-number">2M</span>
+                                <span class="chart-total-label">Dotação</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 9 - Vencimento e Vantagens Fixas - Pessoa civil -->
+                <div class="col-12 col-lg-4">
+                    <div class="dashboard-card">
+                        <h6 class="dashboard-title">Vencimento e Vantagens Fixas - Pessoa civil</h6>
+                        <div class="dashboard-chart-container">
+                            <canvas id="salaryChart3" width="200" height="200"></canvas>
+                            <div class="chart-center-text">
+                                <span class="chart-total-number">2M</span>
+                                <span class="chart-total-label">Dotação</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Quarta Linha de Dashboard Cards -->
+            <div class="row g-4 mb-4">
+                <!-- Card 10 - Vencimento e Vantagens Fixas - Pessoa civil -->
+                <div class="col-12 col-lg-4">
+                    <div class="dashboard-card">
+                        <h6 class="dashboard-title">Vencimento e Vantagens Fixas - Pessoa civil</h6>
+                        <div class="dashboard-chart-container">
+                            <canvas id="salaryChart4" width="200" height="200"></canvas>
+                            <div class="chart-center-text">
+                                <span class="chart-total-number">15M</span>
+                                <span class="chart-total-label">Dotação</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 11 - [A detalhar] -->
+                <div class="col-12 col-lg-4">
+                    <div class="dashboard-card">
+                        <h6 class="dashboard-title">[A detalhar]</h6>
+                        <div class="dashboard-chart-container">
+                            <canvas id="detailChart2" width="200" height="200"></canvas>
+                            <div class="chart-center-text">
+                                <span class="chart-total-number">8M</span>
+                                <span class="chart-total-label">Dotação</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 12 - [A detalhar] -->
+                <div class="col-12 col-lg-4">
+                    <div class="dashboard-card">
+                        <h6 class="dashboard-title">[A detalhar]</h6>
+                        <div class="dashboard-chart-container">
+                            <canvas id="detailChart3" width="200" height="200"></canvas>
+                            <div class="chart-center-text">
+                                <span class="chart-total-number">5M</span>
+                                <span class="chart-total-label">Dotação</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contracts Section -->
+    <section class="contracts-section">
+        <div class="container">
+                <div class="row">
+                <div class="col-12">
+                    <h2 class="contracts-section-title">Quantos contratos vigentes o IPEA tem?</h2>
+                    </div>
+                </div>
+                
+            <!-- Chart Card -->
+            <div class="row">
+                <div class="col-12 col-lg-6">
+                    <div class="chart-card">
+                        <div class="chart-title">Contratos por Categoria</div>
+                <div class="row">
+                            <!-- Gráfico de Rosca -->
+                            <div class="col-12 col-md-6">
+                                <div class="chart-container">
+                                    <div class="chart-wrapper">
+                                        <canvas id="contractsChart" width="240" height="240"></canvas>
+                                        <div class="chart-center-text">
+                                            <span class="chart-total-number">262</span>
+                                            <span class="chart-total-label">Total</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Legenda -->
+                            <div class="col-12 col-md-6">
+                                <div class="chart-legend">
+                                    <div class="legend-item">
+                                        <div class="legend-color" style="background-color: #AB2D2D;"></div>
+                                        <div class="legend-text"><span class="legend-number">59,54%</span> Serviços</div>
+                                    </div>
+                                    <div class="legend-item">
+                                        <div class="legend-color" style="background-color: #FB8585;"></div>
+                                        <div class="legend-text"><span class="legend-number">24,81%</span> Compras</div>
+                                    </div>
+                                    <div class="legend-item">
+                                        <div class="legend-color" style="background-color: #31652B;"></div>
+                                        <div class="legend-text"><span class="legend-number">8,78%</span> Informática</div>
+                                    </div>
+                                    <div class="legend-item">
+                                        <div class="legend-color" style="background-color: #67A95E;"></div>
+                                        <div class="legend-text"><span class="legend-number">3,82%</span> Mão de obra</div>
+                                    </div>
+                                    <div class="legend-item">
+                                        <div class="legend-color" style="background-color: #326879;"></div>
+                                        <div class="legend-text"><span class="legend-number">2,67%</span> Serviços de Engenharia</div>
+                                    </div>
+                                    <div class="legend-item">
+                                        <div class="legend-color" style="background-color: #8B4513;"></div>
+                                        <div class="legend-text"><span class="legend-number">0,38%</span> Cessão</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Budget Allocation Section -->
+    <section class="budget-allocation-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="budget-allocation-title">Quanto do orçamento está alocado para contratos?</h2>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Cards Laterais -->
+                <div class="col-12 col-lg-3">
+                    <!-- Card 1 - Orçamento Alocado -->
+                    <div class="allocation-card allocation-card-purple">
+                        <h3 class="allocation-card-label">ORÇAMENTO ALOCADO (EMPENHADO)</h3>
+                        <p class="allocation-card-value">10,468,530.85</p>
+                    </div>
+                    
+                    <!-- Card 2 - Saldo de Empenho -->
+                    <div class="allocation-card allocation-card-purple">
+                        <h3 class="allocation-card-label">SALDO DE EMPENHO (À LIQUIDAR)</h3>
+                        <p class="allocation-card-value">3,855,196.17</p>
+                    </div>
+                    
+                    <!-- Card 3 - Despesas Pagas -->
+                    <div class="allocation-card allocation-card-purple">
+                        <h3 class="allocation-card-label">DESPESAS PAGAS</h3>
+                        <p class="allocation-card-value">4,094,929.86</p>
+                    </div>
+                </div>
+                
+                <!-- Dashboard de Barras -->
+                <div class="col-12 col-lg-9">
+                    <div class="bar-chart-card">
+                        <h3 class="bar-chart-title">10 Maiores contratos pelo orçamento alocado (empenhado) e a natureza da despesa</h3>
+                        
+                        <!-- Legenda -->
+                        <div class="bar-chart-legend">
+                            <div class="legend-item">
+                                <div class="legend-color" style="background-color: #7A34F3;"></div>
+                                <div class="legend-text">Locação de mão-de-obra</div>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background-color: #31652B;"></div>
+                                <div class="legend-text">Passagens e despesas com locomoção</div>
+                            </div>
+                            <div class="legend-row-break"></div>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background-color: #F59E0B;"></div>
+                                <div class="legend-text">Serviços de tecnologia da informação e comunicação</div>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background-color: #AB2D2D;"></div>
+                                <div class="legend-text">Outros serviços de terceiros - Pessoa Jurídica</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Gráfico - Barras de Progresso -->
+                        <div class="contracts-bars-list">
+                            <!-- Item 1 -->
+                            <div class="contracts-bar-item">
+                                <div class="contracts-bar-header">
+                                    <span class="contracts-bar-value">1.96M</span>
+                                    <span class="contracts-bar-label">T & S Engenharia Telematica e Sistemas LTDA</span>
+                                </div>
+                                <div class="contracts-bar-track">
+                                    <div class="contracts-bar-fill" style="width: 98%; background-color: #7A34F3;"></div>
+                                </div>
+                            </div>
+                            
+                            <!-- Item 2 -->
+                            <div class="contracts-bar-item">
+                                <div class="contracts-bar-header">
+                                    <span class="contracts-bar-value">1.65M</span>
+                                    <span class="contracts-bar-label">Evolux Multi Serviços LTDA</span>
+                                </div>
+                                <div class="contracts-bar-track">
+                                    <div class="contracts-bar-fill" style="width: 84%; background-color: #7A34F3;"></div>
+                                </div>
+                            </div>
+                            
+                            <!-- Item 3 -->
+                            <div class="contracts-bar-item">
+                                <div class="contracts-bar-header">
+                                    <span class="contracts-bar-value">1.2M</span>
+                                    <span class="contracts-bar-label">G&E Serviços Terceirizados LTDA</span>
+                                </div>
+                                <div class="contracts-bar-track">
+                                    <div class="contracts-bar-fill" style="width: 61%; background-color: #7A34F3;"></div>
+                                </div>
+                            </div>
+                            
+                            <!-- Item 4 -->
+                            <div class="contracts-bar-item">
+                                <div class="contracts-bar-header">
+                                    <span class="contracts-bar-value">920k</span>
+                                    <span class="contracts-bar-label">R2 Radiodifusão e Telecomunicações LTDA</span>
+                                </div>
+                                <div class="contracts-bar-track">
+                                    <div class="contracts-bar-fill" style="width: 47%; background-color: #7A34F3;"></div>
+                                </div>
+                            </div>
+                            
+                            <!-- Item 5 -->
+                            <div class="contracts-bar-item">
+                                <div class="contracts-bar-header">
+                                    <span class="contracts-bar-value">710k</span>
+                                    <span class="contracts-bar-label">AIRES Turismo LTDA</span>
+                                </div>
+                                <div class="contracts-bar-track">
+                                    <div class="contracts-bar-fill" style="width: 36%; background-color: #31652B;"></div>
+                                </div>
+                            </div>
+                            
+                            <!-- Item 6 -->
+                            <div class="contracts-bar-item">
+                                <div class="contracts-bar-header">
+                                    <span class="contracts-bar-value">540k</span>
+                                    <span class="contracts-bar-label">Cast Informatica S/A</span>
+                                </div>
+                                <div class="contracts-bar-track">
+                                    <div class="contracts-bar-fill" style="width: 27.5%; background-color: #F59E0B;"></div>
+                                </div>
+                            </div>
+                            
+                            <!-- Item 7 -->
+                            <div class="contracts-bar-item">
+                                <div class="contracts-bar-header">
+                                    <span class="contracts-bar-value">473k</span>
+                                    <span class="contracts-bar-label">NEOENERGIA Distribuição Brasília S/A</span>
+                                </div>
+                                <div class="contracts-bar-track">
+                                    <div class="contracts-bar-fill" style="width: 24%; background-color: #AB2D2D;"></div>
+                                </div>
+                            </div>
+                            
+                            <!-- Item 8 -->
+                            <div class="contracts-bar-item">
+                                <div class="contracts-bar-header">
+                                    <span class="contracts-bar-value">425k</span>
+                                    <span class="contracts-bar-label">Climatica Engenharia LTDA</span>
+                                </div>
+                                <div class="contracts-bar-track">
+                                    <div class="contracts-bar-fill" style="width: 21.5%; background-color: #7A34F3;"></div>
+                                </div>
+                            </div>
+                            
+                            <!-- Item 9 -->
+                            <div class="contracts-bar-item">
+                                <div class="contracts-bar-header">
+                                    <span class="contracts-bar-value">423k</span>
+                                    <span class="contracts-bar-label">Uniserve Comercio e Serviços Terceirizados LTDA</span>
+                                </div>
+                                <div class="contracts-bar-track">
+                                    <div class="contracts-bar-fill" style="width: 21.5%; background-color: #7A34F3;"></div>
+                                </div>
+                            </div>
+                            
+                            <!-- Item 10 -->
+                            <div class="contracts-bar-item">
+                                <div class="contracts-bar-header">
+                                    <span class="contracts-bar-value">335k</span>
+                                    <span class="contracts-bar-label">JK Segurança Privada LTDA</span>
+                                </div>
+                                <div class="contracts-bar-track">
+                                    <div class="contracts-bar-fill" style="width: 17%; background-color: #31652B;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- TEDs Section -->
+    <section class="teds-section">
+        <div class="container">
+            <!-- Título -->
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="teds-title">Quais TEDs o IPEA recebeu?</h2>
+                </div>
+            </div>
+
+            <!-- KPIs -->
+            <div class="row g-3 teds-kpis">
+                <div class="col-12 col-md-4">
+                    <div class="budget-card">
+                        <div class="budget-card-header">
+                            <h3 class="budget-card-title">TOTAL DE TEDS RECEBIDOS PELO IPEA</h3>
+                        </div>
+                        <div class="budget-card-content">
+                            <span class="budget-value">34</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="budget-card">
+                        <div class="budget-card-header">
+                            <h3 class="budget-card-title">TEDS PRÓXIMOS DE SEREM FINALIZADOS (EM 2025)</h3>
+                        </div>
+                        <div class="budget-card-content">
+                            <span class="budget-value">5</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="budget-card">
+                        <div class="budget-card-header">
+                            <h3 class="budget-card-title">TEDS DESPESAS A LIQUIDAR</h3>
+                        </div>
+                        <div class="budget-card-content">
+                            <span class="budget-value">4,601,082.01</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Subtítulo -->
+            <div class="row teds-subheader">
+                <div class="col-12">
+                    <h5 class="teds-subtitle">Áreas de pesquisa, vigência e valores</h5>
+                </div>
+            </div>
+            <!-- Legenda abaixo do subtítulo -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="bar-chart-legend teds-legend">
+                        <div class="legend-item">
+                            <div class="legend-color" style="background-color:#7A34F3"></div>
+                            <div class="legend-text">Locação de mão-de-obra</div>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color" style="background-color:#22c55e"></div>
+                            <div class="legend-text">Passagens e despesas com locomoção</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tabela -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="teds-table-wrapper">
+                        <table class="teds-table table">
+                            <thead>
+                                <tr>
+                                    <th>Programa</th>
+                                    <th>Vigência</th>
+                                    <th>Valor Firmado</th>
+                                    <th>Conclusão</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="teds-program">
+                                            <div class="teds-program-code">MIR/SENAPIR-MIR</div>
+                                            <div class="teds-program-text">INCLUA - Igualdade Racial</div>
+                                        </div>
+                                    </td>
+                                    <td>26/06/2025 → 31/12/2028</td>
+                                    <td>1,494,580.00</td>
+                                    <td>
+                                        <div class="teds-progress">
+                                            <div class="teds-progress-bar" style="width: 68%"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="teds-program">
+                                            <div class="teds-program-code">PR/SG</div>
+                                            <div class="teds-program-text">1149 - Reconstrução, Ampliação e Aprofundamento da Participação Social e da Democracia</div>
+                                        </div>
+                                    </td>
+                                    <td>01/07/2024 → 31/12/2026</td>
+                                    <td>693,800.00</td>
+                                    <td>
+                                        <div class="teds-progress">
+                                            <div class="teds-progress-bar" style="width: 52%"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="teds-program">
+                                            <div class="teds-program-code">MDS/MDS</div>
+                                            <div class="teds-program-text">Construção e a efetivação do Plano Nacional de Cuidados.</div>
+                                        </div>
+                                    </td>
+                                    <td>06/12/2023 → 06/12/2026</td>
+                                    <td>1,789,894.50</td>
+                                    <td>
+                                        <div class="teds-progress">
+                                            <div class="teds-progress-bar" style="width: 47%"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="teds-program">
+                                            <div class="teds-program-code">MPO/DGE</div>
+                                            <div class="teds-program-text">Mestrado Profissional em Políticas Públicas e Desenvolvimento</div>
+                                        </div>
+                                    </td>
+                                    <td>13/12/2023 → 31/10/2026</td>
+                                    <td>610,000.00</td>
+                                    <td>
+                                        <div class="teds-progress">
+                                            <div class="teds-progress-bar" style="width: 61%"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="teds-program">
+                                            <div class="teds-program-code">SNDS/SNDS</div>
+                                            <div class="teds-program-text">Programa 1149 - Reconstrução, Ampliação e Aprofundamento da Participação Social e da Democracia</div>
+                                        </div>
+                                    </td>
+                                    <td>01/08/2025 → 31/10/2026</td>
+                                    <td>891,360.00</td>
+                                    <td>
+                                        <div class="teds-progress">
+                                            <div class="teds-progress-bar" style="width: 39%"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="teds-program">
+                                            <div class="teds-program-code">DFC/DFC</div>
+                                            <div class="teds-program-text">Estudos avançados sobre processos de gestão de pessoas no governo federal</div>
+                                        </div>
+                                    </td>
+                                    <td>01/11/2023 → 31/10/2026</td>
+                                    <td>956,520.00</td>
+                                    <td>
+                                        <div class="teds-progress">
+                                            <div class="teds-progress-bar" style="width: 28%"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEDs Sent Section -->
+    <section class="teds-sent-section">
+        <div class="container">
+            <!-- Título -->
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="teds-sent-title">Quais TEDs o IPEA enviou?</h2>
+                </div>
+            </div>
+
+            <!-- KPIs -->
+            <div class="row g-3 teds-sent-kpis">
+                <div class="col-12 col-md-6 col-lg-2">
+                    <div class="budget-card">
+                        <div class="budget-card-header">
+                            <h3 class="budget-card-title">VALOR FIRMADO</h3>
+                        </div>
+                        <div class="budget-card-content">
+                            <span class="budget-value">1,444,320.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="budget-card">
+                        <div class="budget-card-header">
+                            <h3 class="budget-card-title">DESTINAÇÃO ORÇAMENTÁRIA ENVIADA</h3>
+                        </div>
+                        <div class="budget-card-content">
+                            <span class="budget-value">1,714,368.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tabela -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="teds-sent-table-wrapper">
+                        <table class="teds-sent-table table">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        PROGRAMA
+                                        <i class="fas fa-chevron-down"></i>
+                                    </th>
+                                    <th>VIGÊNCIA</th>
+                                    <th>VALOR FIRMADO</th>
+                                    <th>CONCLUSÃO</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="teds-sent-program">
+                                            <div class="teds-sent-program-code">IPEA/UNB</div>
+                                            <div class="teds-sent-program-text">Laboratório Avançado de Produção Pesquisa e Inovação em Software - LAPPIS/UnB GAMA</div>
+                                        </div>
+                                    </td>
+                                    <td>01/02/2024 - 31/01/2025</td>
+                                    <td>902.400,00</td>
+                                    <td>
+                                        <div class="teds-sent-progress">
+                                            <div class="teds-sent-progress-bar" style="width: 68%"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="teds-sent-program">
+                                            <div class="teds-sent-program-code">IPEA/UNB</div>
+                                            <div class="teds-sent-program-text">Mapeamento de Processos com Método Business Process Management (BPM) no Instituto de Pesquisa Econômica Aplicada (Ipea)</div>
+                                        </div>
+                                    </td>
+                                    <td>20/12/2023 - 20/02/2025</td>
+                                    <td>541.920,00</td>
+                                    <td>
+                                        <div class="teds-sent-progress">
+                                            <div class="teds-sent-progress-bar" style="width: 65%"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="teds-sent-program">
+                                            <div class="teds-sent-program-code">IPEA/UNB</div>
+                                            <div class="teds-sent-program-text">Laboratório Avançado de Produção Pesquisa e Inovação em Software - LAPPIS/UnB GAMA</div>
+                                        </div>
+                                    </td>
+                                    <td>01/02/2024 - 31/01/2025</td>
+                                    <td>0,0</td>
+                                    <td>
+                                        <div class="teds-sent-progress">
+                                            <div class="teds-sent-progress-bar" style="width: 0%"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
